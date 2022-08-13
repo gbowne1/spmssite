@@ -1,0 +1,10 @@
+# editorconfig.org
+root = true
+
+[*.html]
+
+[*.css]
+
+[*.json]
+
+[*.md]
