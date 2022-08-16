@@ -143,6 +143,17 @@ i{
   height: 20px;
 }
 
+/* footer */
+
+#footer-icon {
+  align-items: center;
+  padding-bottom: 10px;
+}
+
+#footer-icon a{
+  color: black;
+}
+
 /* Medium Screens */
 
 @media all and (min-width: 34.375em) {
