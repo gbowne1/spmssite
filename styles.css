@@ -1,5 +1,7 @@
 body {
-  display: inline;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
   color: black;
   background: orchid;
   background-size: cover;
@@ -7,7 +9,6 @@ body {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  position: absolute;
   top: 0;
   left: 0;
   z-index: 1;
@@ -61,16 +62,9 @@ li a:hover {
   z-index: 2;
 }
 
-@media screen and (max-width: 768px) {
-  .jumbotron {
-    padding-top: 20px;
-    padding-bottom: 20px;
-  }
-}
-
 footer {
   display: inline-flex;
-  bottom: 2px;
+  bottom: 0px;
   background-color: gray;
   color: black;
   clear: both;
@@ -144,6 +138,21 @@ iframe {
   color: black;
   font-size: 30px;
 }
+i{
+  width: 20px;
+  height: 20px;
+}
+
+/* footer */
+
+#footer-icon {
+  align-items: center;
+  padding-bottom: 10px;
+}
+
+#footer-icon a{
+  color: black;
+}
 
 /* Medium Screens */
 
@@ -154,5 +163,12 @@ iframe {
 
   .static-img {
     display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .jumbotron {
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
 }
