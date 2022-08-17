@@ -36,6 +36,14 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
     <link rel="stylesheet" href="./styles.css" />
   </head>
 
@@ -52,36 +60,28 @@
             </div>
           </div>
         </div>
+        <div class="navbar_wrapper">
+          <ion-icon name="menu-outline" id="hamburger_trigger"></ion-icon>
+          <nav class="main_navbar">
+            <ul class="hamburger_menu_active" id="hamburger">
+              <li><a href="./about.html">About</a></li>
+              <li><a href="#materials">Materials</a></li>
+              <li><a href="#industries">Industries</a></li>
+              <li><a href="./rfq.html">Quotes</a></li>
+              <li><a href="#capabilities">Capabilities</a></li>
+              <li><a href="#history">History</a></li>
+              <li><a href="#quality">Quality</a></li>
+              <li><a href="#gallery">Gallery</a></li>
+              <li><a href="./jobs.html">Careers</a></li>
+              <li><a href="./contact.html">Contact</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#blog">Blog</a></li>
+              <li><a href="#testiominals">Testimonials</a></li>
+              <li><a href="#equipment">Equipment</a></li>
+            </ul>
+          </nav>
+        </div>
       </header>
-      <nav>
-        <nav class="navbar navbar-default">
-          <div class="container-fluid">
-            <div class="navbar-header">
-              <div class="nav navbar-wrap">
-                <nav class="menu">
-                  <ul class="nav navbar-nav">
-                    <li class="nav-item active"></li>
-                    <li><a href="./about.html">About</a></li>
-                    <li><a href="#materials">Materials</a></li>
-                    <li><a href="#industries">Industries</a></li>
-                    <li><a href="./rfq.html">Quotes</a></li>
-                    <li><a href="#capabilities">Capabilities</a></li>
-                    <li><a href="#history">History</a></li>
-                    <li><a href="#quality">Quality</a></li>
-                    <li><a href="#gallery">Gallery</a></li>
-                    <li><a href="./jobs.html">Careers</a></li>
-                    <li><a href="./contact.html">Contact</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#blog">Blog</a></li>
-                    <li><a href="#testiominals">Testimonials</a></li>
-                    <li><a href="#equipment">Equipment</a></li>
-                  </ul>
-                </nav>
-              </div>
-            </div>
-          </div>
-        </nav>
-      </nav>
       <div class="mainContent">
         <section>
           <div class="card">
@@ -193,5 +193,6 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+    <script src="./index.js"></script>
   </body>
 </html>
