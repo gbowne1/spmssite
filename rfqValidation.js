@@ -5,8 +5,6 @@ const mobileEl = document.querySelector('#mobile');
 const websiteEl = document.querySelector('#website');
 const emailEl = document.querySelector('#email');
 const contactEl = document.querySelector('#contactPerson');
-const attachment = document.querySelector('#attachment');
-console.log('its alive')
 const form = document.querySelector('#form')
 
 const isRequired = value => value ===''?false:true;
@@ -14,6 +12,7 @@ const isEmailValid = (email) => {
     const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(email);
 };
+//check number in US format
 const isNumberValid = number =>{
     const re = /\(?([0-9]{3})\)?([ .-]?)([0-9]{3})\2([0-9]{4})/;
     return re.test(number);
@@ -166,7 +165,7 @@ isContanctValid;
 
 // submit to the server if the form is valid
 if (isFormValid) {
-console.log('DONE')
+alert('Message Send')
 }
 });
 
