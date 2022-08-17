@@ -2,6 +2,22 @@
 	// See https://go.microsoft.com/fwlink/?LinkId=827846
 	// for the documentation about the extensions.json format
 	"recommendations": [
-		
+		"ritwickdey.LiveServer",
+		"esbenp.prettier-vscode",
+		"ecmel.vscode-html-css",
+		"abusaidm.html-snippets",
+		"Zignd.html-css-class-completion",
+		"pranaygp.vscode-css-peek",
+		"dbaeumer.jshint",
+		"geyao.html-snippets",
+		"mohd-akram.vscode-html-format",
+		"negokaz.live-server-preview",
+		"ms-vscode.live-server",
+		"brapifra.phpserver",
+		"mkaufman.HTMLHint",
+		"qinjia.view-in-browser",
+		"ZainChen.json",
+		"sidthesloth.html5-boilerplate",
+		"tht13.html-preview-vscode"
 	]
 }

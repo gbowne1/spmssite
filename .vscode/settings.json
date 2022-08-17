@@ -1,9 +1,28 @@
 // Place your settings in this file to overwrite default and user settings.
 {
    "[html]": {
-    "editor.suggest.insertMode": "replace"
+    "editor.suggest.insertMode": "replace",
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
    },
    "[css]": {
     "editor.suggest.insertMode": "replace"
+   },
+   "[javascript]": {
+      "editor.maxTokenizationLineLength": 2500,
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+   },
+   "[json]": {
+      "editor.quickSuggestions": {
+         "strings": true
+      },
+      "editor.suggest.insertMode": "replace",
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+   },
+   "[jsonc]": {
+      "editor.quickSuggestions": {
+         "strings": true
+      },
+      "editor.suggest.insertMode": "replace",
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
    }
 }
