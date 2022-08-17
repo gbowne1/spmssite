@@ -1,0 +1,74 @@
+*{
+    font-family: 'Roboto';
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+}
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+.rfqForm{
+    display: flex;
+    width: 70%;
+    height: 80%;
+    justify-content: space-around;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 0.5rem;
+    padding: 0.5rem
+  }
+.fieldForm input{
+    /* margin-bottom: 0.5rem; */
+    display: block;
+    width: 80%;
+    box-sizing: border-box;
+}
+.fieldForm{
+    width: 100%;
+    margin-left: 2rem;
+}
+.rfqForm textarea{
+    /* margin: 0; */
+    display: block;
+    resize: none;
+    padding: 0;
+    width: 90%;
+    box-sizing: border-box;
+    height: 70%;
+}
+.inputs,.textArea{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+}
+.submitButton{
+    height: 4rem;
+    margin: 2rem;
+    font-size: 2rem;
+}
+.fieldForm label{
+    margin-top: 0;
+    margin-bottom: -1rem;
+    align-self: flex-start;
+}
+.error{
+    color: red;
+}
+.success{
+    color:green;
+}
