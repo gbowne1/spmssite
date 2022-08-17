@@ -8,11 +8,15 @@ body {
   font-family: "Roboto", serif, sans-serif;
   width: 100%;
   height: 100%;
-  overflow: hidden;
   top: 0;
   left: 0;
   z-index: 1;
   text-align: center;
+}
+.overall_wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 ul {
@@ -64,16 +68,13 @@ li a:hover {
 
 footer {
   display: inline-flex;
-  bottom: 0px;
   background-color: gray;
   color: black;
   clear: both;
-  position: fixed;
   height: 100px;
   font-family: "Roboto", sans-serif;
   padding: 20px;
   padding-top: 10px;
-  padding-bottom: 0px;
   width: 100%;
 }
 
@@ -138,7 +139,7 @@ iframe {
   color: black;
   font-size: 30px;
 }
-i{
+i {
   width: 20px;
   height: 20px;
 }
@@ -150,7 +151,7 @@ i{
   padding-bottom: 10px;
 }
 
-#footer-icon a{
+#footer-icon a {
   color: black;
 }
 
