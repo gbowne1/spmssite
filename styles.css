@@ -76,6 +76,29 @@ footer {
   width: 100%;
 }
 
+.fa-github {
+  color: #171515;
+}
+.fa-linkedin-in {
+  color: #0e76a8;
+}
+
+.fa-twitter{
+  color: #00acee;
+}
+
+.fa-pinterest{
+  color: #c8232c;
+}
+
+.fa-facebook {
+  color: #1877f2;
+}
+
+.svg-inline--fa :hover {
+  color: #fff;
+}
+
 section {
   display: flex;
   float: left;
@@ -233,4 +256,9 @@ footer ul , li{
     gap: 100px;
     padding: 0 20px;
   }
+}
+
+.imgLogo{
+  width: 30%;
+  height: 10%;
 }
