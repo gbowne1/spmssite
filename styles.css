@@ -27,6 +27,7 @@ body {
   max-width: 100%;
   position: relative;
   z-index: 2;
+  padding: 0;
 }
 .jumbotron {
   margin: 10px auto;
@@ -72,8 +73,6 @@ footer {
   clear: both;
   height: 100px;
   font-family: "Roboto", sans-serif;
-  padding: 20px;
-  padding-top: 10px;
   width: 100%;
 }
 
@@ -143,16 +142,65 @@ i {
 }
 
 /* footer */
-
+/* footer-top */
+.footer-top{
+  width: 100%;
+  display: inline-flex;
+  justify-content: space-between;
+  background-color: rgb(89, 44, 212);
+  color: white;
+}
+#icon-title{
+  padding: 10px 50px;
+  gap: 20px;
+}
 #footer-icon {
   align-items: center;
-  padding-bottom: 10px;
+  padding: 10px 50px;
+  gap: 20px;
+  display: flex;
 }
 
 #footer-icon a {
-  color: black;
+  color: white;
+  padding-left: 20px;
+}
+/* footer-middle */
+.footer-middle{
+  display: flex;
+  justify-content: space-evenly;
+  padding: 40px 0;
+  background-color: #1B2430;
+  color: white;
+  text-align: left;
+}
+.footer-title{
+  font-weight: 500;
+  font-size: 18px;
+  padding-bottom: 30px;
+}
+.contact-list, .link-list, .product-list, .company-list{
+  font-size: 13px;
+  text-align: left;
+}
+.company-product, .link-contact{
+  display: flex;
+  gap: 50px;
+  justify-content: space-evenly;
+}
+footer ul , li{
+  text-decoration: none;
+  list-style-type: none;
+  padding-bottom: 15px;
+  padding-left: 0;
 }
 
+.footer-bottom{
+  background-color: #0f151b;
+  color: white;
+  padding: 20px;
+  margin: 0;
+}
 
 /* Medium Screens */
 
@@ -181,6 +229,32 @@ i {
   .jumbotron {
     padding-top: 20px;
     padding-bottom: 20px;
+  }
+  /* footer */
+  .footer-top{
+    flex-direction: column;
+  }
+  #icon-title{
+    width: 100%;
+    text-align: left;
+    padding: 15px;
+  }
+  #footer-icon{
+    padding: 0 10px;
+    gap: 7px;
+  }
+  .footer-middle{
+    flex-direction: column;
+  }
+  .company-name,.useful-link{
+    width: 60%;
+  }
+  .company-product{
+    gap: 10px;
+  }
+  .link-contact{
+    gap: 100px;
+    padding: 0 20px;
   }
 }
 
