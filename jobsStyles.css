@@ -1,0 +1,11 @@
+* {
+  font-family: 'Roboto';
+}
+.textField, textarea {
+  border-radius: 6px;
+  border: 1px solid #333333;
+  background-color: #F6F6F6;
+}
+.textField {
+  min-height: 30px;
+}
