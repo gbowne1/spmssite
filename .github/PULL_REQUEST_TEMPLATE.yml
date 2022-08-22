@@ -1,0 +1,39 @@
+---
+name: Pull Request template
+description: Create a pull request to help us improve
+title: "[PULL REQUEST] <pull request details>"
+labels: [enhancement]
+assignees:
+  -
+body:
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: Briefly describe the change
+    validations:
+      required: true
+
+  - type: input
+    id: issue-link
+    attributes:
+      label: Issue link
+      description: What issue this PR is fixing?
+    validations:
+      required: false
+        
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Please confirm the following
+      options:
+        - label: I agree to follow this project's [README.md](https://github.com/gbowne1/spmssite/blob/main/README.md) and [CONTRIBUTION.md](https://github.com/gbowne1/spmssite/main/CONTRIBUTION.md).
+          required: true
+        - label: I have performed a self-review of my own code.
+          required: true
+        - label: I have tested my changes and they are ready to be merged.
+          required: true
+        - label: I have commented my code, particularly in hard-to-understand areas
+          required: false
+        - label: I have made corresponding changes to the documentation
+          required: false
