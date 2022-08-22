@@ -2,11 +2,11 @@
     font-family: 'Roboto';
 }
 body{
-    display: flex;
+    /* display: flex;
     align-items: center;
     justify-content: center;
     justify-items: center;
-    flex-direction: column;
+    flex-direction: column; */
     width: 100vw;
     height: 100vh;
     margin: 0;
@@ -39,6 +39,8 @@ main{
 .fieldForm{
     width: 100%;
     margin-left: 2rem;
+    display: flex;
+    flex-direction: column;
 }
 .rfqForm textarea{
     /* margin: 0; */
@@ -65,7 +67,7 @@ main{
 }
 .fieldForm label{
     margin-top: 0;
-    margin-bottom: -1rem;
+    margin-bottom: -0.2rem;
     align-self: flex-start;
 }
 .error{
@@ -80,7 +82,7 @@ main{
         width: 85%;
         height: 90%;
         flex-direction: column;
-        font-size: 0.9rem;
+        font-size: 0.7rem;
     }
     .inputs,.textArea{
         width: 100%;
