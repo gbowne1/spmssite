@@ -1,15 +1,47 @@
 * {
   font-family: 'Roboto';
 }
+body {
+  margin: auto;
+  max-width: 1200px;
+  min-width: 400px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
 .textField, textarea {
   border-radius: 6px;
   border: 1px solid #333333;
   background-color: #F6F6F6;
+  width: 100%;
 }
-.textField {
+.textField, button {
   min-height: 30px;
 }
-div {
+h1 {
+  font-size: 30px;
+}
+h2 {
+  font-size: 24px;
+}
+h3 {
+  font-size: 18px;
+}
+p, div {
+  max-width: 1000px;
+  text-align: justify;
   margin-top: 10px;
   margin-bottom: 10px;
+}
+button {
+  font-size: 18px;
+  border-radius: 10px;
+  border: 1px solid #333333;
+  min-width: 200px;
+}
+.uploadFile {
+  font-size: 16px;
+}
+.employment-box, .references-box, .school-box {
+  margin-bottom: 50px;
+  margin-top: 20px;
 }
