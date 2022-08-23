@@ -188,7 +188,7 @@ i {
   gap: 50px;
   justify-content: space-evenly;
 }
-footer ul , li{
+footer ul {
   text-decoration: none;
   list-style-type: none;
   padding-bottom: 15px;
