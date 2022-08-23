@@ -44,6 +44,14 @@
 	</style>
 	<header>
 		<div class="header">
+			<!--Start toggle light/dark mode-->
+			<nav class="navbar navbar-expand-sm navbar-light">
+				<div class="custom-control custom-switch">
+					<input type="checkbox" class="custom-control-input" id="selector">
+					<label class="custom-control-label" for="selector">Dark Mode</label>
+				</div>
+			</nav>
+			<!--End toggle light/dark mode-->
 			<div class="container">
 				<div class="jumbotron">
 					<h1>Seattle Precision Machine Shop</h1>
@@ -261,6 +269,19 @@
 			</div>
 		</div>
 	</footer>
+	<!--Start toggle light/dark mode-->
+	<script>
+		$(document).ready(function(){
+			$("#selector").change(function(){
+				$("body").toggleClass("bg-dark text-white")
+				$(".header").toggleClass("bg-dark text-white")
+				$(".hamburger_menu_active ").toggleClass("bg-dark text-white")
+				$(".custom-control-label text-dark").toggleClass("text-white")
+	
+			})
+		})
+	</script>
+	<!--End toggle light/dark mode-->
 </body>
 
 </html>

@@ -6,23 +6,36 @@
 }
 body {
   text-align: center;
-  background: orchid;
+  background: white;
 }
 .overall_wrapper {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
+
 .header {
   padding: 60px;
   text-align: center;
-  background: blue;
+  /* background: blue; */
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
   color: black;
   font-size: 30px;
+  /*toggle light/dark mode*/
+  position:relative;
 }
+
+/*Start toggle light/dark mode*/
+.navbar.navbar-expand-sm{
+  position: absolute;
+  z-index:10;
+  top:0;right:60px;
+  font-size: 20px;
+}
+/*End toggle light/dark mode*/
+
 .container {
   max-width: 100%;
   position: relative;
@@ -46,7 +59,7 @@ body {
   justify-content: space-between;
   list-style-type: none;
   text-align: left;
-  background-color: green;
+  background-color: white;
   padding: 10px;
 }
 .hamburger_menu_active > li > a {
