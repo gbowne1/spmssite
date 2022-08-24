@@ -65,9 +65,6 @@
                             if (theForm.ApplicantsCertificationAndAgreement[0].checked == false) {
                                 ErrorMessage = ErrorMessage + '\n* Applicant\'s Certification and Agreement';
                             }
-                            if (theForm.ApplicantsCertificationOfEmploymentEligibility[0].checked == false) {
-                                ErrorMessage = ErrorMessage + '\n* Applicant\'s Certification of Employment Eligibility';
-                            }
                             if (ErrorMessage != '') {
                                 alert('The following fields are required:' + ErrorMessage);
                             } else {
@@ -190,18 +187,6 @@
                                     value="0" /><br />
                                 <input type="hidden" name="GeneralBelow18" value="" />
                             </p>
-                            <p>
-                                Are you eligible to work in the United States?
-                                Yes<input type="radio" checked="checked" name="GeneralEmploy" value="1" />
-                                No<input type="radio" name="GeneralEmploy" value="0" />
-                                <input type="hidden" name="GeneralEmploy" value="" /><br />
-                                <span class="example">(either because you are a U.S. Citizen or have U.S. government
-                                    permission to do so)</span>
-                            </p>
-                            <p><strong>NOTE:</strong> If offered employment you will be required to provide
-                                documentation to verify employment eligibility. Failure to provide the requested
-                                documentation may result in a determination that the applicant is ineligible for
-                                employment in the United States.</p>
                             <p>
                                 Have you ever worked for us before?
                                 Yes<input type="radio" name="GeneralPreviousEmployment" value="1" />
@@ -957,25 +942,7 @@
                                 <input type="hidden" name="ApplicantsCertificationAndAgreement" value="" required />
                             </p>
                             <p>Resumes, letters of reference, etc. submitted with the application become property of
-                                this organization and will not be returned. The information you have
-                                provided on the application is
-                                subject to public disclosure under the Georgia Open Records Act.</p>
-                        </div>
-
-                        <div class="job-signatures">
-                            <h3>Applicant's Certification of Employment Eligibility</h3>
-
-                            <p>I certify that I am in compliance with O.C.G.A. 13-10-91 and that I am a
-                                citizen, legal permanent resident or a qualified alien or nonimmigrant and I am
-                                eligible
-                                to work in
-                                the United States.</p>
-                            <p>
-                                <input type="checkbox" name="ApplicantsCertificationOfEmploymentEligibility" required
-                                    value="1" />By checking this box, I acknowledge the above and agree to these
-                                terms.
-                                <input type="hidden" name="ApplicantsCertificationOfEmploymentEligibility" value="" required />
-                            </p>
+                                this organization and will not be returned.</p>
                         </div>
                         <div style="text-align:center;">
                             <p>Attach Resume to Email: <input class="uploadFile" type="file" name="AttachResume" /></p>
