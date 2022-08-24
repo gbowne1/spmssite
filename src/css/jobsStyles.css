@@ -14,6 +14,9 @@ body {
   background-color: #F6F6F6;
   width: 100%;
 }
+textarea {
+  height: 75px;
+}
 .textField, button {
   min-height: 30px;
 }

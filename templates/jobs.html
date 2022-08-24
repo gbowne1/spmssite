@@ -14,10 +14,6 @@
 </head>
 
 <body>
-    <!--header-->
-
-
-    <!--content-->
     <div class="content indent content-sidebar">
 
         <div class="container content-interior">
@@ -85,82 +81,96 @@
                     <h1>Application for Employment</h1>
                     <form name="frmApp" method="post" action="job-application.html" enctype="multipart/form-data">
                         <div>
-                            <input type="text" class="textField" name="DateOfApplication" maxlength="255"
-                                value="" /><br />
-                            <span class="example">Date</span>
+                            <label class="example" for="DateOfApplication">Date</label>
+                            <br />
+                            <input type="date" name="DateOfApplication" id="DateOfApplication" />
                         </div>
                         <div>
-                            <input type="text" class="textField" name="WorkPosition" maxlength="255"
-                                value="" /><br />
-                            <span class="example">Position Applied For</span>
+                            <label class="example" for="WorkPosition">Position Applied For</label>
+                            <br />
+                            <input type="text" class="textField" name="WorkPosition" id="WorkPosition" maxlength="255"
+                                value="" />
                         </div>
 
                         <h2>Personal Data:</h2>
                         <div class="job-box personal">
                             <div>
-                                <input type="text" class="textField" name="ApplicantFirstName" maxlength="255" required
-                                    value="" /><br />
-                                <span class="example">First Name</span>
+                                <label class="example" for="ApplicantFirstName">First Name</label>
+                                <br />
+                                <input type="text" class="textField" name="ApplicantFirstName" id="ApplicantFirstName" maxlength="255" required
+                                    value="" />
                             </div>
                             <div>
-                                <input type="text" class="textField" name="ApplicantMiddleName" maxlength="255"
-                                    value="" /><br />
-                                <span class="example">Middle Name</span>
+                                <label class="example" for="ApplicantMiddleName">Middle Name</label>
+                                <br />
+                                <input type="text" class="textField" name="ApplicantMiddleName" id="ApplicantMiddleName" maxlength="255"
+                                    value="" />
                             </div>
                             <div>
-                                <input type="text" class="textField" name="ApplicantLastName" maxlength="255" required
-                                    value="" /><br />
-                                <span class="example">Last Name</span>
+                                <label class="example" for="ApplicantLastName">Last Name</label>
+                                <br />
+                                <input type="text" class="textField" name="ApplicantLastName" id="ApplicantLastName" maxlength="255" required
+                                    value="" />
                             </div>
                             <div colspan="3">
+                                <label for="ApplicantStreet" class="example">Mailing Address</label>
+                                <br />
                                 <input type="text" class="textField" name="ApplicantStreet" maxlength="255" required
-                                    value="" /><br />
-                                <span class="example">Mailing Address</span>
+                                    value="" id="ApplicantStreet" />
                             </div>
                             <div>
+                                <label for="ApplicantCity" class="example">City</label>
+                                <br />
                                 <input type="text" class="textField" name="ApplicantCity" maxlength="255" required
-                                    value="" /><br />
-                                <span class="example">City</span>
+                                    value="" id="ApplicantCity" />
                             </div>
                             <div>
+                                <label for="ApplicantState" class="example">State</label>
+                                <br />
                                 <input type="text" class="textField" name="ApplicantState" maxlength="20" required
-                                    value="" /><br />
-                                <span class="example">State</span>
+                                    value="" id="ApplicantState" />
                             </div>
                             <div>
+                                <label for="ApplicantZip" class="example">Zip</label>
+                                <br />
                                 <input type="text" class="textField" name="ApplicantZip" maxlength="10" required
-                                    value="" /><br />
-                                <span class="example">Zip</span>
+                                    value="" id="ApplicantZip" />
                             </div>
                             <div>
+                                <label for="ApplicantEmailAddress" class="example">Email Address</label>
+                                <br />
                                 <input type="text" class="textField" name="ApplicantEmailAddress" maxlength="255" required
-                                    value="" /><br />
-                                <span class="example">Email Address</span>
+                                    value="" id="ApplicantEmailAddress" />
                             </div>
                             <div>
+                                <label for="ApplicantHomePhone" class="example">Home Phone</label>
+                                <br />
                                 <input type="text" class="textField" name="ApplicantHomePhone" maxlength="15"
-                                    value="" /><br />
-                                <span class="example">Home Phone</span>
+                                    value="" id="ApplicantHomePhone" />
                             </div>
                             <div>
+                                <label for="ApplicantWorkPhone" class="example">Work Phone</label>
+                                <br />
                                 <input type="text" class="textField" name="ApplicantWorkPhone" maxlength="15"
-                                    value="" /><br />
-                                <span class="example">Work Phone</span>
+                                    value="" id="ApplicantWorkPhone" />
                             </div>
                             <div>
+                                <label for="ApplicantCellPhone" class="example">Cell Phone</label>
+                                <br />
                                 <input type="text" class="textField" name="ApplicantCellPhone" maxlength="15"
-                                    value="" /><br />
-                                <span class="example">Cell Phone</span>
+                                    value="" id="ApplicantCellPhone" />
                             </div>
                             <div>
+                                <label for="WorkMinimumSalary" class="example">Minimum Salary Requirement</label>
+                                <br />
                                 <input type="text" class="textField" name="WorkMinimumSalary" maxlength="15"
-                                    value="" /><br />
-                                <span class="example">Minimum Salary Requirement</span>
+                                    value="" id="WorkMinimumSalary" />
                             </div>
                             <p>
-                                How did you hear about this opening?<br />
+                                <label for="ApplicantReferralSource">How did you hear about this opening?</label>
+                                <br />
                                 <textarea style="width:100%;height:75px;"
-                                name="ApplicantReferralSource"></textarea>
+                                name="ApplicantReferralSource" id="ApplicantReferralSource"></textarea>
                                 <br />
                                     <div>
                                         Which will you accept? (Check all that apply)<br />
@@ -302,14 +312,16 @@
                             <div>
                                 <h3>High School</h3>
                                 <div>
+                                    <label for="EducationHighSchool" class="example">Name</label>
+                                    <br />
                                     <input type="text" class="textField" name="EducationHighSchool" maxlength="255"
-                                        value="" /><br />
-                                    <span class="example">Name</span>
+                                        value="" id="EducationHighSchool"/>
                                 </div>
                                 <div>
+                                    <label for="EducationHighSchoolAddress" class="example">Address</label>
+                                    <br />
                                     <input type="text" class="textField" name="EducationHighSchoolAddress" maxlength="255"
-                                        value="" /><br />
-                                    <span class="example">Address</span>
+                                        value="" id="EducationHighSchoolAddress" />
                                 </div>
                                 <span class="example" style="text-align:center">
                                     (Name of the high school of state authority issuing the diploma or certificate)
@@ -345,24 +357,25 @@
                                 Schools/Colleges/Universities):</p>
                                 <div class="school-box">
                                     <div>
-                                        <input class="textField" type="text" name="EducationSchool1" maxlength="255"/>
+                                        <label for="EducationSchool1">Name of School</label>
                                         <br />
-                                        <span>Name of School</span>
+                                        <input class="textField" type="text" name="EducationSchool1" id="EducationSchool1" maxlength="255"/>
                                     </div>
                                     <div>
-                                        <input class="textField" type="text" name="EducationCityState1" maxlength="255"/>
+                                        <label for="EducationCityState1">City/State</label>
                                         <br />
-                                        <span>City/State</span>
+                                        <input class="textField" type="text" name="EducationCityState1" maxlength="255" id="EducationCityState1" />
                                     </div>
                                     <div>
-                                        <input class="textField" type="text" name="EducationYears1" maxlength="10"  />
+                                        <label for="EducationYears1">Number of Hours</label>
                                         <br />
-                                        <span>Number of Hours</span>
+                                        <input class="textField" type="text" name="EducationYears1" maxlength="10" id="EducationYears1"  />
                                     </div>
                                     <div>
-                                        <input class="textField" type="text" name="EducationDegreeDiploma1" maxlength="10"/>
+                                        <label for="EducationDegreeDiploma1">Degree Type</label>
                                         <br />
-                                        <span>Degree Type</span>
+                                        <input class="textField" type="text" name="EducationDegreeDiploma1" id="EducationDegreeDiploma1" maxlength="10"/>
+                                        <br />
                                     </div>
                                     <div>
                                         <span>Degree earned?</span>
@@ -374,24 +387,24 @@
                                 </div>
                                 <div class="school-box">
                                     <div>
-                                        <input class="textField" type="text" name="EducationSchool2" maxlength="255"/>
+                                        <label for="EducationSchool2">Name of School</label>
                                         <br />
-                                        <span>Name of School</span>
+                                        <input class="textField" type="text" name="EducationSchool2" id="EducationSchool2" maxlength="255"/>
                                     </div>
                                     <div>
-                                        <input class="textField" type="text" name="EducationCityState2" maxlength="255"/>
+                                        <label for="EducationCityState2">City/State</label>
                                         <br />
-                                        <span>City/State</span>
+                                        <input class="textField" type="text" name="EducationCityState2" id="EducationCityState2" maxlength="255"/>
                                     </div>
                                     <div>
-                                        <input class="textField" type="text" name="EducationYears2" maxlength="10" />
+                                        <label for="EducationYears2">Number of Hours</label>
                                         <br />
-                                        <span>Number of Hours</span>
+                                        <input class="textField" type="text" name="EducationYears2" id="EducationYears2" maxlength="10" />
                                     </div>
                                     <div>
-                                        <input class="textField" type="text" name="EducationDegreeDiploma2" maxlength="10"/>
+                                        <label for="EducationDegreeDiploma2">Degree Type</label>
                                         <br />
-                                        <span>Degree Type</span>
+                                        <input class="textField" type="text" name="EducationDegreeDiploma2" id="EducationDegreeDiploma2" maxlength="10"/>
                                     </div>
                                     <div>
                                         <span>Degree earned?</span>
@@ -403,24 +416,24 @@
                                 </div>
                                 <div class="school-box">
                                     <div>
-                                        <input type="text" class="textField" name="EducationSchool3" maxlength="255"/>
+                                        <label for="EducationSchool3">Name of School</label>
                                         <br />
-                                        <span>Name of School</span>
+                                        <input type="text" class="textField" name="EducationSchool3" id="EducationSchool3" maxlength="255"/>
                                     </div>
                                     <div>
-                                        <input type="text" class="textField" name="EducationCityState3" maxlength="255"/>
+                                        <label for="EducationCityState3">City/State</label>
                                         <br />
-                                        <span>City/State</span>
+                                        <input type="text" class="textField" name="EducationCityState3" id="EducationCityState3" maxlength="255"/>
                                     </div>
                                     <div>
-                                        <input type="text" class="textField" name="EducationYears3" maxlength="10" />
+                                        <label for="EducationYears3">Number of Hours</label>
                                         <br />
-                                        <span>Number of Hours</span>
+                                        <input type="text" class="textField" name="EducationYears3" id="EducationYears3" maxlength="10" />
                                     </div>
                                     <div>
-                                        <input type="text" class="textField" name="EducationDegreeDiploma3" maxlength="10"/>
+                                        <label for="EducationDegreeDiploma3">Degree Type</label>
                                         <br />
-                                        <span>Degree Type</span>
+                                        <input type="text" class="textField" name="EducationDegreeDiploma3" id="EducationDegreeDiploma3" maxlength="10"/>
                                     </div>
                                     <div>
                                         <span>Degree earned?</span>
@@ -444,111 +457,124 @@
 
                         <h2>References:</h2>
                         <div class="job-box references">
-                            <p>Give names, addresses, and telephone numbers of three (3) references that <span
+                            <p>Give names, addresses, and telephone numbers of three (3) references who <span
                                     style="text-decoration:underline;">ARE NOT</span> related to you and <span
                                     style="text-decoration:underline;">ARE NOT</span> previous employers.</p>
 
                             <div class="references-box">
-                                        <div colspan="2"><input type="text" class="textField" maxlength="255"
-                                                name="ReferencesName1" /><br /><span class="example">Name</span>
-                                        </div>
-                                        <div><input type="text" class="textField" maxlength="20"
-                                                name="ReferencesPhone1" /><br /><span class="example">Phone</span>
-                                        </div>
-
-                                        <div colspan="3"><input type="text" class="textField" maxlength="20"
-                                                name="ReferencesAddress1" /><br /><span class="example">Street
-                                                Address</span></div>
-                                        <div>
-                                            <input type="text" class="textField" maxlength="255"
-                                                name="ReferencesCity1" /><br /><span class="example">City</span>
-                                        </div>
-                                        <div>
-                                            <input type="text" class="textField" maxlength="20"
-                                                name="ReferencesState1" /><br /><span class="example">State</span>
-                                        </div>
-                                        <div>
-                                            <input type="text" class="textField" maxlength="10"
-                                                name="ReferencesZip1" /><br /><span class="example">Zip</span>
-                                        </div>
-                            </div>
-                            <div />
-
-                            <div class="references-box">
-                                <table cellpadding="0" cellspacing="0" width="100%">
-
-                                        <div colspan="2"><input type="text" class="textField" maxlength="255"
-                                                name="ReferencesName2" /><br /><span class="example">Name</span>
-                                        </div>
-                                        <div><input type="text" class="textField" maxlength="20"
-                                                name="ReferencesPhone2" /><br /><span class="example">Phone</span>
-                                        <div colspan="3"><input type="text" class="textField" maxlength="20"
-                                                name="ReferencesAddress2" /><br /><span class="example">Street
-                                                Address</span></div>
-                                        <div>
-                                            <input type="text" class="textField" maxlength="255"
-                                                name="ReferencesCity2" /><br /><span class="example">City</span>
-                                        </div>
-                                        <div>
-                                            <input type="text" class="textField" maxlength="20"
-                                                name="ReferencesState2" /><br /><span class="example">State</span>
-                                        </div>
-                                        <div>
-                                            <input type="text" class="textField" maxlength="10"
-                                                name="ReferencesZip2" /><br /><span class="example">Zip</span>
-                                        </div>
-                            </div>
-                            <div />
-
-                            <div class="references-box">
-                                <div colspan="2"><input type="text" class="textField" maxlength="255"
-                                        name="ReferencesName3" /><br /><span class="example">Name</span>
-                                </div>
-                                <div><input type="text" class="textField" maxlength="20"
-                                        name="ReferencesPhone3" /><br /><span class="example">Phone</span>
-                                </div>
-                                <div colspan="3"><input type="text" class="textField" maxlength="20"
-                                        name="ReferencesAddress3" /><br /><span class="example">Street
-                                        Address</span></div>
                                 <div>
+                                    <label for="ReferencesName1" class="example">Name</label>
+                                    <br />
                                     <input type="text" class="textField" maxlength="255"
-                                        name="ReferencesCity3" /><br /><span class="example">City</span>
+                                        name="ReferencesName1" id="ReferencesName1" />
                                 </div>
                                 <div>
+                                    <label for="ReferencesPhone1" class="example">Phone</label>
+                                    <br />
                                     <input type="text" class="textField" maxlength="20"
-                                        name="ReferencesState3" /><br /><span class="example">State</span>
+                                        name="ReferencesPhone1" id="ReferencesPhone1" />
                                 </div>
                                 <div>
-                                    <input type="text" class="textField" maxlength="10"
-                                        name="ReferencesZip3" /><br /><span class="example">Zip</span>
-                                </div>
-                            </div>
-                            <div />
-
-                            <div class="references-box">
-                                <div colspan="2"><input type="text" class="textField" maxlength="255"
-                                        name="ReferencesName4" /><br /><span class="example">Name</span>
-                                </div>
-                                <div><input type="text" class="textField" maxlength="20"
-                                        name="ReferencesPhone4" /><br /><span class="example">Phone</span>
-                                </div>
-                                <div colspan="3"><input type="text" class="textField" maxlength="20"
-                                        name="ReferencesAddress4" /><br /><span class="example">Street
-                                        Address</span></div>
-                                <div>
+                                    <label for="ReferencesAddress1" class="example">Street Address</label>
+                                    <br />
                                     <input type="text" class="textField" maxlength="255"
-                                        name="ReferencesCity4" /><br /><span class="example">City</span>
+                                        name="ReferencesAddress1" id="ReferencesAddress1" />
                                 </div>
                                 <div>
+                                    <label for="ReferencesCity1" class="example">City</label>
+                                    <br />
+                                    <input type="text" class="textField" maxlength="255"
+                                        name="ReferencesCity1" id="ReferencesCity1" />
+                                </div>
+                                <div>
+                                    <label for="ReferencesState1" class="example">State</label>
+                                    <br />
                                     <input type="text" class="textField" maxlength="20"
-                                        name="ReferencesState4" /><br /><span class="example">State</span>
+                                        name="ReferencesState1" id="ReferencesState1" />
                                 </div>
                                 <div>
+                                    <label for="ReferencesZip1" class="example">Zip</label>
+                                    <br />
                                     <input type="text" class="textField" maxlength="10"
-                                        name="ReferencesZip4" /><br /><span class="example">Zip</span>
+                                        name="ReferencesZip1" id="ReferencesZip1" />
                                 </div>
                             </div>
-
+                            <div class="references-box">
+                                <div>
+                                    <label for="ReferencesName2" class="example">Name</label>
+                                    <br />
+                                    <input type="text" class="textField" maxlength="255"
+                                        name="ReferencesName2" id="ReferencesName2" />
+                                </div>
+                                <div>
+                                    <label for="ReferencesPhone2" class="example">Phone</label>
+                                    <br />
+                                    <input type="text" class="textField" maxlength="20"
+                                        name="ReferencesPhone2" id="ReferencesPhone2" />
+                                </div>
+                                <div>
+                                    <label for="ReferencesAddress2" class="example">Street Address</label>
+                                    <br />
+                                    <input type="text" class="textField" maxlength="255"
+                                        name="ReferencesAddress2" id="ReferencesAddress2" />
+                                </div>
+                                <div>
+                                    <label for="ReferencesCity2" class="example">City</label>
+                                    <br />
+                                    <input type="text" class="textField" maxlength="255"
+                                        name="ReferencesCity2" id="ReferencesCity2" />
+                                </div>
+                                <div>
+                                    <label for="ReferencesState2" class="example">State</label>
+                                    <br />
+                                    <input type="text" class="textField" maxlength="20"
+                                        name="ReferencesState2" id="ReferencesState2" />
+                                </div>
+                                <div>
+                                    <label for="ReferencesZip2" class="example">Zip</label>
+                                    <br />
+                                    <input type="text" class="textField" maxlength="10"
+                                        name="ReferencesZip2" id="ReferencesZip2" />
+                                </div>
+                            </div>
+                            <div class="references-box">
+                                <div>
+                                    <label for="ReferencesName3" class="example">Name</label>
+                                    <br />
+                                    <input type="text" class="textField" maxlength="255"
+                                        name="ReferencesName3" id="ReferencesName3" />
+                                </div>
+                                <div>
+                                    <label for="ReferencesPhone3" class="example">Phone</label>
+                                    <br />
+                                    <input type="text" class="textField" maxlength="20"
+                                        name="ReferencesPhone3" id="ReferencesPhone3" />
+                                </div>
+                                <div>
+                                    <label for="ReferencesAddress3" class="example">Street Address</label>
+                                    <br />
+                                    <input type="text" class="textField" maxlength="255"
+                                        name="ReferencesAddress3" id="ReferencesAddress3" />
+                                </div>
+                                <div>
+                                    <label for="ReferencesCity3" class="example">City</label>
+                                    <br />
+                                    <input type="text" class="textField" maxlength="255"
+                                        name="ReferencesCity3" id="ReferencesCity3" />
+                                </div>
+                                <div>
+                                    <label for="ReferencesState3" class="example">State</label>
+                                    <br />
+                                    <input type="text" class="textField" maxlength="20"
+                                        name="ReferencesState3" id="ReferencesState3" />
+                                </div>
+                                <div>
+                                    <label for="ReferencesZip3" class="example">Zip</label>
+                                    <br />
+                                    <input type="text" class="textField" maxlength="10"
+                                        name="ReferencesZip3" id="ReferencesZip3" />
+                                </div>
+                            </div>
                         </div>
 
                         <h2>Employment History:</h2>
@@ -568,297 +594,342 @@
                             </p>
 
                             <div class="employment-box">
-                                <div width="66%" colspan="3">
+                                <div>
+                                    <label for="Employment1Name" class="example">Name of Organization or Firm</label>
+                                    <br />
                                     <input class="textField" type="text" maxlength="255"
-                                        name="Employment1Name" /><br />
-                                    <span class="example">Name of Organization or Firm</span>
+                                        name="Employment1Name" id="Employment1Name" />
                                 </div>
                                 <div>
+                                    <label for="Employment1Phone" class="example">Phone Number</label>
+                                    <br />
                                     <input class="textField" type="text" maxlength="20"
-                                        name="Employment1Phone" /><br />
-                                    <span class="example">Phone Number</span>
+                                        name="Employment1Phone" id="Employment1Phone" />
                                 </div>
-                                <div width="66%" colspan="3">
+                                <div>
+                                    <label for="Employment1Address" class="example">Street Address</label>
+                                    <br />
                                     <input class="textField" type="text" maxlength="255"
-                                        name="Employment1Address" /><br />
-                                    <span class="example">Street Address</span>
+                                        name="Employment1Address" id="Employment1Address" />
                                 </div>
                                 <div>
+                                    <label for="Employment1DateFrom" class="example">Employed from month/year</label>
+                                    <br />
                                     <input class="textField" type="text" maxlength="20"
-                                        name="Employment1DateFrom" /><br />
-                                    <span class="example">Employed from month/year</span><br />
+                                        name="Employment1DateFrom" id="Employment1DateFrom" />
                                 </div>
                                 <div>
+                                    <label for="Employment1DateTo" class="example">Employed to month/year</label>
+                                    <br />
+                                    <input class="textField" type="text" maxlength="20"
+                                        name="Employment1DateTo" id="Employment1DateTo" />
+                                </div>
+                                <div>
+                                    <label for="Employment1City" class="example">City</label>
+                                    <br />
                                     <input class="textField" type="text" maxlength="255"
-                                        name="Employment1City" /><br />
-                                    <span class="example">City</span>
+                                        name="Employment1City" id="Employment1City" />
                                 </div>
                                 <div>
+                                    <label id="Employment1State" class="example">State</label>
+                                    <br />
                                     <input class="textField" type="text" maxlength="20"
-                                        name="Employment1State" /><br />
-                                    <span class="example">State</span>
+                                        name="Employment1State" id="Employment1State" />
                                 </div>
                                 <div>
+                                    <label id="Employment1Zip" class="example">Zip</label>
+                                    <br />
                                     <input class="textField" type="text" maxlength="10"
-                                        name="Employment1Zip" /><br />
-                                    <span class="example">Zip</span>
-                                </div>
+                                        name="Employment1Zip" id="Employment1Zip" />
                                 </div>
                                 <div>
-                                    <input class="textField" type="text" maxlength="20"
-                                        name="Employment1DateTo" /><br />
-                                    <span class="example">Employed to month/year</span>
-                                </div>
-                                <div width="66%" colspan="3">
+                                    <label for="Employment1Super" class="example">Name of your supervisor</label>
+                                    <br />
                                     <input class="textField" type="text" maxlength="255"
-                                        name="Employment1Super" /><br />
-                                    <span class="example">Name of your supervisor</span>
+                                        name="Employment1Super" id="Employment1Super" />
                                 </div>
                                 <div>
+                                    <label for="Employment1SalaryStart" class="example">Pay at Start</label>
+                                    <br />
                                     <input class="textField" type="text" maxlength="20"
-                                        name="Employment1SalaryStart" /> <br />
-                                    <span class="example">Pay at Start</span>
+                                        name="Employment1SalaryStart" id="Employment1SalaryStart" />
                                 </div>
-                                <div width="66%" colspan="3">
+                                <div>
+                                    <label id="Employment1Title" class="example">Official job title</label>
+                                    <br />
                                     <input class="textField" type="text" maxlength="255"
-                                        name="Employment1Title" /><br />
-                                    <span class="example">Official job title</span>
+                                        name="Employment1Title" id="Employment1Title" />
                                 </div>
                                 <div>
+                                    <label for="Employment1SalaryFinal" class="example">Pay at End</label>
+                                    <br />
                                     <input class="textField" type="text" maxlength="20"
-                                        name="Employment1SalaryFinal" /><br />
-                                    <span class="example">Pay at End</span>
+                                        name="Employment1SalaryFinal" id="Employment1SalaryFinal" />
                                 </div>
-                                <div colspan="4">
-                                    <input class="textField" type="text" maxlength="250"
-                                        name="Employment1ReasonLeft" /><br />
-                                    <span class="example">Reason for Leaving</span>
+                                <div>
+                                    <label for="Employment1ReasonLeft" class="example">Reason for Leaving</label>
+                                    <br />
+                                    <textarea name="Employment1ReasonLeft" id="Employment1ReasonLeft"></textarea>
                                 </div>
-                                <p>
-                                    Describe Your Specific Job Duties:<br />
-                                    <textarea style="width:100%;height:75px;" name="Employment1Summary"></textarea>
-                                </p>
+                                <div>
+                                    <label for="Employment1Summary">Describe Your Specific Job Duties</label>
+                                    <br />
+                                    <textarea name="Employment1Summary" id="Employment1Summary"></textarea>
+                                </div>
                             </div>
-                            <div />
                             <div class="employment-box">
-                                <div width="66%" colspan="3">
+                                <div>
+                                    <label for="Employment2Name" class="example">Name of Organization or Firm</label>
+                                    <br />
                                     <input class="textField" type="text" maxlength="255"
-                                        name="Employment2Name" /><br />
-                                    <span class="example">Name of Organization or Firm</span>
+                                        name="Employment2Name" id="Employment2Name" />
                                 </div>
                                 <div>
+                                    <label for="Employment2Phone" class="example">Phone Number</label>
+                                    <br />
                                     <input class="textField" type="text" maxlength="20"
-                                        name="Employment2Phone" /><br />
-                                    <span class="example">Phone Number</span>
+                                        name="Employment2Phone" id="Employment2Phone" />
                                 </div>
-                                <div width="66%" colspan="3">
+                                <div>
+                                    <label for="Employment2Address" class="example">Street Address</label>
+                                    <br />
                                     <input class="textField" type="text" maxlength="255"
-                                        name="Employment2Address" /><br />
-                                    <span class="example">Street Address</span>
+                                        name="Employment2Address" id="Employment2Address" />
                                 </div>
                                 <div>
+                                    <label for="Employment2DateFrom" class="example">Employed from month/year</label>
+                                    <br />
                                     <input class="textField" type="text" maxlength="20"
-                                        name="Employment2DateFrom" /><br />
-                                    <span class="example">Employed from month/year</span><br />
+                                        name="Employment2DateFrom" id="Employment2DateFrom" />
                                 </div>
                                 <div>
+                                    <label for="Employment2DateTo" class="example">Employed to month/year</label>
+                                    <br />
+                                    <input class="textField" type="text" maxlength="20"
+                                        name="Employment2DateTo" id="Employment2DateTo" />
+                                </div>
+                                <div>
+                                    <label for="Employment2City" class="example">City</label>
+                                    <br />
                                     <input class="textField" type="text" maxlength="255"
-                                        name="Employment2City" /><br />
-                                    <span class="example">City</span>
+                                        name="Employment2City" id="Employment2City" />
                                 </div>
                                 <div>
+                                    <label id="Employment2State" class="example">State</label>
+                                    <br />
                                     <input class="textField" type="text" maxlength="20"
-                                        name="Employment2State" /><br />
-                                    <span class="example">State</span>
+                                        name="Employment2State" id="Employment2State" />
                                 </div>
                                 <div>
+                                    <label id="Employment2Zip" class="example">Zip</label>
+                                    <br />
                                     <input class="textField" type="text" maxlength="10"
-                                        name="Employment2Zip" /><br />
-                                    <span class="example">Zip</span>
-                                </div>
+                                        name="Employment2Zip" id="Employment2Zip" />
                                 </div>
                                 <div>
-                                    <input class="textField" type="text" maxlength="20"
-                                        name="Employment2DateTo" /><br />
-                                    <span class="example">Employed to month/year</span>
-                                </div>
-                                <div width="66%" colspan="3">
+                                    <label for="Employment2Super" class="example">Name of your supervisor</label>
+                                    <br />
                                     <input class="textField" type="text" maxlength="255"
-                                        name="Employment2Super" /><br />
-                                    <span class="example">Name of your supervisor</span>
+                                        name="Employment2Super" id="Employment2Super" />
                                 </div>
                                 <div>
+                                    <label for="Employment2SalaryStart" class="example">Pay at Start</label>
+                                    <br />
                                     <input class="textField" type="text" maxlength="20"
-                                        name="Employment2SalaryStart" /> <br />
-                                    <span class="example">Pay at Start</span>
+                                        name="Employment2SalaryStart" id="Employment2SalaryStart" />
                                 </div>
-                                <div width="66%" colspan="3">
+                                <div>
+                                    <label id="Employment2Title" class="example">Official job title</label>
+                                    <br />
                                     <input class="textField" type="text" maxlength="255"
-                                        name="Employment2Title" /><br />
-                                    <span class="example">Official job title</span>
+                                        name="Employment2Title" id="Employment2Title" />
                                 </div>
                                 <div>
+                                    <label for="Employment2SalaryFinal" class="example">Pay at End</label>
+                                    <br />
                                     <input class="textField" type="text" maxlength="20"
-                                        name="Employment2SalaryFinal" /><br />
-                                    <span class="example">Pay at End</span>
+                                        name="Employment2SalaryFinal" id="Employment2SalaryFinal" />
                                 </div>
-                                <div colspan="4">
-                                    <input class="textField" type="text" maxlength="250"
-                                        name="Employment2ReasonLeft" /><br />
-                                    <span class="example">Reason for Leaving</span>
+                                <div>
+                                    <label for="Employment2ReasonLeft" class="example">Reason for Leaving</label>
+                                    <br />
+                                    <textarea name="Employment2ReasonLeft" id="Employment2ReasonLeft"></textarea>
                                 </div>
-                                <p>
-                                    Describe Your Specific Job Duties:<br />
-                                    <textarea style="width:100%;height:75px;" name="Employment2Summary"></textarea>
-                                </p>
+                                <div>
+                                    <label for="Employment2Summary">Describe Your Specific Job Duties</label>
+                                    <br />
+                                    <textarea name="Employment2Summary" id="Employment2Summary"></textarea>
+                                </div>
                             </div>
-                            <div />
                             <div class="employment-box">
-                                <div width="66%" colspan="3">
+                                <div>
+                                    <label for="Employment3Name" class="example">Name of Organization or Firm</label>
+                                    <br />
                                     <input class="textField" type="text" maxlength="255"
-                                        name="Employment3Name" /><br />
-                                    <span class="example">Name of Organization or Firm</span>
+                                        name="Employment3Name" id="Employment3Name" />
                                 </div>
                                 <div>
+                                    <label for="Employment3Phone" class="example">Phone Number</label>
+                                    <br />
                                     <input class="textField" type="text" maxlength="20"
-                                        name="Employment3Phone" /><br />
-                                    <span class="example">Phone Number</span>
+                                        name="Employment3Phone" id="Employment3Phone" />
                                 </div>
-                                <div width="66%" colspan="3">
+                                <div>
+                                    <label for="Employment3Address" class="example">Street Address</label>
+                                    <br />
                                     <input class="textField" type="text" maxlength="255"
-                                        name="Employment3Address" /><br />
-                                    <span class="example">Street Address</span>
+                                        name="Employment3Address" id="Employment3Address" />
                                 </div>
                                 <div>
+                                    <label for="Employment3DateFrom" class="example">Employed from month/year</label>
+                                    <br />
                                     <input class="textField" type="text" maxlength="20"
-                                        name="Employment3DateFrom" /><br />
-                                    <span class="example">Employed from month/year</span><br />
+                                        name="Employment3DateFrom" id="Employment3DateFrom" />
                                 </div>
                                 <div>
+                                    <label for="Employment3DateTo" class="example">Employed to month/year</label>
+                                    <br />
+                                    <input class="textField" type="text" maxlength="20"
+                                        name="Employment3DateTo" id="Employment3DateTo" />
+                                </div>
+                                <div>
+                                    <label for="Employment3City" class="example">City</label>
+                                    <br />
                                     <input class="textField" type="text" maxlength="255"
-                                        name="Employment3City" /><br />
-                                    <span class="example">City</span>
+                                        name="Employment3City" id="Employment3City" />
                                 </div>
                                 <div>
+                                    <label id="Employment3State" class="example">State</label>
+                                    <br />
                                     <input class="textField" type="text" maxlength="20"
-                                        name="Employment3State" /><br />
-                                    <span class="example">State</span>
+                                        name="Employment3State" id="Employment3State" />
                                 </div>
                                 <div>
+                                    <label id="Employment3Zip" class="example">Zip</label>
+                                    <br />
                                     <input class="textField" type="text" maxlength="10"
-                                        name="Employment3Zip" /><br />
-                                    <span class="example">Zip</span>
-                                </div>
+                                        name="Employment3Zip" id="Employment3Zip" />
                                 </div>
                                 <div>
-                                    <input class="textField" type="text" maxlength="20"
-                                        name="Employment3DateTo" /><br />
-                                    <span class="example">Employed to month/year</span>
-                                </div>
-                                <div width="66%" colspan="3">
+                                    <label for="Employment3Super" class="example">Name of your supervisor</label>
+                                    <br />
                                     <input class="textField" type="text" maxlength="255"
-                                        name="Employment3Super" /><br />
-                                    <span class="example">Name of your supervisor</span>
+                                        name="Employment3Super" id="Employment3Super" />
                                 </div>
                                 <div>
+                                    <label for="Employment3SalaryStart" class="example">Pay at Start</label>
+                                    <br />
                                     <input class="textField" type="text" maxlength="20"
-                                        name="Employment3SalaryStart" /> <br />
-                                    <span class="example">Pay at Start</span>
+                                        name="Employment3SalaryStart" id="Employment3SalaryStart" />
                                 </div>
-                                <div width="66%" colspan="3">
+                                <div>
+                                    <label id="Employment3Title" class="example">Official job title</label>
+                                    <br />
                                     <input class="textField" type="text" maxlength="255"
-                                        name="Employment3Title" /><br />
-                                    <span class="example">Official job title</span>
+                                        name="Employment3Title" id="Employment3Title" />
                                 </div>
                                 <div>
+                                    <label for="Employment3SalaryFinal" class="example">Pay at End</label>
+                                    <br />
                                     <input class="textField" type="text" maxlength="20"
-                                        name="Employment3SalaryFinal" /><br />
-                                    <span class="example">Pay at End</span>
+                                        name="Employment3SalaryFinal" id="Employment3SalaryFinal" />
                                 </div>
-                                <div colspan="4">
-                                    <input class="textField" type="text" maxlength="250"
-                                        name="Employment3ReasonLeft" /><br />
-                                    <span class="example">Reason for Leaving</span>
+                                <div>
+                                    <label for="Employment3ReasonLeft" class="example">Reason for Leaving</label>
+                                    <br />
+                                    <textarea name="Employment3ReasonLeft" id="Employment3ReasonLeft"></textarea>
                                 </div>
-                                <p>
-                                    Describe Your Specific Job Duties:<br />
-                                    <textarea style="width:100%;height:75px;" name="Employment3Summary"></textarea>
-                                </p>
+                                <div>
+                                    <label for="Employment3Summary">Describe Your Specific Job Duties</label>
+                                    <br />
+                                    <textarea name="Employment3Summary" id="Employment3Summary"></textarea>
+                                </div>
                             </div>
-                            <div />
                             <div class="employment-box">
-                                <div width="66%" colspan="3">
+                                <div>
+                                    <label for="Employment4Name" class="example">Name of Organization or Firm</label>
+                                    <br />
                                     <input class="textField" type="text" maxlength="255"
-                                        name="Employment4Name" /><br />
-                                    <span class="example">Name of Organization or Firm</span>
+                                        name="Employment4Name" id="Employment4Name" />
                                 </div>
                                 <div>
+                                    <label for="Employment4Phone" class="example">Phone Number</label>
+                                    <br />
                                     <input class="textField" type="text" maxlength="20"
-                                        name="Employment4Phone" /><br />
-                                    <span class="example">Phone Number</span>
+                                        name="Employment4Phone" id="Employment4Phone" />
                                 </div>
-                                <div width="66%" colspan="3">
+                                <div>
+                                    <label for="Employment4Address" class="example">Street Address</label>
+                                    <br />
                                     <input class="textField" type="text" maxlength="255"
-                                        name="Employment4Address" /><br />
-                                    <span class="example">Street Address</span>
+                                        name="Employment4Address" id="Employment4Address" />
                                 </div>
                                 <div>
+                                    <label for="Employment4DateFrom" class="example">Employed from month/year</label>
+                                    <br />
                                     <input class="textField" type="text" maxlength="20"
-                                        name="Employment4DateFrom" /><br />
-                                    <span class="example">Employed from month/year</span><br />
+                                        name="Employment4DateFrom" id="Employment4DateFrom" />
                                 </div>
                                 <div>
+                                    <label for="Employment4DateTo" class="example">Employed to month/year</label>
+                                    <br />
+                                    <input class="textField" type="text" maxlength="20"
+                                        name="Employment4DateTo" id="Employment4DateTo" />
+                                </div>
+                                <div>
+                                    <label for="Employment4City" class="example">City</label>
+                                    <br />
                                     <input class="textField" type="text" maxlength="255"
-                                        name="Employment4City" /><br />
-                                    <span class="example">City</span>
+                                        name="Employment4City" id="Employment4City" />
                                 </div>
                                 <div>
+                                    <label id="Employment4State" class="example">State</label>
+                                    <br />
                                     <input class="textField" type="text" maxlength="20"
-                                        name="Employment4State" /><br />
-                                    <span class="example">State</span>
+                                        name="Employment4State" id="Employment4State" />
                                 </div>
                                 <div>
+                                    <label id="Employment4Zip" class="example">Zip</label>
+                                    <br />
                                     <input class="textField" type="text" maxlength="10"
-                                        name="Employment4Zip" /><br />
-                                    <span class="example">Zip</span>
-                                </div>
+                                        name="Employment4Zip" id="Employment4Zip" />
                                 </div>
                                 <div>
-                                    <input class="textField" type="text" maxlength="20"
-                                        name="Employment4DateTo" /><br />
-                                    <span class="example">Employed to month/year</span>
-                                </div>
-                                <div width="66%" colspan="3">
+                                    <label for="Employment4Super" class="example">Name of your supervisor</label>
+                                    <br />
                                     <input class="textField" type="text" maxlength="255"
-                                        name="Employment4Super" /><br />
-                                    <span class="example">Name of your supervisor</span>
+                                        name="Employment4Super" id="Employment4Super" />
                                 </div>
                                 <div>
+                                    <label for="Employment4SalaryStart" class="example">Pay at Start</label>
+                                    <br />
                                     <input class="textField" type="text" maxlength="20"
-                                        name="Employment4SalaryStart" /> <br />
-                                    <span class="example">Pay at Start</span>
+                                        name="Employment4SalaryStart" id="Employment4SalaryStart" />
                                 </div>
-                                <div width="66%" colspan="3">
+                                <div>
+                                    <label id="Employment4Title" class="example">Official job title</label>
+                                    <br />
                                     <input class="textField" type="text" maxlength="255"
-                                        name="Employment4Title" /><br />
-                                    <span class="example">Official job title</span>
+                                        name="Employment4Title" id="Employment4Title" />
                                 </div>
                                 <div>
+                                    <label for="Employment4SalaryFinal" class="example">Pay at End</label>
+                                    <br />
                                     <input class="textField" type="text" maxlength="20"
-                                        name="Employment4SalaryFinal" /><br />
-                                    <span class="example">Pay at End</span>
+                                        name="Employment4SalaryFinal" id="Employment4SalaryFinal" />
                                 </div>
-                                <div colspan="4">
-                                    <input class="textField" type="text" maxlength="250"
-                                        name="Employment4ReasonLeft" /><br />
-                                    <span class="example">Reason for Leaving</span>
+                                <div>
+                                    <label for="Employment4ReasonLeft" class="example">Reason for Leaving</label>
+                                    <br />
+                                    <textarea name="Employment4ReasonLeft" id="Employment4ReasonLeft"></textarea>
                                 </div>
-                                <p>
-                                    Describe Your Specific Job Duties:<br />
-                                    <textarea style="width:100%;height:75px;" name="Employment4Summary"></textarea>
-                                </p>
+                                <div>
+                                    <label for="Employment4Summary">Describe Your Specific Job Duties</label>
+                                    <br />
+                                    <textarea name="Employment4Summary" id="Employment4Summary"></textarea>
+                                </div>
                             </div>
-                            <div />
+                            
                             <p>
                                 Please use this space for additional information pertinent to your education,
                                 training
@@ -1120,18 +1191,6 @@
                 items: 4,
                 autoplay: true
             });
-            /*
-                $('ul.bx-partners').bxSlider({
-                    slideMargin:20,
-                    pager:false,
-                    minSlides:1,
-                    maxSlides:12,
-                    moveSlides:1,
-                    slideWidth:100,
-                    auto:true,
-                    useCSS:false
-                });
-            */
         });
     </script>
 </body>
