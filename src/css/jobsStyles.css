@@ -20,6 +20,10 @@ textarea {
 .textField, button {
   min-height: 30px;
 }
+.textField {
+  font-size: 16px;
+  padding-left: 10px;
+}
 h1 {
   font-size: 30px;
 }
@@ -53,4 +57,10 @@ button {
 }
 #applicationResponseText {
   margin-bottom: 30px;
+}
+a, a:visited {
+  color: darkblue;
+}
+.dateInput {
+  font-size: 16px;
 }
