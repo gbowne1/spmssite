@@ -64,3 +64,6 @@ a, a:visited {
 .dateInput {
   font-size: 16px;
 }
+.emphasizedText {
+  font-weight: bold;
+}
