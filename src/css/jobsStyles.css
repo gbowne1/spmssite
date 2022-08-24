@@ -48,3 +48,9 @@ button {
   margin-bottom: 50px;
   margin-top: 20px;
 }
+.center {
+  text-align: center;
+}
+#applicationResponseText {
+  margin-bottom: 30px;
+}
