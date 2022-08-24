@@ -43,9 +43,9 @@
                                 theForm.ApplicantCity.style.backgroundColor = '#ffc';
                                 ErrorMessage = ErrorMessage + '\n* Applicant City';
                             }
-                            if (isBlank(theForm.ApplicantState.value)) {
-                                theForm.ApplicantState.style.backgroundColor = '#ffc';
-                                ErrorMessage = ErrorMessage + '\n* Applicant State';
+                            if (isBlank(theForm.ApplicantCountry.value)) {
+                                theForm.ApplicantCountry.style.backgroundColor = '#ffc';
+                                ErrorMessage = ErrorMessage + '\n* Applicant Country';
                             }
                             if (isBlank(theForm.ApplicantZip.value)) {
                                 theForm.ApplicantZip.style.backgroundColor = '#ffc';
@@ -89,7 +89,7 @@
                         <h2>Personal Data:</h2>
                         <div class="job-box personal">
                             <div>
-                                <label class="example" for="ApplicantFirstName">First Name</label>
+                                <label class="example" for="ApplicantFirstName">First Name (required)</label>
                                 <br />
                                 <input type="text" class="textField" name="ApplicantFirstName" id="ApplicantFirstName" maxlength="255" required
                                     value="" />
@@ -101,19 +101,19 @@
                                     value="" />
                             </div>
                             <div>
-                                <label class="example" for="ApplicantLastName">Last Name</label>
+                                <label class="example" for="ApplicantLastName">Last Name (required)</label>
                                 <br />
                                 <input type="text" class="textField" name="ApplicantLastName" id="ApplicantLastName" maxlength="255" required
                                     value="" />
                             </div>
                             <div colspan="3">
-                                <label for="ApplicantStreet" class="example">Mailing Address</label>
+                                <label for="ApplicantStreet" class="example">Mailing Address (required)</label>
                                 <br />
                                 <input type="text" class="textField" name="ApplicantStreet" maxlength="255" required
                                     value="" id="ApplicantStreet" />
                             </div>
                             <div>
-                                <label for="ApplicantCity" class="example">City</label>
+                                <label for="ApplicantCity" class="example">City (required)</label>
                                 <br />
                                 <input type="text" class="textField" name="ApplicantCity" maxlength="255" required
                                     value="" id="ApplicantCity" />
@@ -121,17 +121,23 @@
                             <div>
                                 <label for="ApplicantState" class="example">State</label>
                                 <br />
-                                <input type="text" class="textField" name="ApplicantState" maxlength="20" required
+                                <input type="text" class="textField" name="ApplicantState" maxlength="255"
                                     value="" id="ApplicantState" />
                             </div>
                             <div>
-                                <label for="ApplicantZip" class="example">Zip</label>
+                                <label for="ApplicantCountry" class="example">Country (required)</label>
+                                <br />
+                                <input type="text" class="textField" name="ApplicantCountry" maxlength="255" required
+                                    value="" id="ApplicantCountry" />
+                            </div>
+                            <div>
+                                <label for="ApplicantZip" class="example">Zip (required)</label>
                                 <br />
                                 <input type="text" class="textField" name="ApplicantZip" maxlength="10" required
                                     value="" id="ApplicantZip" />
                             </div>
                             <div>
-                                <label for="ApplicantEmailAddress" class="example">Email Address</label>
+                                <label for="ApplicantEmailAddress" class="example">Email Address (required)</label>
                                 <br />
                                 <input type="text" class="textField" name="ApplicantEmailAddress" maxlength="255" required
                                     value="" id="ApplicantEmailAddress" />
