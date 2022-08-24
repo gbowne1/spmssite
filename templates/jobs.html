@@ -62,9 +62,6 @@
                             if (theForm.AuthorizationToReleaseInformation[0].checked == false) {
                                 ErrorMessage = ErrorMessage + '\n* Authorization to Release Information';
                             }
-                            if (theForm.AlcoholAndControlledSubstanceTesting[0].checked == false) {
-                                ErrorMessage = ErrorMessage + '\n* Alcohol and Controlled Substance Testing';
-                            }
                             if (theForm.ApplicantsCertificationAndAgreement[0].checked == false) {
                                 ErrorMessage = ErrorMessage + '\n* Applicant\'s Certification and Agreement';
                             }
@@ -236,74 +233,6 @@
                             </p>
                             <p>
                                 State: <input class="textField" type="text" name="GeneralDriversLicense" maxlength="20" />
-                            </p>
-                            <p>
-                                Have you received any traffic violations in the past 5 years?
-                                Yes<input type="radio" name="GeneralDriversGood" value="1" />
-                                No<input checked="checked" type="radio" name="GeneralDriversGood" value="0" />
-                                <input type="hidden" name="GeneralDriversGood" value="" />
-                                <br />
-                                If yes, list type of offense and dates:<br />
-                                <textarea style="width:100%;height:75px;" name="GeneralDriversGoodExplain"></textarea>
-                            </p>
-                        </div>
-
-                        <h2>Criminal History Information:</h2>
-                        <div class="job-box criminal">
-
-                            <p>Have you (since the age of 18) ever been convicted of or plead guilty or no contest
-                                to a
-                                misdemeanor? (For example: DUI, Bad Checks, etc)
-                                Yes<input type="radio" name="GeneralConvictionMisdemeanor" value="1" />
-                                No<input checked="checked" type="radio" name="GeneralConvictionMisdemeanor" value="0" />
-                                <input type="hidden" name="GeneralConvictionMisdemeanor" value="" />
-                                (Omit non-moving traffic violations/parking tickets and any offense which was
-                                finally
-                                adjudicated in a Juvenile Court or under a Youth Offender Law)
-                            </p>
-                            <p>
-                                If YES describe the circumstances. (Date, Place, Charges, Disposition).<br />
-                                <textarea style="width:100%;height:75px;"
-                                    name="GeneralConvictionMisdemeanorExplain"></textarea>
-                            </p>
-                            <p>Have you (since the age of 18) ever been convicted of or plead guilty or no contest
-                                to a
-                                felony?
-                                Yes<input type="radio" name="GeneralConvictionFelony" value="1" />
-                                No<input checked="checked" type="radio" name="GeneralConvictionFelony" value="0" />
-                                <input type="hidden" name="GeneralConvictionFelony" value="" />
-                            </p>
-                            <p>
-                                If Yes, describe the circumstances: (Date, Place, Charges, Disposition)<br />
-                                <textarea style="width:100%;height:75px;"
-                                    name="GeneralConvictionFelonyExplain"></textarea>
-                            </p>
-                            <p><strong>NOTE:</strong> Applicants convicted of a criminal offense involving the
-                                manufacture, distribution,
-                                trafficking, or sale of a controlled substance, dangerous drugs or marijuana, or
-                                convicted of any
-                                felony involving a violent crime such as assault with a deadly weapon, aggravated
-                                assault or murder
-                                are ineligible to be employed with Seattle Precision Machine Shop. Such applicants
-                                will
-                                automatically be
-                                rejected. Applicants convicted of any other felony shall be considered on a case by
-                                case
-                                basis. An
-                                applicant convicted of a felony or misdemeanor who has received a pardon from the
-                                appropriate
-                                State Pardons and Parole Board shall be eligible for employment with Seattle
-                                Precision
-                                Machine Shop.</p>
-                            <p>
-                                Have you ever been suspended, demoted, dismissed or asked to resign from any
-                                job?<br />
-                                Yes<input type="radio" name="GeneralConvictionFired" value="1" />
-                                No<input checked="checked" type="radio" name="GeneralConvictionFired" value="0" />
-                                <input type="hidden" name="GeneralConvictionFired" value="" />
-                                If Yes, explain in detail<br />
-                                <textarea style="width:100%;height:75px;"
-                                    name="GeneralConvictionFiredExplain"></textarea>
                             </p>
                         </div>
 
@@ -1010,27 +939,6 @@
                                 employer.
                             </p>
                             <input type="hidden" name="AuthorizationToReleaseInformation" value="" />
-                        </div>
-
-                        <div class="job-signatures">
-                            <h3>Alcohol and Controlled Substance Testing</h3>
-
-                            <p>As a condition of employment with Seattle Precision Machine Shop, you may be required
-                                to
-                                submit to an
-                                alcohol and controlled substance test. Employees who test positive for illegal drugs
-                                and/or alcohol
-                                will be terminated. Employees must report any conviction under a criminal drug
-                                statute
-                                for such
-                                violations. A report of the conviction must be made within five (5) days after the
-                                conviction.</p>
-                            <p>
-                                <input type="checkbox" name="AlcoholAndControlledSubstanceTesting" value="1" required />By
-                                checking this box, I acknowledge the above and consent to such an examination and
-                                test.
-                                <input type="hidden" name="AlcoholAndControlledSubstanceTesting" value="" required />
-                            </p>
                         </div>
 
                         <div class="job-signatures">
