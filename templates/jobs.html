@@ -5,19 +5,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Application for Employment</title>
+    <link rel="stylesheet" href="../src/css/jobsStyles.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"
+        rel="stylesheet"
+    />
 </head>
 
 <body>
-    <!--header-->
-
-
-    <!--content-->
     <div class="content indent content-sidebar">
-
         <div class="container content-interior">
             <div class="row">
-                <article class="col-sm-9">
+                <article class="col-sm-9 jobApplication">
 
                     <script type="text/javascript">
                         function CheckValues() {
@@ -42,9 +42,9 @@
                                 theForm.ApplicantCity.style.backgroundColor = '#ffc';
                                 ErrorMessage = ErrorMessage + '\n* Applicant City';
                             }
-                            if (isBlank(theForm.ApplicantState.value)) {
-                                theForm.ApplicantState.style.backgroundColor = '#ffc';
-                                ErrorMessage = ErrorMessage + '\n* Applicant State';
+                            if (isBlank(theForm.ApplicantCountry.value)) {
+                                theForm.ApplicantCountry.style.backgroundColor = '#ffc';
+                                ErrorMessage = ErrorMessage + '\n* Applicant Country';
                             }
                             if (isBlank(theForm.ApplicantZip.value)) {
                                 theForm.ApplicantZip.style.backgroundColor = '#ffc';
@@ -61,14 +61,8 @@
                             if (theForm.AuthorizationToReleaseInformation[0].checked == false) {
                                 ErrorMessage = ErrorMessage + '\n* Authorization to Release Information';
                             }
-                            if (theForm.AlcoholAndControlledSubstanceTesting[0].checked == false) {
-                                ErrorMessage = ErrorMessage + '\n* Alcohol and Controlled Substance Testing';
-                            }
                             if (theForm.ApplicantsCertificationAndAgreement[0].checked == false) {
                                 ErrorMessage = ErrorMessage + '\n* Applicant\'s Certification and Agreement';
-                            }
-                            if (theForm.ApplicantsCertificationOfEmploymentEligibility[0].checked == false) {
-                                ErrorMessage = ErrorMessage + '\n* Applicant\'s Certification of Employment Eligibility';
                             }
                             if (ErrorMessage != '') {
                                 alert('The following fields are required:' + ErrorMessage);
@@ -77,142 +71,120 @@
                             }
                         }
                     </script>
-                    <style type="text/css" media="all">
-                        h2.job-h2,
-                        h3.job-h3 {
-                            font-weight: normal;
-                            color: #033649;
-                            font-family: Georgia, "Times New Roman", Times, serif;
-                            font-style: italic;
-                            margin-bottom: 5px;
-                        }
-
-                        .job-box,
-                        .employment-box,
-                        .references-box,
-                        .job-signatures {
-                            border-bottom: 2px solid #999;
-                            padding-bottom: 10px;
-                            margin-bottom: 20px;
-                        }
-
-                        .job-box td {
-                            vertical-align: top;
-                            padding: 2px;
-                        }
-
-                        td.right {
-                            text-align: right;
-                        }
-                    </style>
                     <h1>Application for Employment</h1>
-                    <form name="frmApp" method="post" action="job-application.html" enctype="multipart/form-data">
+                    <form name="frmApp" method="post" action="applicationReceived.html" enctype="multipart/form-data">
+                        <div>
+                            <label class="example" for="DateOfApplication">Date</label>
+                            <br />
+                            <input type="date" class="dateInput" name="DateOfApplication" id="DateOfApplication" />
+                        </div>
+                        <div>
+                            <label class="example" for="WorkPosition">Position Applied For</label>
+                            <br />
+                            <input type="text" class="textField" name="WorkPosition" id="WorkPosition" maxlength="255"
+                                value="" />
+                        </div>
 
-                        <table cellpadding="0" cellspacing="0" width="100%" style="margin:10px 0;">
-                            <tr>
-                                <td>
-                                    Date: <input type="text" readonly name="DateOfApplication" style="width:275px;"
-                                        value="Wednesday, November 11, 2020" />
-                                </td>
-                                <td class="right">
-
-                                    Position Applied for:
-
-                                    <input type="text" name="WorkPosition" style="width:275px;" />
-
-                                </td>
-                            </tr>
-                        </table>
-
-                        <h2>Personal Data:</h2>
+                        <h2>Personal Data</h2>
                         <div class="job-box personal">
-                            <table cellpadding="0" cellspacing="0" width="100%">
-                                <tr>
-                                    <td>
-                                        <input type="text" name="ApplicantFirstName" style="width:100%;" maxlength="50"
-                                            value="" /><br />
-                                        <span class="example">First Name</span>
-                                    </td>
-                                    <td>
-                                        <input type="text" name="ApplicantMiddleName" style="width:100%;" maxlength="50"
-                                            value="" /><br />
-                                        <span class="example">Middle Name</span>
-                                    </td>
-                                    <td>
-                                        <input type="text" name="ApplicantLastName" style="width:100%;" maxlength="50"
-                                            value="" /><br />
-                                        <span class="example">Last Name</span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td colspan="3">
-                                        <input type="text" name="ApplicantStreet" style="width:100%;" maxlength="50"
-                                            value="" /><br />
-                                        <span class="example">Mailing Address</span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <input type="text" name="ApplicantCity" style="width:100%;" maxlength="50"
-                                            value="" /><br />
-                                        <span class="example">City</span>
-                                    </td>
-                                    <td>
-                                        <input type="text" name="ApplicantState" style="width:100%;" maxlength="20"
-                                            value="" /><br />
-                                        <span class="example">State</span>
-                                    </td>
-                                    <td>
-                                        <input type="text" name="ApplicantZip" style="width:100%;" maxlength="10"
-                                            value="" /><br />
-                                        <span class="example">Zip</span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td colspan="3">
-                                        <input type="text" name="ApplicantEmailAddress" maxlength="50"
-                                            style="width:100%;" value="" /><br />
-                                        <span class="example">Email Address</span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <input type="text" name="ApplicantHomePhone" style="width:100%;" maxlength="15"
-                                            value="" /><br />
-                                        <span class="example">Home Phone</span>
-                                    </td>
-                                    <td>
-                                        <input type="text" name="ApplicantWorkPhone" style="width:100%;" maxlength="15"
-                                            value="" /><br />
-                                        <span class="example">Work Phone</span>
-                                    </td>
-                                    <td>
-                                        <input type="text" name="ApplicantCellPhone" style="width:100%;" maxlength="15"
-                                            value="" /><br />
-                                        <span class="example">Cell Phone</span>
-                                    </td>
-                                </tr>
-                            </table>
+                            <div>
+                                <label class="example" for="ApplicantFirstName">First Name (required)</label>
+                                <br />
+                                <input type="text" class="textField" name="ApplicantFirstName" id="ApplicantFirstName" maxlength="255" required
+                                    value="" />
+                            </div>
+                            <div>
+                                <label class="example" for="ApplicantMiddleName">Middle Name</label>
+                                <br />
+                                <input type="text" class="textField" name="ApplicantMiddleName" id="ApplicantMiddleName" maxlength="255"
+                                    value="" />
+                            </div>
+                            <div>
+                                <label class="example" for="ApplicantLastName">Last Name (required)</label>
+                                <br />
+                                <input type="text" class="textField" name="ApplicantLastName" id="ApplicantLastName" maxlength="255" required
+                                    value="" />
+                            </div>
+                            <div colspan="3">
+                                <label for="ApplicantStreet" class="example">Mailing Address (required)</label>
+                                <br />
+                                <input type="text" class="textField" name="ApplicantStreet" maxlength="255" required
+                                    value="" id="ApplicantStreet" />
+                            </div>
+                            <div>
+                                <label for="ApplicantCity" class="example">City (required)</label>
+                                <br />
+                                <input type="text" class="textField" name="ApplicantCity" maxlength="255" required
+                                    value="" id="ApplicantCity" />
+                            </div>
+                            <div>
+                                <label for="ApplicantState" class="example">State</label>
+                                <br />
+                                <input type="text" class="textField" name="ApplicantState" maxlength="255"
+                                    value="" id="ApplicantState" />
+                            </div>
+                            <div>
+                                <label for="ApplicantCountry" class="example">Country (required)</label>
+                                <br />
+                                <input type="text" class="textField" name="ApplicantCountry" maxlength="255" required
+                                    value="" id="ApplicantCountry" />
+                            </div>
+                            <div>
+                                <label for="ApplicantZip" class="example">Zip (required)</label>
+                                <br />
+                                <input type="text" class="textField" name="ApplicantZip" maxlength="10" required
+                                    value="" id="ApplicantZip" />
+                            </div>
+                            <div>
+                                <label for="ApplicantEmailAddress" class="example">Email Address (required)</label>
+                                <br />
+                                <input type="text" class="textField" name="ApplicantEmailAddress" maxlength="255" required
+                                    value="" id="ApplicantEmailAddress" />
+                            </div>
+                            <div>
+                                <label for="ApplicantHomePhone" class="example">Home Phone</label>
+                                <br />
+                                <input type="text" class="textField" name="ApplicantHomePhone" maxlength="15"
+                                    value="" id="ApplicantHomePhone" />
+                            </div>
+                            <div>
+                                <label for="ApplicantWorkPhone" class="example">Work Phone</label>
+                                <br />
+                                <input type="text" class="textField" name="ApplicantWorkPhone" maxlength="15"
+                                    value="" id="ApplicantWorkPhone" />
+                            </div>
+                            <div>
+                                <label for="ApplicantCellPhone" class="example">Cell Phone</label>
+                                <br />
+                                <input type="text" class="textField" name="ApplicantCellPhone" maxlength="15"
+                                    value="" id="ApplicantCellPhone" />
+                            </div>
+                            <div>
+                                <label for="WorkMinimumSalary" class="example">Minimum Salary Requirement</label>
+                                <br />
+                                <input type="text" class="textField" name="WorkMinimumSalary" maxlength="15"
+                                    value="" id="WorkMinimumSalary" />
+                            </div>
                             <p>
-                                How did you hear about this opening? <input type="text" name="ApplicantReferralSource"
-                                    value="" /><br />
-                                Salary Requirement: <input type="text" name="WorkMinimumSalary" value="" />
-                                <p />
-                            <table cellpadding="0" cellspacing="0" width="100%">
-                                <tr>
-                                    <td>
-                                        Which will you accept: <br />
-                                        <span class="example">*Check all that apply)</span>
-                                    </td>
-                                    <td>
-                                        Full Time? <input type="checkbox" name="WorkDesired" value="Full Time" />
-                                        Part Time? <input type="checkbox" name="WorkDesired" value="Part Time" />
-                                        Seasonal? <input type="checkbox" name="WorkDesired" value="Seasonal" />
-                                        Shift work? <input type="checkbox" name="WorkDesired" value="Shift Work" />
+                                <label for="ApplicantReferralSource">How did you hear about this opening?</label>
+                                <br />
+                                <textarea
+                                name="ApplicantReferralSource" id="ApplicantReferralSource"></textarea>
+                                <br />
+                                    <div>
+                                        Which will you accept? (Check all that apply)<br />
+                                    </div>
+                                    <div>
+                                        Full Time <input type="checkbox" name="WorkDesired" value="Full Time" />
+                                        <br />
+                                        Part Time <input type="checkbox" name="WorkDesired" value="Part Time" />
+                                        <br />
+                                        Seasonal <input type="checkbox" name="WorkDesired" value="Seasonal" />
+                                        <br />
+                                        Shift work <input type="checkbox" name="WorkDesired" value="Shift Work" />
+                                        <br />
                                         <input type="hidden" name="WorkDesired" value="" />
-                                    </td>
-                                </tr>
-                            </table>
+                                    </div>
 
                             <p>
                                 Are you over 18 years old? Yes<input type="radio" checked="checked"
@@ -221,132 +193,54 @@
                                 <input type="hidden" name="GeneralBelow18" value="" />
                             </p>
                             <p>
-                                Are you eligible to work in the United States?
-                                Yes<input type="radio" checked="checked" name="GeneralEmploy" value="1" />
-                                No<input type="radio" name="GeneralEmploy" value="0" />
-                                <input type="hidden" name="GeneralEmploy" value="" /><br />
-                                <span class="example">(either because you are a U.S. Citizen or have U.S. government
-                                    permission to do so)</span>
-                            </p>
-                            <p><strong>NOTE:</strong> If offered employment you will be required to provide
-                                documentation to verify employment eligibility. Failure to provide the requested
-                                documentation may result in a determination that the applicant is ineligible for
-                                employment in the United States.</p>
-                            <p>
                                 Have you ever worked for us before?
                                 Yes<input type="radio" name="GeneralPreviousEmployment" value="1" />
                                 No<input type="radio" checked="checked" name="GeneralPreviousEmployment" value="0" />
                                 <input type="hidden" name="GeneralPreviousEmployment" value="" />
                                 If yes, When &amp; Where?<br />
-                                <textarea style="width:100%;height:75px;"
+                                <textarea
                                     name="GeneralPreviousEmploymentWhere"></textarea>
                             </p>
                             <p>
-                                Give name, relationship and department of any relatives employed by Seattle
-                                Precision
-                                Machine Shop:<br />
-                                <textarea style="width:100%;height:75px;"
+                                Give the, name, relationship and department of any relatives employed by this organization.<br />
+                                <textarea
                                     name="GeneralRelativesEmployedExplain"></textarea>
                             </p>
                         </div>
 
-                        <h2>Driver's History Information:</h2>
+                        <h2>Driver's History Information</h2>
                         <div class="job-box driver">
                             <p>
-                                Do you have a valid Driver's License:
-                                Yes<input type="radio" checked="checked" name="GeneralDrivers" value="1" />
-                                No<input type="radio" name="GeneralDrivers" value="0" />
+                                Do you have a valid Driver's License?<br />
+                                Yes<input type="radio" checked="checked" name="GeneralDrivers" value="1" /><br />
+                                No<input type="radio" name="GeneralDrivers" value="0" /><br />
                                 <input type="hidden" name="GeneralDrivers" value="" />
                             </p>
                             <p>
-                                Class: <input type="text" name="GeneralDriversClass" maxlength="50" value="" />
+                                Class <input class="textField" type="text" name="GeneralDriversClass" maxlength="255" value="" />
                             </p>
                             <p>
-                                State: <input type="text" name="GeneralDriversLicense" maxlength="20" />
-                            </p>
-                            <p>
-                                Have you received any traffic violations in the past 5 years?
-                                Yes<input type="radio" name="GeneralDriversGood" value="1" />
-                                No<input checked="checked" type="radio" name="GeneralDriversGood" value="0" />
-                                <input type="hidden" name="GeneralDriversGood" value="" />
-                                <br />
-                                If yes, list type of offense and dates:<br />
-                                <textarea style="width:100%;height:75px;" name="GeneralDriversGoodExplain"></textarea>
+                                State <input class="textField" type="text" name="GeneralDriversLicense" maxlength="20" />
                             </p>
                         </div>
 
-                        <h2>Criminal History Information:</h2>
-                        <div class="job-box criminal">
-
-                            <p>Have you (since the age of 18) ever been convicted of or plead guilty or no contest
-                                to a
-                                misdemeanor? (For example: DUI, Bad Checks, etc)
-                                Yes<input type="radio" name="GeneralConvictionMisdemeanor" value="1" />
-                                No<input checked="checked" type="radio" name="GeneralConvictionMisdemeanor" value="0" />
-                                <input type="hidden" name="GeneralConvictionMisdemeanor" value="" />
-                                (Omit non-moving traffic violations/parking tickets and any offense which was
-                                finally
-                                adjudicated in a Juvenile Court or under a Youth Offender Law)
-                            </p>
-                            <p>
-                                If YES describe the circumstances. (Date, Place, Charges, Disposition).<br />
-                                <textarea style="width:100%;height:75px;"
-                                    name="GeneralConvictionMisdemeanorExplain"></textarea>
-                            </p>
-                            <p>Have you (since the age of 18) ever been convicted of or plead guilty or no contest
-                                to a
-                                felony?
-                                Yes<input type="radio" name="GeneralConvictionFelony" value="1" />
-                                No<input checked="checked" type="radio" name="GeneralConvictionFelony" value="0" />
-                                <input type="hidden" name="GeneralConvictionFelony" value="" />
-                            </p>
-                            <p>
-                                If Yes, describe the circumstances: (Date, Place, Charges, Disposition)<br />
-                                <textarea style="width:100%;height:75px;"
-                                    name="GeneralConvictionFelonyExplain"></textarea>
-                            </p>
-                            <p><strong>NOTE:</strong> Applicants convicted of a criminal offense involving the
-                                manufacture, distribution,
-                                trafficking, or sale of a controlled substance, dangerous drugs or marijuana, or
-                                convicted of any
-                                felony involving a violent crime such as assault with a deadly weapon, aggravated
-                                assault or murder
-                                are ineligible to be employed with Seattle Precision Machine Shop. Such applicants
-                                will
-                                automatically be
-                                rejected. Applicants convicted of any other felony shall be considered on a case by
-                                case
-                                basis. An
-                                applicant convicted of a felony or misdemeanor who has received a pardon from the
-                                appropriate
-                                State Pardons and Parole Board shall be eligible for employment with Seattle
-                                Precision
-                                Machine Shop.</p>
-                            <p>
-                                Have you ever been suspended, demoted, dismissed or asked to resign from any
-                                job?<br />
-                                Yes<input type="radio" name="GeneralConvictionFired" value="1" />
-                                No<input checked="checked" type="radio" name="GeneralConvictionFired" value="0" />
-                                <input type="hidden" name="GeneralConvictionFired" value="" />
-                                If Yes, explain in detail<br />
-                                <textarea style="width:100%;height:75px;"
-                                    name="GeneralConvictionFiredExplain"></textarea>
-                            </p>
-                        </div>
-
-                        <h2>Education:</h2>
+                        <h2>Education</h2>
                         <div class="job-box education">
-
-                            <h3>High School</h3>
-                            <p>
-                                Name <input type="text" name="EducationHighSchool" value=""
-                                    style="width:300px;" /><br />
-                                Address <input type="text" name="EducationHighSchoolAddress" value=""
-                                    style="width:300px;" /><br />
-                                <span class="example" style="text-align:center">
-                                    (Name of the high school of state authority issuing the diploma or certificate)
-                                </span>
-                            </p>
+                            <div>
+                                <h3>High School</h3>
+                                <div>
+                                    <label for="EducationHighSchool" class="example">Name</label>
+                                    <br />
+                                    <input type="text" class="textField" name="EducationHighSchool" maxlength="255"
+                                        value="" id="EducationHighSchool"/>
+                                </div>
+                                <div>
+                                    <label for="EducationHighSchoolAddress" class="example">Address</label>
+                                    <br />
+                                    <input type="text" class="textField" name="EducationHighSchoolAddress" maxlength="255"
+                                        value="" id="EducationHighSchoolAddress" />
+                                </div>
+                            </div>
 
                             <p>
                                 Check highest grade completed:
@@ -373,89 +267,95 @@
 
                             <h3>Colleges/Universities</h3>
                             <p>Please complete the following for post-secondary education (Technical
-                                Schools/Colleges/Universities):</p>
-                            <table cellpadding="0" cellspacing="0" width="100%">
-                                <tr>
-                                    <td>Name of School</td>
-                                    <td>City/State</td>
-                                    <td>No. of Hours</td>
-                                    <td>Degree Type</td>
-                                    <td>Earned</td>
-                                </tr>
-
-                                <tr>
-                                    <td align="center">
-                                        <input type="text" name="EducationSchool1" maxlength="50"
-                                            style="width:160px;" />
-                                    </td>
-                                    <td align="center">
-                                        <input type="text" name="EducationCityState1" maxlength="50"
-                                            style="width:160px;" />
-                                    </td>
-                                    <td align="center">
-                                        <input type="text" name="EducationYears1" maxlength="10" style="width:100px;" />
-                                    </td>
-                                    <td align="center">
-                                        <input type="text" name="EducationDegreeDiploma1" maxlength="10"
-                                            style="width:100px;" />
-                                    </td>
-                                    <td align="center">
+                                Schools/Colleges/Universities)</p>
+                                <div class="school-box">
+                                    <div>
+                                        <label for="EducationSchool1">Name of School</label>
+                                        <br />
+                                        <input class="textField" type="text" name="EducationSchool1" id="EducationSchool1" maxlength="255"/>
+                                    </div>
+                                    <div>
+                                        <label for="EducationCityState1">City/State</label>
+                                        <br />
+                                        <input class="textField" type="text" name="EducationCityState1" maxlength="255" id="EducationCityState1" />
+                                    </div>
+                                    <div>
+                                        <label for="EducationYears1">Number of Hours</label>
+                                        <br />
+                                        <input class="textField" type="text" name="EducationYears1" maxlength="10" id="EducationYears1"  />
+                                    </div>
+                                    <div>
+                                        <label for="EducationDegreeDiploma1">Degree Type</label>
+                                        <br />
+                                        <input class="textField" type="text" name="EducationDegreeDiploma1" id="EducationDegreeDiploma1" maxlength="10"/>
+                                        <br />
+                                    </div>
+                                    <div>
+                                        <span>Degree earned?</span>
                                         Yes<input type="radio" name="EducationDegreeEarned1" value="1" />
                                         No<input type="radio" checked="checked" name="EducationDegreeEarned1"
                                             value="0" />
                                         <input type="hidden" name="EducationDegreeEarned1" value="" />
-                                    </td>
-                                </tr>
-
-                                <tr>
-                                    <td align="center">
-                                        <input type="text" name="EducationSchool2" maxlength="50"
-                                            style="width:160px;" />
-                                    </td>
-                                    <td align="center">
-                                        <input type="text" name="EducationCityState2" maxlength="50"
-                                            style="width:160px;" />
-                                    </td>
-                                    <td align="center">
-                                        <input type="text" name="EducationYears2" maxlength="10" style="width:100px;" />
-                                    </td>
-                                    <td align="center">
-                                        <input type="text" name="EducationDegreeDiploma2" maxlength="10"
-                                            style="width:100px;" />
-                                    </td>
-                                    <td align="center">
+                                    </div>
+                                </div>
+                                <div class="school-box">
+                                    <div>
+                                        <label for="EducationSchool2">Name of School</label>
+                                        <br />
+                                        <input class="textField" type="text" name="EducationSchool2" id="EducationSchool2" maxlength="255"/>
+                                    </div>
+                                    <div>
+                                        <label for="EducationCityState2">City/State</label>
+                                        <br />
+                                        <input class="textField" type="text" name="EducationCityState2" id="EducationCityState2" maxlength="255"/>
+                                    </div>
+                                    <div>
+                                        <label for="EducationYears2">Number of Hours</label>
+                                        <br />
+                                        <input class="textField" type="text" name="EducationYears2" id="EducationYears2" maxlength="10" />
+                                    </div>
+                                    <div>
+                                        <label for="EducationDegreeDiploma2">Degree Type</label>
+                                        <br />
+                                        <input class="textField" type="text" name="EducationDegreeDiploma2" id="EducationDegreeDiploma2" maxlength="10"/>
+                                    </div>
+                                    <div>
+                                        <span>Degree earned?</span>
                                         Yes<input type="radio" name="EducationDegreeEarned2" value="1" />
                                         No<input type="radio" checked="checked" name="EducationDegreeEarned2"
                                             value="0" />
                                         <input type="hidden" name="EducationDegreeEarned2" value="" />
-                                    </td>
-                                </tr>
-
-                                <tr>
-                                    <td align="center">
-                                        <input type="text" name="EducationSchool3" maxlength="50"
-                                            style="width:160px;" />
-                                    </td>
-                                    <td align="center">
-                                        <input type="text" name="EducationCityState3" maxlength="50"
-                                            style="width:160px;" />
-                                    </td>
-                                    <td align="center">
-                                        <input type="text" name="EducationYears3" maxlength="10" style="width:100px;" />
-                                    </td>
-                                    <td align="center">
-                                        <input type="text" name="EducationDegreeDiploma3" maxlength="10"
-                                            style="width:100px;" />
-                                    </td>
-                                    <td align="center">
+                                    </div>
+                                </div>
+                                <div class="school-box">
+                                    <div>
+                                        <label for="EducationSchool3">Name of School</label>
+                                        <br />
+                                        <input type="text" class="textField" name="EducationSchool3" id="EducationSchool3" maxlength="255"/>
+                                    </div>
+                                    <div>
+                                        <label for="EducationCityState3">City/State</label>
+                                        <br />
+                                        <input type="text" class="textField" name="EducationCityState3" id="EducationCityState3" maxlength="255"/>
+                                    </div>
+                                    <div>
+                                        <label for="EducationYears3">Number of Hours</label>
+                                        <br />
+                                        <input type="text" class="textField" name="EducationYears3" id="EducationYears3" maxlength="10" />
+                                    </div>
+                                    <div>
+                                        <label for="EducationDegreeDiploma3">Degree Type</label>
+                                        <br />
+                                        <input type="text" class="textField" name="EducationDegreeDiploma3" id="EducationDegreeDiploma3" maxlength="10"/>
+                                    </div>
+                                    <div>
+                                        <span>Degree earned?</span>
                                         Yes<input type="radio" name="EducationDegreeEarned3" value="1" />
                                         No<input type="radio" checked="checked" name="EducationDegreeEarned3"
                                             value="0" />
                                         <input type="hidden" name="EducationDegreeEarned3" value="" />
-                                    </td>
-                                </tr>
-
-                            </table>
+                                    </div>
+                                </div>
 
                             <h3>Skills/Training</h3>
                             <p>Describe specialized training, qualifications, apprenticeship, skills and
@@ -465,146 +365,132 @@
                                 foreign language skills, typing skills, and business equipment or machine operating
                                 skills which
                                 may relate to the position for which you are applying.</p>
-                            <textarea style="width:100%;height:75px;" name="SkillsQualifications"></textarea>
+                            <textarea name="SkillsQualifications"></textarea>
                         </div>
 
-                        <h2>References:</h2>
+                        <h2>References</h2>
                         <div class="job-box references">
-                            <p>Give names, addresses, and telephone numbers of three (3) references that <span
-                                    style="text-decoration:underline;">ARE NOT</span> related to you and <span
-                                    style="text-decoration:underline;">ARE NOT</span> previous employers.</p>
+                            <p>Give names, addresses, and telephone numbers of three (3) references who <span
+                                    class="emphasizedText">ARE NOT</span> related to you and <span
+                                    class="emphasizedText">ARE NOT</span> previous employers.</p>
 
                             <div class="references-box">
-                                <table cellpadding="0" cellspacing="0" width="100%">
-                                    <tr>
-                                        <td colspan="2"><input type="text" style="width:100%;" maxlength="50"
-                                                name="ReferencesName1" /><br /><span class="example">Name</span>
-                                        </td>
-                                        <td><input type="text" style="width:100%;" maxlength="20"
-                                                name="ReferencesPhone1" /><br /><span class="example">Phone</span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td colspan="3"><input type="text" style="width:100%;" maxlength="20"
-                                                name="ReferencesAddress1" /><br /><span class="example">Street
-                                                Address</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <input type="text" style="width:100%;" maxlength="50"
-                                                name="ReferencesCity1" /><br /><span class="example">City</span>
-                                        </td>
-                                        <td>
-                                            <input type="text" style="width:100%;" maxlength="20"
-                                                name="ReferencesState1" /><br /><span class="example">State</span>
-                                        </td>
-                                        <td>
-                                            <input type="text" style="width:100%;" maxlength="10"
-                                                name="ReferencesZip1" /><br /><span class="example">Zip</span>
-                                        </td>
-                                    </tr>
-                                </table>
+                                <div>
+                                    <label for="ReferencesName1" class="example">Name</label>
+                                    <br />
+                                    <input type="text" class="textField" maxlength="255"
+                                        name="ReferencesName1" id="ReferencesName1" />
+                                </div>
+                                <div>
+                                    <label for="ReferencesPhone1" class="example">Phone</label>
+                                    <br />
+                                    <input type="text" class="textField" maxlength="20"
+                                        name="ReferencesPhone1" id="ReferencesPhone1" />
+                                </div>
+                                <div>
+                                    <label for="ReferencesAddress1" class="example">Street Address</label>
+                                    <br />
+                                    <input type="text" class="textField" maxlength="255"
+                                        name="ReferencesAddress1" id="ReferencesAddress1" />
+                                </div>
+                                <div>
+                                    <label for="ReferencesCity1" class="example">City</label>
+                                    <br />
+                                    <input type="text" class="textField" maxlength="255"
+                                        name="ReferencesCity1" id="ReferencesCity1" />
+                                </div>
+                                <div>
+                                    <label for="ReferencesState1" class="example">State</label>
+                                    <br />
+                                    <input type="text" class="textField" maxlength="20"
+                                        name="ReferencesState1" id="ReferencesState1" />
+                                </div>
+                                <div>
+                                    <label for="ReferencesZip1" class="example">Zip</label>
+                                    <br />
+                                    <input type="text" class="textField" maxlength="10"
+                                        name="ReferencesZip1" id="ReferencesZip1" />
+                                </div>
                             </div>
-
                             <div class="references-box">
-                                <table cellpadding="0" cellspacing="0" width="100%">
-                                    <tr>
-                                        <td colspan="2"><input type="text" style="width:100%;" maxlength="50"
-                                                name="ReferencesName2" /><br /><span class="example">Name</span>
-                                        </td>
-                                        <td><input type="text" style="width:100%;" maxlength="20"
-                                                name="ReferencesPhone2" /><br /><span class="example">Phone</span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td colspan="3"><input type="text" style="width:100%;" maxlength="20"
-                                                name="ReferencesAddress2" /><br /><span class="example">Street
-                                                Address</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <input type="text" style="width:100%;" maxlength="50"
-                                                name="ReferencesCity2" /><br /><span class="example">City</span>
-                                        </td>
-                                        <td>
-                                            <input type="text" style="width:100%;" maxlength="20"
-                                                name="ReferencesState2" /><br /><span class="example">State</span>
-                                        </td>
-                                        <td>
-                                            <input type="text" style="width:100%;" maxlength="10"
-                                                name="ReferencesZip2" /><br /><span class="example">Zip</span>
-                                        </td>
-                                    </tr>
-                                </table>
+                                <div>
+                                    <label for="ReferencesName2" class="example">Name</label>
+                                    <br />
+                                    <input type="text" class="textField" maxlength="255"
+                                        name="ReferencesName2" id="ReferencesName2" />
+                                </div>
+                                <div>
+                                    <label for="ReferencesPhone2" class="example">Phone</label>
+                                    <br />
+                                    <input type="text" class="textField" maxlength="20"
+                                        name="ReferencesPhone2" id="ReferencesPhone2" />
+                                </div>
+                                <div>
+                                    <label for="ReferencesAddress2" class="example">Street Address</label>
+                                    <br />
+                                    <input type="text" class="textField" maxlength="255"
+                                        name="ReferencesAddress2" id="ReferencesAddress2" />
+                                </div>
+                                <div>
+                                    <label for="ReferencesCity2" class="example">City</label>
+                                    <br />
+                                    <input type="text" class="textField" maxlength="255"
+                                        name="ReferencesCity2" id="ReferencesCity2" />
+                                </div>
+                                <div>
+                                    <label for="ReferencesState2" class="example">State</label>
+                                    <br />
+                                    <input type="text" class="textField" maxlength="20"
+                                        name="ReferencesState2" id="ReferencesState2" />
+                                </div>
+                                <div>
+                                    <label for="ReferencesZip2" class="example">Zip</label>
+                                    <br />
+                                    <input type="text" class="textField" maxlength="10"
+                                        name="ReferencesZip2" id="ReferencesZip2" />
+                                </div>
                             </div>
-
                             <div class="references-box">
-                                <table cellpadding="0" cellspacing="0" width="100%">
-                                    <tr>
-                                        <td colspan="2"><input type="text" style="width:100%;" maxlength="50"
-                                                name="ReferencesName3" /><br /><span class="example">Name</span>
-                                        </td>
-                                        <td><input type="text" style="width:100%;" maxlength="20"
-                                                name="ReferencesPhone3" /><br /><span class="example">Phone</span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td colspan="3"><input type="text" style="width:100%;" maxlength="20"
-                                                name="ReferencesAddress3" /><br /><span class="example">Street
-                                                Address</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <input type="text" style="width:100%;" maxlength="50"
-                                                name="ReferencesCity3" /><br /><span class="example">City</span>
-                                        </td>
-                                        <td>
-                                            <input type="text" style="width:100%;" maxlength="20"
-                                                name="ReferencesState3" /><br /><span class="example">State</span>
-                                        </td>
-                                        <td>
-                                            <input type="text" style="width:100%;" maxlength="10"
-                                                name="ReferencesZip3" /><br /><span class="example">Zip</span>
-                                        </td>
-                                    </tr>
-                                </table>
+                                <div>
+                                    <label for="ReferencesName3" class="example">Name</label>
+                                    <br />
+                                    <input type="text" class="textField" maxlength="255"
+                                        name="ReferencesName3" id="ReferencesName3" />
+                                </div>
+                                <div>
+                                    <label for="ReferencesPhone3" class="example">Phone</label>
+                                    <br />
+                                    <input type="text" class="textField" maxlength="20"
+                                        name="ReferencesPhone3" id="ReferencesPhone3" />
+                                </div>
+                                <div>
+                                    <label for="ReferencesAddress3" class="example">Street Address</label>
+                                    <br />
+                                    <input type="text" class="textField" maxlength="255"
+                                        name="ReferencesAddress3" id="ReferencesAddress3" />
+                                </div>
+                                <div>
+                                    <label for="ReferencesCity3" class="example">City</label>
+                                    <br />
+                                    <input type="text" class="textField" maxlength="255"
+                                        name="ReferencesCity3" id="ReferencesCity3" />
+                                </div>
+                                <div>
+                                    <label for="ReferencesState3" class="example">State</label>
+                                    <br />
+                                    <input type="text" class="textField" maxlength="20"
+                                        name="ReferencesState3" id="ReferencesState3" />
+                                </div>
+                                <div>
+                                    <label for="ReferencesZip3" class="example">Zip</label>
+                                    <br />
+                                    <input type="text" class="textField" maxlength="10"
+                                        name="ReferencesZip3" id="ReferencesZip3" />
+                                </div>
                             </div>
-
-                            <div class="references-box">
-                                <table cellpadding="0" cellspacing="0" width="100%">
-                                    <tr>
-                                        <td colspan="2"><input type="text" style="width:100%;" maxlength="50"
-                                                name="ReferencesName4" /><br /><span class="example">Name</span>
-                                        </td>
-                                        <td><input type="text" style="width:100%;" maxlength="20"
-                                                name="ReferencesPhone4" /><br /><span class="example">Phone</span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td colspan="3"><input type="text" style="width:100%;" maxlength="20"
-                                                name="ReferencesAddress4" /><br /><span class="example">Street
-                                                Address</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <input type="text" style="width:100%;" maxlength="50"
-                                                name="ReferencesCity4" /><br /><span class="example">City</span>
-                                        </td>
-                                        <td>
-                                            <input type="text" style="width:100%;" maxlength="20"
-                                                name="ReferencesState4" /><br /><span class="example">State</span>
-                                        </td>
-                                        <td>
-                                            <input type="text" style="width:100%;" maxlength="10"
-                                                name="ReferencesZip4" /><br /><span class="example">Zip</span>
-                                        </td>
-                                    </tr>
-                                </table>
-                            </div>
-
                         </div>
 
-                        <h2>Employment History:</h2>
+                        <h2>Employment History</h2>
                         <div class="job-box employment">
                             <p>
                                 Describe your work history beginning with your current or most recent job. Include
@@ -621,389 +507,354 @@
                             </p>
 
                             <div class="employment-box">
-                                <table cellpadding="0" cellspacing="0" width="100%">
-                                    <tr>
-                                        <td width="66%" colspan="3">
-                                            <input style="width:100%;" type="text" maxlength="50"
-                                                name="Employment1Name" /><br />
-                                            <span class="example">Name of Organization or Firm</span>
-                                        </td>
-                                        <td>
-                                            <input style="width:100%;" type="text" maxlength="20"
-                                                name="Employment1Phone" /><br />
-                                            <span class="example">Phone Number</span>
-                                        </td>
-                                    </tr>
-                                </table>
-                                <table cellpadding="0" cellspacing="0" width="100%">
-                                    <tr>
-                                        <td width="66%" colspan="3">
-                                            <input style="width:100%;" type="text" maxlength="50"
-                                                name="Employment1Address" /><br />
-                                            <span class="example">Street Address</span>
-                                        </td>
-                                        <td>
-                                            <input style="width:100%;" type="text" maxlength="20"
-                                                name="Employment1DateFrom" /><br />
-                                            <span class="example">Employed from month/year</span><br />
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <input style="width:100%;" type="text" maxlength="50"
-                                                name="Employment1City" /><br />
-                                            <span class="example">City</span>
-                                        </td>
-                                        <td>
-                                            <input style="width:100%;" type="text" maxlength="20"
-                                                name="Employment1State" /><br />
-                                            <span class="example">State</span>
-                                        </td>
-                                        <td>
-                                            <input style="width:100%;" type="text" maxlength="10"
-                                                name="Employment1Zip" /><br />
-                                            <span class="example">Zip</span>
-                                        </td>
-                                        </td>
-                                        <td>
-                                            <input style="width:100%;" type="text" maxlength="20"
-                                                name="Employment1DateTo" /><br />
-                                            <span class="example">Employed to month/year</span>
-                                        </td>
-                                    </tr>
-                                </table>
-                                <table cellpadding="0" cellspacing="0" width="100%">
-                                    <tr>
-                                        <td width="66%" colspan="3">
-                                            <input style="width:100%;" type="text" maxlength="50"
-                                                name="Employment1Super" /><br />
-                                            <span class="example">Name of your supervisor</span>
-                                        </td>
-                                        <td>
-                                            <input style="width:100%;" type="text" maxlength="20"
-                                                name="Employment1SalaryStart" /> <br />
-                                            <span class="example">Pay at Start</span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                    </tr>
-                                    <tr>
-                                        <td width="66%" colspan="3">
-                                            <input style="width:100%;" type="text" maxlength="50"
-                                                name="Employment1Title" /><br />
-                                            <span class="example">Official job title</span>
-                                        </td>
-                                        <td>
-                                            <input style="width:100%;" type="text" maxlength="20"
-                                                name="Employment1SalaryFinal" /><br />
-                                            <span class="example">Pay at End</span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td colspan="4">
-                                            <input style="width:100%;" type="text" maxlength="250"
-                                                name="Employment1ReasonLeft" /><br />
-                                            <span class="example">Reason for Leaving</span>
-                                        </td>
-                                    </tr>
-                                </table>
-                                <p>
-                                    Describe Your Specific Job Duties:<br />
-                                    <textarea style="width:100%;height:75px;" name="Employment1Summary"></textarea>
-                                </p>
+                                <div>
+                                    <label for="Employment1Name" class="example">Name of Organization or Firm</label>
+                                    <br />
+                                    <input class="textField" type="text" maxlength="255"
+                                        name="Employment1Name" id="Employment1Name" />
+                                </div>
+                                <div>
+                                    <label for="Employment1Phone" class="example">Phone Number</label>
+                                    <br />
+                                    <input class="textField" type="text" maxlength="20"
+                                        name="Employment1Phone" id="Employment1Phone" />
+                                </div>
+                                <div>
+                                    <label for="Employment1Address" class="example">Street Address</label>
+                                    <br />
+                                    <input class="textField" type="text" maxlength="255"
+                                        name="Employment1Address" id="Employment1Address" />
+                                </div>
+                                <div>
+                                    <label for="Employment1DateFrom" class="example">Employed from month/year</label>
+                                    <br />
+                                    <input class="textField" type="text" maxlength="20"
+                                        name="Employment1DateFrom" id="Employment1DateFrom" />
+                                </div>
+                                <div>
+                                    <label for="Employment1DateTo" class="example">Employed to month/year</label>
+                                    <br />
+                                    <input class="textField" type="text" maxlength="20"
+                                        name="Employment1DateTo" id="Employment1DateTo" />
+                                </div>
+                                <div>
+                                    <label for="Employment1City" class="example">City</label>
+                                    <br />
+                                    <input class="textField" type="text" maxlength="255"
+                                        name="Employment1City" id="Employment1City" />
+                                </div>
+                                <div>
+                                    <label id="Employment1State" class="example">State</label>
+                                    <br />
+                                    <input class="textField" type="text" maxlength="20"
+                                        name="Employment1State" id="Employment1State" />
+                                </div>
+                                <div>
+                                    <label id="Employment1Zip" class="example">Zip</label>
+                                    <br />
+                                    <input class="textField" type="text" maxlength="10"
+                                        name="Employment1Zip" id="Employment1Zip" />
+                                </div>
+                                <div>
+                                    <label for="Employment1Super" class="example">Name of your supervisor</label>
+                                    <br />
+                                    <input class="textField" type="text" maxlength="255"
+                                        name="Employment1Super" id="Employment1Super" />
+                                </div>
+                                <div>
+                                    <label for="Employment1SalaryStart" class="example">Pay at Start</label>
+                                    <br />
+                                    <input class="textField" type="text" maxlength="20"
+                                        name="Employment1SalaryStart" id="Employment1SalaryStart" />
+                                </div>
+                                <div>
+                                    <label id="Employment1Title" class="example">Official job title</label>
+                                    <br />
+                                    <input class="textField" type="text" maxlength="255"
+                                        name="Employment1Title" id="Employment1Title" />
+                                </div>
+                                <div>
+                                    <label for="Employment1SalaryFinal" class="example">Pay at End</label>
+                                    <br />
+                                    <input class="textField" type="text" maxlength="20"
+                                        name="Employment1SalaryFinal" id="Employment1SalaryFinal" />
+                                </div>
+                                <div>
+                                    <label for="Employment1ReasonLeft" class="example">Reason for Leaving</label>
+                                    <br />
+                                    <textarea name="Employment1ReasonLeft" id="Employment1ReasonLeft"></textarea>
+                                </div>
+                                <div>
+                                    <label for="Employment1Summary">Describe Your Specific Job Duties</label>
+                                    <br />
+                                    <textarea name="Employment1Summary" id="Employment1Summary"></textarea>
+                                </div>
                             </div>
-
                             <div class="employment-box">
-                                <table cellpadding="0" cellspacing="0" width="100%">
-                                    <tr>
-                                        <td width="66%" colspan="3">
-                                            <input style="width:100%;" type="text" maxlength="50"
-                                                name="Employment2Name" /><br />
-                                            <span class="example">Name of Organization or Firm</span>
-                                        </td>
-                                        <td>
-                                            <input style="width:100%;" type="text" maxlength="20"
-                                                name="Employment2Phone" /><br />
-                                            <span class="example">Phone Number</span>
-                                        </td>
-                                    </tr>
-                                </table>
-                                <table cellpadding="0" cellspacing="0" width="100%">
-                                    <tr>
-                                        <td width="66%" colspan="3">
-                                            <input style="width:100%;" type="text" maxlength="50"
-                                                name="Employment2Address" /><br />
-                                            <span class="example">Street Address</span>
-                                        </td>
-                                        <td>
-                                            <input style="width:100%;" type="text" maxlength="20"
-                                                name="Employment2DateFrom" /><br />
-                                            <span class="example">Employed from month/year</span><br />
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <input style="width:100%;" type="text" maxlength="50"
-                                                name="Employment2City" /><br />
-                                            <span class="example">City</span>
-                                        </td>
-                                        <td>
-                                            <input style="width:100%;" type="text" maxlength="20"
-                                                name="Employment2State" /><br />
-                                            <span class="example">State</span>
-                                        </td>
-                                        <td>
-                                            <input style="width:100%;" type="text" maxlength="10"
-                                                name="Employment2Zip" /><br />
-                                            <span class="example">Zip</span>
-                                        </td>
-                                        </td>
-                                        <td>
-                                            <input style="width:100%;" type="text" maxlength="20"
-                                                name="Employment2DateTo" /><br />
-                                            <span class="example">Employed to month/year</span>
-                                        </td>
-                                    </tr>
-                                </table>
-                                <table cellpadding="0" cellspacing="0" width="100%">
-                                    <tr>
-                                        <td width="66%" colspan="3">
-                                            <input style="width:100%;" type="text" maxlength="50"
-                                                name="Employment2Super" /><br />
-                                            <span class="example">Name of your supervisor</span>
-                                        </td>
-                                        <td>
-                                            <input style="width:100%;" type="text" maxlength="20"
-                                                name="Employment2SalaryStart" /> <br />
-                                            <span class="example">Pay at Start</span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                    </tr>
-                                    <tr>
-                                        <td width="66%" colspan="3">
-                                            <input style="width:100%;" type="text" maxlength="50"
-                                                name="Employment2Title" /><br />
-                                            <span class="example">Official job title</span>
-                                        </td>
-                                        <td>
-                                            <input style="width:100%;" type="text" maxlength="20"
-                                                name="Employment2SalaryFinal" /><br />
-                                            <span class="example">Pay at End</span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td colspan="4">
-                                            <input style="width:100%;" type="text" maxlength="250"
-                                                name="Employment2ReasonLeft" /><br />
-                                            <span class="example">Reason for Leaving</span>
-                                        </td>
-                                    </tr>
-                                </table>
-                                <p>
-                                    Describe Your Specific Job Duties:<br />
-                                    <textarea style="width:100%;height:75px;" name="Employment2Summary"></textarea>
-                                </p>
+                                <div>
+                                    <label for="Employment2Name" class="example">Name of Organization or Firm</label>
+                                    <br />
+                                    <input class="textField" type="text" maxlength="255"
+                                        name="Employment2Name" id="Employment2Name" />
+                                </div>
+                                <div>
+                                    <label for="Employment2Phone" class="example">Phone Number</label>
+                                    <br />
+                                    <input class="textField" type="text" maxlength="20"
+                                        name="Employment2Phone" id="Employment2Phone" />
+                                </div>
+                                <div>
+                                    <label for="Employment2Address" class="example">Street Address</label>
+                                    <br />
+                                    <input class="textField" type="text" maxlength="255"
+                                        name="Employment2Address" id="Employment2Address" />
+                                </div>
+                                <div>
+                                    <label for="Employment2DateFrom" class="example">Employed from month/year</label>
+                                    <br />
+                                    <input class="textField" type="text" maxlength="20"
+                                        name="Employment2DateFrom" id="Employment2DateFrom" />
+                                </div>
+                                <div>
+                                    <label for="Employment2DateTo" class="example">Employed to month/year</label>
+                                    <br />
+                                    <input class="textField" type="text" maxlength="20"
+                                        name="Employment2DateTo" id="Employment2DateTo" />
+                                </div>
+                                <div>
+                                    <label for="Employment2City" class="example">City</label>
+                                    <br />
+                                    <input class="textField" type="text" maxlength="255"
+                                        name="Employment2City" id="Employment2City" />
+                                </div>
+                                <div>
+                                    <label id="Employment2State" class="example">State</label>
+                                    <br />
+                                    <input class="textField" type="text" maxlength="20"
+                                        name="Employment2State" id="Employment2State" />
+                                </div>
+                                <div>
+                                    <label id="Employment2Zip" class="example">Zip</label>
+                                    <br />
+                                    <input class="textField" type="text" maxlength="10"
+                                        name="Employment2Zip" id="Employment2Zip" />
+                                </div>
+                                <div>
+                                    <label for="Employment2Super" class="example">Name of your supervisor</label>
+                                    <br />
+                                    <input class="textField" type="text" maxlength="255"
+                                        name="Employment2Super" id="Employment2Super" />
+                                </div>
+                                <div>
+                                    <label for="Employment2SalaryStart" class="example">Pay at Start</label>
+                                    <br />
+                                    <input class="textField" type="text" maxlength="20"
+                                        name="Employment2SalaryStart" id="Employment2SalaryStart" />
+                                </div>
+                                <div>
+                                    <label id="Employment2Title" class="example">Official job title</label>
+                                    <br />
+                                    <input class="textField" type="text" maxlength="255"
+                                        name="Employment2Title" id="Employment2Title" />
+                                </div>
+                                <div>
+                                    <label for="Employment2SalaryFinal" class="example">Pay at End</label>
+                                    <br />
+                                    <input class="textField" type="text" maxlength="20"
+                                        name="Employment2SalaryFinal" id="Employment2SalaryFinal" />
+                                </div>
+                                <div>
+                                    <label for="Employment2ReasonLeft" class="example">Reason for Leaving</label>
+                                    <br />
+                                    <textarea name="Employment2ReasonLeft" id="Employment2ReasonLeft"></textarea>
+                                </div>
+                                <div>
+                                    <label for="Employment2Summary">Describe Your Specific Job Duties</label>
+                                    <br />
+                                    <textarea name="Employment2Summary" id="Employment2Summary"></textarea>
+                                </div>
                             </div>
-
                             <div class="employment-box">
-                                <table cellpadding="0" cellspacing="0" width="100%">
-                                    <tr>
-                                        <td width="66%" colspan="3">
-                                            <input style="width:100%;" type="text" maxlength="50"
-                                                name="Employment3Name" /><br />
-                                            <span class="example">Name of Organization or Firm</span>
-                                        </td>
-                                        <td>
-                                            <input style="width:100%;" type="text" maxlength="20"
-                                                name="Employment3Phone" /><br />
-                                            <span class="example">Phone Number</span>
-                                        </td>
-                                    </tr>
-                                </table>
-                                <table cellpadding="0" cellspacing="0" width="100%">
-                                    <tr>
-                                        <td width="66%" colspan="3">
-                                            <input style="width:100%;" type="text" maxlength="50"
-                                                name="Employment3Address" /><br />
-                                            <span class="example">Street Address</span>
-                                        </td>
-                                        <td>
-                                            <input style="width:100%;" type="text" maxlength="20"
-                                                name="Employment3DateFrom" /><br />
-                                            <span class="example">Employed from month/year</span><br />
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <input style="width:100%;" type="text" maxlength="50"
-                                                name="Employment3City" /><br />
-                                            <span class="example">City</span>
-                                        </td>
-                                        <td>
-                                            <input style="width:100%;" type="text" maxlength="20"
-                                                name="Employment3State" /><br />
-                                            <span class="example">State</span>
-                                        </td>
-                                        <td>
-                                            <input style="width:100%;" type="text" maxlength="10"
-                                                name="Employment3Zip" /><br />
-                                            <span class="example">Zip</span>
-                                        </td>
-                                        </td>
-                                        <td>
-                                            <input style="width:100%;" type="text" maxlength="20"
-                                                name="Employment3DateTo" /><br />
-                                            <span class="example">Employed to month/year</span>
-                                        </td>
-                                    </tr>
-                                </table>
-                                <table cellpadding="0" cellspacing="0" width="100%">
-                                    <tr>
-                                        <td width="66%" colspan="3">
-                                            <input style="width:100%;" type="text" maxlength="50"
-                                                name="Employment3Super" /><br />
-                                            <span class="example">Name of your supervisor</span>
-                                        </td>
-                                        <td>
-                                            <input style="width:100%;" type="text" maxlength="20"
-                                                name="Employment3SalaryStart" /> <br />
-                                            <span class="example">Pay at Start</span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                    </tr>
-                                    <tr>
-                                        <td width="66%" colspan="3">
-                                            <input style="width:100%;" type="text" maxlength="50"
-                                                name="Employment3Title" /><br />
-                                            <span class="example">Official job title</span>
-                                        </td>
-                                        <td>
-                                            <input style="width:100%;" type="text" maxlength="20"
-                                                name="Employment3SalaryFinal" /><br />
-                                            <span class="example">Pay at End</span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td colspan="4">
-                                            <input style="width:100%;" type="text" maxlength="250"
-                                                name="Employment3ReasonLeft" /><br />
-                                            <span class="example">Reason for Leaving</span>
-                                        </td>
-                                    </tr>
-                                </table>
-                                <p>
-                                    Describe Your Specific Job Duties:<br />
-                                    <textarea style="width:100%;height:75px;" name="Employment3Summary"></textarea>
-                                </p>
+                                <div>
+                                    <label for="Employment3Name" class="example">Name of Organization or Firm</label>
+                                    <br />
+                                    <input class="textField" type="text" maxlength="255"
+                                        name="Employment3Name" id="Employment3Name" />
+                                </div>
+                                <div>
+                                    <label for="Employment3Phone" class="example">Phone Number</label>
+                                    <br />
+                                    <input class="textField" type="text" maxlength="20"
+                                        name="Employment3Phone" id="Employment3Phone" />
+                                </div>
+                                <div>
+                                    <label for="Employment3Address" class="example">Street Address</label>
+                                    <br />
+                                    <input class="textField" type="text" maxlength="255"
+                                        name="Employment3Address" id="Employment3Address" />
+                                </div>
+                                <div>
+                                    <label for="Employment3DateFrom" class="example">Employed from month/year</label>
+                                    <br />
+                                    <input class="textField" type="text" maxlength="20"
+                                        name="Employment3DateFrom" id="Employment3DateFrom" />
+                                </div>
+                                <div>
+                                    <label for="Employment3DateTo" class="example">Employed to month/year</label>
+                                    <br />
+                                    <input class="textField" type="text" maxlength="20"
+                                        name="Employment3DateTo" id="Employment3DateTo" />
+                                </div>
+                                <div>
+                                    <label for="Employment3City" class="example">City</label>
+                                    <br />
+                                    <input class="textField" type="text" maxlength="255"
+                                        name="Employment3City" id="Employment3City" />
+                                </div>
+                                <div>
+                                    <label id="Employment3State" class="example">State</label>
+                                    <br />
+                                    <input class="textField" type="text" maxlength="20"
+                                        name="Employment3State" id="Employment3State" />
+                                </div>
+                                <div>
+                                    <label id="Employment3Zip" class="example">Zip</label>
+                                    <br />
+                                    <input class="textField" type="text" maxlength="10"
+                                        name="Employment3Zip" id="Employment3Zip" />
+                                </div>
+                                <div>
+                                    <label for="Employment3Super" class="example">Name of your supervisor</label>
+                                    <br />
+                                    <input class="textField" type="text" maxlength="255"
+                                        name="Employment3Super" id="Employment3Super" />
+                                </div>
+                                <div>
+                                    <label for="Employment3SalaryStart" class="example">Pay at Start</label>
+                                    <br />
+                                    <input class="textField" type="text" maxlength="20"
+                                        name="Employment3SalaryStart" id="Employment3SalaryStart" />
+                                </div>
+                                <div>
+                                    <label id="Employment3Title" class="example">Official job title</label>
+                                    <br />
+                                    <input class="textField" type="text" maxlength="255"
+                                        name="Employment3Title" id="Employment3Title" />
+                                </div>
+                                <div>
+                                    <label for="Employment3SalaryFinal" class="example">Pay at End</label>
+                                    <br />
+                                    <input class="textField" type="text" maxlength="20"
+                                        name="Employment3SalaryFinal" id="Employment3SalaryFinal" />
+                                </div>
+                                <div>
+                                    <label for="Employment3ReasonLeft" class="example">Reason for Leaving</label>
+                                    <br />
+                                    <textarea name="Employment3ReasonLeft" id="Employment3ReasonLeft"></textarea>
+                                </div>
+                                <div>
+                                    <label for="Employment3Summary">Describe Your Specific Job Duties</label>
+                                    <br />
+                                    <textarea name="Employment3Summary" id="Employment3Summary"></textarea>
+                                </div>
                             </div>
-
                             <div class="employment-box">
-                                <table cellpadding="0" cellspacing="0" width="100%">
-                                    <tr>
-                                        <td width="66%" colspan="3">
-                                            <input style="width:100%;" type="text" maxlength="50"
-                                                name="Employment4Name" /><br />
-                                            <span class="example">Name of Organization or Firm</span>
-                                        </td>
-                                        <td>
-                                            <input style="width:100%;" type="text" maxlength="20"
-                                                name="Employment4Phone" /><br />
-                                            <span class="example">Phone Number</span>
-                                        </td>
-                                    </tr>
-                                </table>
-                                <table cellpadding="0" cellspacing="0" width="100%">
-                                    <tr>
-                                        <td width="66%" colspan="3">
-                                            <input style="width:100%;" type="text" maxlength="50"
-                                                name="Employment4Address" /><br />
-                                            <span class="example">Street Address</span>
-                                        </td>
-                                        <td>
-                                            <input style="width:100%;" type="text" maxlength="20"
-                                                name="Employment4DateFrom" /><br />
-                                            <span class="example">Employed from month/year</span><br />
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <input style="width:100%;" type="text" maxlength="50"
-                                                name="Employment4City" /><br />
-                                            <span class="example">City</span>
-                                        </td>
-                                        <td>
-                                            <input style="width:100%;" type="text" maxlength="20"
-                                                name="Employment4State" /><br />
-                                            <span class="example">State</span>
-                                        </td>
-                                        <td>
-                                            <input style="width:100%;" type="text" maxlength="10"
-                                                name="Employment4Zip" /><br />
-                                            <span class="example">Zip</span>
-                                        </td>
-                                        </td>
-                                        <td>
-                                            <input style="width:100%;" type="text" maxlength="20"
-                                                name="Employment4DateTo" /><br />
-                                            <span class="example">Employed to month/year</span>
-                                        </td>
-                                    </tr>
-                                </table>
-                                <table cellpadding="0" cellspacing="0" width="100%">
-                                    <tr>
-                                        <td width="66%" colspan="3">
-                                            <input style="width:100%;" type="text" maxlength="50"
-                                                name="Employment4Super" /><br />
-                                            <span class="example">Name of your supervisor</span>
-                                        </td>
-                                        <td>
-                                            <input style="width:100%;" type="text" maxlength="20"
-                                                name="Employment4SalaryStart" /> <br />
-                                            <span class="example">Pay at Start</span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                    </tr>
-                                    <tr>
-                                        <td width="66%" colspan="3">
-                                            <input style="width:100%;" type="text" maxlength="50"
-                                                name="Employment4Title" /><br />
-                                            <span class="example">Official job title</span>
-                                        </td>
-                                        <td>
-                                            <input style="width:100%;" type="text" maxlength="20"
-                                                name="Employment4SalaryFinal" /><br />
-                                            <span class="example">Pay at End</span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td colspan="4">
-                                            <input style="width:100%;" type="text" maxlength="250"
-                                                name="Employment4ReasonLeft" /><br />
-                                            <span class="example">Reason for Leaving</span>
-                                        </td>
-                                    </tr>
-                                </table>
-                                <p>
-                                    Describe Your Specific Job Duties:<br />
-                                    <textarea style="width:100%;height:75px;" name="Employment4Summary"></textarea>
-                                </p>
+                                <div>
+                                    <label for="Employment4Name" class="example">Name of Organization or Firm</label>
+                                    <br />
+                                    <input class="textField" type="text" maxlength="255"
+                                        name="Employment4Name" id="Employment4Name" />
+                                </div>
+                                <div>
+                                    <label for="Employment4Phone" class="example">Phone Number</label>
+                                    <br />
+                                    <input class="textField" type="text" maxlength="20"
+                                        name="Employment4Phone" id="Employment4Phone" />
+                                </div>
+                                <div>
+                                    <label for="Employment4Address" class="example">Street Address</label>
+                                    <br />
+                                    <input class="textField" type="text" maxlength="255"
+                                        name="Employment4Address" id="Employment4Address" />
+                                </div>
+                                <div>
+                                    <label for="Employment4DateFrom" class="example">Employed from month/year</label>
+                                    <br />
+                                    <input class="textField" type="text" maxlength="20"
+                                        name="Employment4DateFrom" id="Employment4DateFrom" />
+                                </div>
+                                <div>
+                                    <label for="Employment4DateTo" class="example">Employed to month/year</label>
+                                    <br />
+                                    <input class="textField" type="text" maxlength="20"
+                                        name="Employment4DateTo" id="Employment4DateTo" />
+                                </div>
+                                <div>
+                                    <label for="Employment4City" class="example">City</label>
+                                    <br />
+                                    <input class="textField" type="text" maxlength="255"
+                                        name="Employment4City" id="Employment4City" />
+                                </div>
+                                <div>
+                                    <label id="Employment4State" class="example">State</label>
+                                    <br />
+                                    <input class="textField" type="text" maxlength="20"
+                                        name="Employment4State" id="Employment4State" />
+                                </div>
+                                <div>
+                                    <label id="Employment4Zip" class="example">Zip</label>
+                                    <br />
+                                    <input class="textField" type="text" maxlength="10"
+                                        name="Employment4Zip" id="Employment4Zip" />
+                                </div>
+                                <div>
+                                    <label for="Employment4Super" class="example">Name of your supervisor</label>
+                                    <br />
+                                    <input class="textField" type="text" maxlength="255"
+                                        name="Employment4Super" id="Employment4Super" />
+                                </div>
+                                <div>
+                                    <label for="Employment4SalaryStart" class="example">Pay at Start</label>
+                                    <br />
+                                    <input class="textField" type="text" maxlength="20"
+                                        name="Employment4SalaryStart" id="Employment4SalaryStart" />
+                                </div>
+                                <div>
+                                    <label id="Employment4Title" class="example">Official job title</label>
+                                    <br />
+                                    <input class="textField" type="text" maxlength="255"
+                                        name="Employment4Title" id="Employment4Title" />
+                                </div>
+                                <div>
+                                    <label for="Employment4SalaryFinal" class="example">Pay at End</label>
+                                    <br />
+                                    <input class="textField" type="text" maxlength="20"
+                                        name="Employment4SalaryFinal" id="Employment4SalaryFinal" />
+                                </div>
+                                <div>
+                                    <label for="Employment4ReasonLeft" class="example">Reason for Leaving</label>
+                                    <br />
+                                    <textarea name="Employment4ReasonLeft" id="Employment4ReasonLeft"></textarea>
+                                </div>
+                                <div>
+                                    <label for="Employment4Summary">Describe Your Specific Job Duties</label>
+                                    <br />
+                                    <textarea name="Employment4Summary" id="Employment4Summary"></textarea>
+                                </div>
                             </div>
-
+                            
                             <p>
                                 Please use this space for additional information pertinent to your education,
                                 training
-                                and experience:<br />
-                                <textarea style="width:100%;height:75px;" name="AdditionalEducation"></textarea>
+                                and experience.<br />
+                                <textarea name="AdditionalEducation"></textarea>
                             </p>
                         </div>
                         <div class="job-signatures">
                             <h2>Authorization to Release Information</h2>
                             <h3>Conditions of Employment</h3>
                             <p>
-                                I have made application for employment with Seattle Precision Machine Shop. I
+                                I have made application for employment with this organization. I
                                 authorize
                                 any persons or
                                 organizations to give you any and all information concerning my previous employment,
@@ -1017,9 +868,9 @@
                                 from all liability for any damage whatsoever for issuing same.
                             </p>
                             <p>
-                                Furthermore, if I am employed by Seattle Precision Machine Shop, I agree to the
+                                Furthermore, if I am employed by this organization, I agree to the
                                 policies, rules, orders and
-                                regulations of the government set forth in Seattle Precision Machine Shop's
+                                regulations of the government set forth in this organization's
                                 Personnel
                                 system, employee
                                 handbook, policies and procedures and ordinances; and acknowledge that these
@@ -1027,20 +878,20 @@
                                 and
                                 procedures, rules, and regulations may be changed, interpreted, withdrawn, or added
                                 to
-                                by Seattle Precision Machine Shop at any time.
+                                by this organization at any time.
                             </p>
                             <p>
-                                I further acknowledge that if I become employed with Seattle Precision Machine Shop,
+                                I further acknowledge that if I become employed with this organization,
                                 my
                                 employment will
-                                be at -will and may be terminated with or without cause at any time by me or Seattle
-                                Precision Machine Shop until such time that I am no longer on my initial trial
+                                be at -will and may be terminated with or without cause at any time by me or the organization
+                                until such time that I am no longer on my initial trial
                                 period,
                                 and become a regular
                                 status employee.
                             </p>
                             <p>
-                                If required by Seattle Precision Machine Shop for the position which I am applying,
+                                If required by this organization for the position which I am applying,
                                 I
                                 consent to undergo a
                                 drug test, a physical examination, and/or a psychological examination after I have
@@ -1051,17 +902,15 @@
                                 THIS APPLICATION WILL REMAIN ACTIVE FOR NINETY (90) DAYS ONLY.
                             </p>
                             <p>
-                                Should you become an employee with Seattle Precision Machine Shop, your position may
-                                require random
-                                drug testing.
-                            </p>
-                            <p>
                                 May we contact your present employer?
                                 Yes<input type="radio" checked="checked" name="EmploymentContactCurrentEmployer"
                                     value="Yes" />
+                                <br />
                                 No<input type="radio" name="EmploymentContactCurrentEmployer" value="No" />
+                                <br />
                                 Not presently employed<input type="radio" name="EmploymentContactCurrentEmployer"
                                     value="Not Employed" />
+                                <br />
                                 <input type="hidden" name="EmploymentContactCurrentEmployer" value="" />
                             </p>
                             <p>
@@ -1075,27 +924,6 @@
                         </div>
 
                         <div class="job-signatures">
-                            <h3>Alcohol and Controlled Substance Testing</h3>
-
-                            <p>As a condition of employment with Seattle Precision Machine Shop, you may be required
-                                to
-                                submit to an
-                                alcohol and controlled substance test. Employees who test positive for illegal drugs
-                                and/or alcohol
-                                will be terminated. Employees must report any conviction under a criminal drug
-                                statute
-                                for such
-                                violations. A report of the conviction must be made within five (5) days after the
-                                conviction.</p>
-                            <p>
-                                <input type="checkbox" name="AlcoholAndControlledSubstanceTesting" value="1" />By
-                                checking this box, I acknowledge the above and consent to such an examination and
-                                test.
-                                <input type="hidden" name="AlcoholAndControlledSubstanceTesting" value="" />
-                            </p>
-                        </div>
-
-                        <div class="job-signatures">
                             <h3>Applicant's Certification and Agreement</h3>
 
                             <p>I certify that the facts set forth in this application for employment are true and
@@ -1104,125 +932,127 @@
                                 omission
                                 of complete
                                 information will result in disqualification, or upon discovery, termination of
-                                employment. Seattle Precision Machine Shop is hereby authorized to make any
+                                employment. This organization is hereby authorized to make any
                                 investigation of my prior educational and work
                                 history. Finally, I agree that all records generated for purposes of employment are
                                 property of and
-                                shall remain the sole and exclusive property of Seattle Precision Machine Shop.</p>
+                                shall remain the sole and exclusive property of this organization.</p>
                             <p>
-                                <input type="checkbox" name="ApplicantsCertificationAndAgreement" value="1" />By
+                                <input type="checkbox" name="ApplicantsCertificationAndAgreement" value="1" required />By
                                 checking this box, I acknowledge the above and agree to these terms.
-                                <input type="hidden" name="ApplicantsCertificationAndAgreement" value="" />
+                                <input type="hidden" name="ApplicantsCertificationAndAgreement" value="" required />
                             </p>
                             <p>Resumes, letters of reference, etc. submitted with the application become property of
-                                Seattle Precision Machine Shop and will not be returned. The information you have
-                                provided on the application is
-                                subject to public disclosure under the Georgia Open Records Act.</p>
-                        </div>
-
-                        <div class="job-signatures">
-                            <h3>Applicant's Certification of Employment Eligibility</h3>
-
-                            <p>I certify that I am in compliance with O.C.G.A. 13-10-91 and that I am a
-                                citizen, legal permanent resident or a qualified alien or nonimmigrant and I am
-                                eligible
-                                to work in
-                                the United States.</p>
-                            <p>
-                                <input type="checkbox" name="ApplicantsCertificationOfEmploymentEligibility"
-                                    value="1" />By checking this box, I acknowledge the above and agree to these
-                                terms.
-                                <input type="hidden" name="ApplicantsCertificationOfEmploymentEligibility" value="" />
-                            </p>
+                                this organization and will not be returned.</p>
                         </div>
                         <div style="text-align:center;">
-                            Attach Resume to Email: <input type="file" name="AttachResume" /><br />
-                            <input type="button" value="Submit Application" onClick="CheckValues();" />
+                            <p>Attach Resume to Email <input class="uploadFile" type="file" name="AttachResume" /></p>
+                            <p><button class="button" type="submit" onClick="CheckValues();">Submit Application</button></p>
                         </div>
                         <input type="hidden" name="ysnSubmit" value="1" />
                     </form>
                 </article>
-                <aside class="sidenav col-sm-3">
-                    <section class="nav">
-                        <h4>In This Section</h4>
-                        <nav class="leftnav">
-                            <ul id="leftnavlist">
-                                <li class="leftnav_home header">
-                                    <a href="http://www.seattleprecision.com/index.html"
-                                        data-title="Seattle Precision Machine Shop, Inc. | Seattle, WA | Machine Shop ">
-                                        <span
-                                            data-title="Seattle Precision Machine Shop, Inc. | Seattle, WA | Machine Shop ">
-                                            Home </span> </a>
-                                </li>
-                                <li class="leftnav_about header">
-                                    <a href="http://www.seattleprecision.com/about.html"
-                                        data-title="Seattle Precision Machine Shop, Inc. | Seattle, WA | Machine Shop  | About">
-                                        <span
-                                            data-title="Seattle Precision Machine Shop, Inc. | Seattle, WA | Machine Shop  | About">
-                                            About </span> </a>
-                                </li>
-                                <li class="leftnav_services header">
-                                    <a href="http://www.seattleprecision.com/services.html"
-                                        data-title="Seattle Precision Machine Shop, Inc. | Seattle, WA | Machine Shop  | Services">
-                                        <span
-                                            data-title="Seattle Precision Machine Shop, Inc. | Seattle, WA | Machine Shop  | Services">
-                                            Services </span> </a>
-                                </li>
-                                <li class="leftnav_alookatourshop header">
-                                    <a href="http://www.seattleprecision.com/photo.html?a=1016"
-                                        data-title="Seattle Precision Machine Shop, Inc. | Seattle, WA | Machine Shop  |A Look at Our Shop">
-                                        <span
-                                            data-title="Seattle Precision Machine Shop, Inc. | Seattle, WA | Machine Shop  |A Look at Our Shop">
-                                            A Look at Our Shop </span> </a>
-                                </li>
-                                <li class="leftnav_contact header">
-                                    <a href="http://www.seattleprecision.com/contact.html"
-                                        data-title="Seattle Precision Machine Shop, Inc. | Seattle, WA | Machine Shop  | Contact">
-                                        <span
-                                            data-title="Seattle Precision Machine Shop, Inc. | Seattle, WA | Machine Shop  | Contact">
-                                            Contact </span> </a>
-                                    <ul id="contact">
-                                        <li class="leftnav_jobapplication">
-                                            <a href="http://www.seattleprecision.com/job-application.html"
-                                                data-title="Job Application"> <span data-title="Job Application">
-                                                    Job
-                                                    Application </span> </a>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </nav>
-                    </section>
-                </aside>
             </div>
         </div>
     </div>
     <!--footer-->
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <strong><img src="images/bos-machine-shop-logo.png"></strong>
-                    <p class="prev">&copy; <em id="copyright-year"></em> Seattle Precision Machine Shop</p>
+    <footer class="footer-wrapper">
+        <div class="footer-container container">
+          <div class="container">
+            <div class="footer-top">
+              <div id="icon-title">
+                Get connected with us on social networks:
+              </div>
+              <div id="footer-icon">
+                <a href="https://github.com/" target="_blank" rel="noopener noreferrer"><i
+                    class="fa-brands fa-github" style="color: white;"></i></a>
+  
+                <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer"><i
+                    class="fa-brands fa-linkedin-in" style="color: white;"></i></a>
+  
+                <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer"><i
+                    class="fa-brands fa-twitter" style="color: white;"></i></a>
+  
+                <a href="https://in.pinterest.com/" target="_blank" rel="noopener noreferrer"><i
+                    class="fa-brands fa-pinterest" style="color: white;"></i></a>
+  
+                <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><i
+                    class="fa-brands fa-facebook" style="color: white;"></i></a>
+  
+                    <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><i
+                      class="fa-brands fa-instagram"></i></a>
+  
+                      <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer"><i
+                        class="fa-brands fa-youtube"></i></a>
+              </div>
+            </div>
+            <div class="footer-middle">
+              <div class="company-product">
+                <div class="company-name">
+                  <div class="footer-title">
+                    COMPANY NAME
+                  </div>
+                  <div class="company-list">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>
+                    Quasi architecto repellendus consequuntur volup <br>
+                    tatem ut quo earum omnis accusantium eligendi <br>
+                    soluta, blanditiis illo porro
+                  </div>
                 </div>
-                <div class="col-lg-6">
-                    <ul id="botnavlist" class="list3">
-                        <li><a href="privacy.html">Privacy Policy</a></li>
-                        <li><a href="terms.html">Terms of Use</a></li>
-                        <li><a href="sitemap.html">Site Map</a></li>
-                        <li><a href="contact.html">Contact Us</a></li>
+                <div class="products">
+                  <div class="footer-title">
+                    PRODUCTS
+                  </div>
+                  <div class="product-list">
+                    <ul>
+                      <li>MDBootstrap</li>
+                      <li>MDWordPress</li>
+                      <li>BrandFlow</li>
+                      <li>Bootstrap Angular</li>
                     </ul>
+                  </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-12 text-right">
-                    Powered by <a href="http://www.southfire.com/" target="_blank" class="southfire"><img
-                            src="http://www.southfire.com/images/southfire-w.png" alt="Southfire"
-                            title="Southfire" /></a>
+              </div>
+              <div class="link-contact">
+                <div class="useful-links">
+                  <div class="footer-title">
+                    USEFUL LINKS
+                  </div>
+                  <div class="link-list">
+                    <ul>
+                      <li>Your Account</li>
+                      <li>Become an Affiliate</li>
+                      <li>Shipping Rate</li>
+                      <li>Helps</li>
+                    </ul>
+                  </div>
                 </div>
+                <div class="contact">
+                  <div class="footer-title">
+                    CONTACT
+                  </div>
+                  <div class="contact-list">
+                    <ul>
+                      <li>NewYork</li>
+                      <li>info@example.com</li>
+                      <li>+01 234 5678</li>
+                      <li>+01 234 5678</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
             </div>
+            <div class="footer-bottom">
+              <div id="footer-wrapper">
+                <p>
+                  &copy; Copyright
+                </p>
+              </div>
+            </div>
+  
+          </div>
         </div>
-    </footer>
+      </footer>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/tm-scripts.js"></script>
 
@@ -1253,18 +1083,6 @@
                 items: 4,
                 autoplay: true
             });
-            /*
-                $('ul.bx-partners').bxSlider({
-                    slideMargin:20,
-                    pager:false,
-                    minSlides:1,
-                    maxSlides:12,
-                    moveSlides:1,
-                    slideWidth:100,
-                    auto:true,
-                    useCSS:false
-                });
-            */
         });
     </script>
 </body>
