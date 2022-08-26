@@ -255,6 +255,11 @@ footer ul , li{
   .jumbotron h1{
     font-size: 1rem;
   }
+  .navbar-nav {
+    flex-direction: column;
+    justify-content: space-around;
+    display: none;
+  }
 
 }
 @media all and (min-width: 34.375em) {
