@@ -244,8 +244,13 @@ footer ul , li{
     gap: 20px;
     display: none;
   }
-
+  .navbar-nav {
+    flex-direction: column;
+    justify-content: space-around;
+    display: none;
+  }
 }
+
 @media screen and (max-width: 576px){
   .header{
     height: 20%;
@@ -255,12 +260,6 @@ footer ul , li{
   .jumbotron h1{
     font-size: 1rem;
   }
-  .navbar-nav {
-    flex-direction: column;
-    justify-content: space-around;
-    display: none;
-  }
-
 }
 @media all and (min-width: 34.375em) {
   .map-container {
