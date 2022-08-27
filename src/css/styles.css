@@ -43,6 +43,9 @@ body {
 }
 
 /* Google maps */
+#container {
+  width: 90%;
+}
 
 #map-container-google-1 {
   width: 100%;
