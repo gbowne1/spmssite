@@ -49,6 +49,7 @@ body {
 
 #map-container-google-1 {
   width: 100%;
+  height: 25rem;
 }
 
 #google-map {
