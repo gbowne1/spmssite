@@ -13,7 +13,9 @@ body {
   flex-direction: column;
   gap: 20px;
 }
-
+.nav-item{
+  padding:0;
+}
 .header {
   padding: 60px;
   text-align: center;
