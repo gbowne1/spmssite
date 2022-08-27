@@ -43,13 +43,8 @@ body {
 }
 
 /* Google maps */
-#container {
-  width: 90%;
-}
-
 #map-container-google-1 {
-  width: 100%;
-  height: 25rem;
+  width: 20vw;
 }
 
 #google-map {
