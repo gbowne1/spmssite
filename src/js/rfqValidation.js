@@ -1,4 +1,4 @@
-const adressEl = document.querySelector('#adress');
+const addressEl = document.querySelector('#address');
 const phoneEl = document.querySelector('#phone');
 const faxEl = document.querySelector('#fax');
 const mobileEl = document.querySelector('#mobile');
@@ -21,12 +21,12 @@ const isNumberValid = number =>{
 const checkAdress = () => {
 
     let valid = false;
-    const adress = adressEl.value.trim();
+    const address = addressEl.value.trim();
 
-    if (!isRequired(adress)) {
-        showError(adressEl, 'Adress cannot be blank.');
+    if (!isRequired(address)) {
+        showError(addressEl, 'Address cannot be blank.');
     }else {
-        showSuccess(adressEl);
+        showSuccess(addressEl);
         valid = true;
     }
     return valid;
@@ -80,7 +80,7 @@ const checkWebsite = () => {
     const website = websiteEl.value.trim();
 
     if (!isRequired(website)) {
-        showError(websiteEl, 'Website adress cannot be blank.');
+        showError(websiteEl, 'Website address cannot be blank.');
     }else {
         showSuccess(websiteEl);
         valid = true;
@@ -147,7 +147,7 @@ const checkEmail = () => {
 form.addEventListener('submit', (e)=>{
     e.preventDefault();
 // validate fields
-let isAdressValid = checkAdress(),
+let isAddressValid = checkAdress(),
 isEmailValid = checkEmail(),
 isPhoneValid = checkPhone(),
 isFaxValid = checkFax(),
@@ -155,7 +155,7 @@ isMobileValid = checkMobile(),
 isWebsiteValid = checkWebsite(),
 isContanctValid = checkContact();
 
-let isFormValid = isAdressValid &&
+let isFormValid = isAddressValid &&
 isEmailValid &&
 isFaxValid &&
 isPhoneValid &&
@@ -186,7 +186,7 @@ timeoutId = setTimeout(() => {
 
 form.addEventListener('input', debounce(function (e) {
 switch (e.target.id) {
-case 'adress':
+case 'address':
     checkAdress();
     break;
 case 'phone':
