@@ -232,15 +232,16 @@ i {
   padding-bottom: 30px;
   color: black;
 }
-.hours-map, .contact-list, .link-list, .product-list, .company-list{
+.contact-list, .link-list, .product-list, .company-list{
   font-size: 13px;
   text-align: left;
 }
-.company-product, .link-contact{
+.hours-map, .company-product, .link-contact{
   display: flex;
   gap: 50px;
   justify-content: space-evenly;
 }
+
 footer ul , li{
   text-decoration: none;
   list-style-type: none;
@@ -321,13 +322,13 @@ footer ul , li{
   .footer-middle{
     flex-direction: column;
   }
-  .company-name,.useful-link{
+  .openhours, .company-name,.useful-link{
     width: 60%;
   }
   .company-product{
     gap: 10px;
   }
-  .link-contact{
+ .link-contact{
     gap: 100px;
     padding: 0 20px;
   }
