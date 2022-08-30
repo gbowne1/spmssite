@@ -60,7 +60,12 @@ body {
   font-size: 20px;
 }
 /*End toggle light/dark mode*/
-
+#container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .container {
   max-width: 100%;
   position: relative;
