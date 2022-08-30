@@ -60,12 +60,19 @@ body {
   font-size: 20px;
 }
 /*End toggle light/dark mode*/
+/*form*/
 #container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
+
+.mb-6 {
+  margin-bottom: 20px;
+}
+
+/**/
 .container {
   max-width: 100%;
   position: relative;
