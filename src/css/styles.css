@@ -29,6 +29,31 @@ body {
   position:relative;
 }
 
+/*Nav Bar*/
+.navbar-nav, .navbar-default, .container-fluid, .navbar-header, .navbar-wrap, .menu {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+/* Google maps */
+#map-container-google-1 {
+  width: 20vw;
+}
+
+#google-map {
+  width: 100%;
+  height: 100%;
+}
+
 /*Start toggle light/dark mode*/
 .navbar.navbar-expand-sm{
   position: absolute;
@@ -37,7 +62,24 @@ body {
   font-size: 20px;
 }
 /*End toggle light/dark mode*/
+/*form*/
+#container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
+.mb-6 {
+  margin-bottom: 20px;
+}
+
+.form-container {
+  height: 37rem;
+  width: 40rem;
+}
+
+/**/
 .container {
   max-width: 100%;
   position: relative;
@@ -188,21 +230,25 @@ i {
   background-color: #1B2430;
   color: white;
   text-align: left;
+  align-items: start;
+  flex-wrap: wrap;
 }
 .footer-title{
   font-weight: 500;
   font-size: 18px;
   padding-bottom: 30px;
+  color: black;
 }
 .contact-list, .link-list, .product-list, .company-list{
   font-size: 13px;
   text-align: left;
 }
-.company-product, .link-contact{
+.hours-map, .company-product, .link-contact{
   display: flex;
   gap: 50px;
   justify-content: space-evenly;
 }
+
 footer ul , li{
   text-decoration: none;
   list-style-type: none;
@@ -220,7 +266,9 @@ footer ul , li{
   width: 30%;
   height: 10%;
 }
-
+.btn-primary {
+  margin-top: 1.5rem;
+}
 /* Medium Screens */
 
 @media all and (max-width: 1000px) {
@@ -233,7 +281,13 @@ footer ul , li{
     gap: 20px;
     display: none;
   }
+  .navbar-nav {
+    flex-direction: column;
+    justify-content: space-around;
+    display: none;
+  }
 }
+
 @media screen and (max-width: 576px){
   .header{
     height: 20%;
@@ -243,7 +297,6 @@ footer ul , li{
   .jumbotron h1{
     font-size: 1rem;
   }
-
 }
 @media all and (min-width: 34.375em) {
   .map-container {
@@ -276,13 +329,13 @@ footer ul , li{
   .footer-middle{
     flex-direction: column;
   }
-  .company-name,.useful-link{
+  .openhours, .company-name,.useful-link{
     width: 60%;
   }
   .company-product{
     gap: 10px;
   }
-  .link-contact{
+ .link-contact{
     gap: 100px;
     padding: 0 20px;
   }
