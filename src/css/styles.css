@@ -246,7 +246,9 @@ footer ul , li{
   width: 30%;
   height: 10%;
 }
-
+.btn-primary {
+  margin-top: 1.5rem;
+}
 /* Medium Screens */
 
 @media all and (max-width: 1000px) {
