@@ -72,6 +72,11 @@ body {
   margin-bottom: 20px;
 }
 
+.form-container {
+  height: 37rem;
+  width: 40rem;
+}
+
 /**/
 .container {
   max-width: 100%;
