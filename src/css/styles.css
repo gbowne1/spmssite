@@ -223,7 +223,7 @@ i {
   background-color: #1B2430;
   color: white;
   text-align: left;
-  align-items: center;
+  align-items: start;
   flex-wrap: wrap;
 }
 .footer-title{
@@ -232,7 +232,7 @@ i {
   padding-bottom: 30px;
   color: black;
 }
-.contact-list, .link-list, .product-list, .company-list{
+.hours-map, .contact-list, .link-list, .product-list, .company-list{
   font-size: 13px;
   text-align: left;
 }
