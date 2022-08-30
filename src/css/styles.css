@@ -211,6 +211,8 @@ i {
   background-color: #1B2430;
   color: white;
   text-align: left;
+  align-items: center;
+  flex-wrap: wrap;
 }
 .footer-title{
   font-weight: 500;
