@@ -42,7 +42,7 @@
       <div class="header">
         <div class="container">
           <div>
-            <img class="imgLogo" src="/images/logo.jpg" alt="logo of the company"></img>
+            <img class="imgLogo" src="../src/images/logo.jpg" alt="logo of the company"></img>
           </div>
           <div class="jumbotron">
             <h1>Seattle Precision Machine Shop</h1>
@@ -52,7 +52,7 @@
           </div>
         </div>
       </div>
-      <nav class="navbar2 sticky-top navbar-expand-lg navbar-light bg-light">
+      <nav class="navbar2 sticky-top navbar-expand-lg navbar-light ">
         <a class="navbar-brand" href="./index.html">Home</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -92,15 +92,15 @@
             </li>
           </ul>
           <form class="form-inline my-2 my-lg-0 ms-auto d-flex">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            <input class="form-control mr-sm-2" type="search" placeholder="type something..." aria-label="Search">
+            <button class="s-btn" id="s-btn"type="submit">Search</button>
           </form>
         </div>
       </nav>
     </header>
     <div class="mainContent">
       <section>
-        <div class="card">
+        <div class="card" >
           <div class="card-body">
             <h4></h4>
             <p>
@@ -118,9 +118,9 @@
           </div>
         </div>
       </section>
-      <article>
+      <article id="art">
         <h3>This is a Article</h3>
-        <p>
+        <p >
           This is an Article the INjuries was I'm name moral think act you.
           will according up an make "amazing" Road an known showing For we be
           words glasses twerkin the a sleeping media out does starchy say Road
@@ -128,7 +128,7 @@
           the unrealistic he
         </p>
       </article>
-      <aside>
+      <aside id="as">
         <h3>This is an Aside</h3>
         <!--Only one H1 on page!-->
         <p>
@@ -143,25 +143,25 @@
     <footer class="footer-wrapper">
       <div class="footer-container container">
         <div class="container">
-          <div class="footer-top">
+          <div class="footer-top" id="footer-top">
             <div id="icon-title">
               Get connected with us on social networks:
             </div>
             <div id="footer-icon">
               <a href="https://github.com/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"
-                  style="color: white;"></i></a>
+                  ></i></a>
 
               <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer"><i
-                  class="fa-brands fa-linkedin-in" style="color: white;"></i></a>
+                  class="fa-brands fa-linkedin-in" ></i></a>
 
               <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-twitter"
-                  style="color: white;"></i></a>
+                  ></i></a>
 
               <a href="https://in.pinterest.com/" target="_blank" rel="noopener noreferrer"><i
-                  class="fa-brands fa-pinterest" style="color: white;"></i></a>
+                  class="fa-brands fa-pinterest" ></i></a>
 
               <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><i
-                  class="fa-brands fa-facebook" style="color: white;"></i></a>
+                  class="fa-brands fa-facebook" ></i></a>
 
               <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><i
                   class="fa-brands fa-instagram"></i></a>
@@ -238,6 +238,14 @@
       </div>
     </footer>
   </div>
+  <input type="checkbox" name="checkbox1" class="e" id="switch-d-mode" onclick="dmode()">
+	<label for="checkbox1"class="dmlabele">Dark Mode</label>
+	<!--Start toggle light/dark mode-->
+	<script>
+		function dmode(){
+			document.body.classList.toggle("dark-mode")
+		}
+	</script>
 </body>
 
 </html>
