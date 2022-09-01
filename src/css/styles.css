@@ -590,3 +590,8 @@ footer ul , li{
   padding-left: 40px;
   padding-right: -10px;
 }
+#navbarSupportedContent li{
+  display: inline-block;
+  padding-left: 50px;
+  margin-top: 15px;
+}
