@@ -42,8 +42,30 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 10px;
+  
 }
-
+.navbar2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  
+}
+.navbar2 a{
+  color: grey;
+  text-decoration: none;
+}
+.navbar2 a:hover{
+  color: rgb(61, 61, 61);
+  transition: 1s;
+}
+.navbar2 a:hover{
+  transition: 1s;
+}
+.navbar2{
+  background-color: #f8f9fa;
+}
 /* Google maps */
 #map-container-google-1 {
   width: 20vw;
@@ -340,5 +362,33 @@ footer ul , li{
     padding: 0 20px;
   }
 }
+.container3 section{
+  background-color: #d4d4d4;
+  box-shadow:
+  0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+  0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+  0 12.5px 10px rgba(0, 0, 0, 0.06),
+  0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+  0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+  0 100px 80px rgba(0, 0, 0, 0.12)
+;
+}
+.form-container option{
+  color: grey;
+}
+.jumbotron h1,h2{
+  text-shadow: none;
+  color: white;
+}
+.header{
+  background-color: #07090c;
+}
+.main_navbar a{
+  color: grey;
+  background-color: transparent;
+  text-decoration: none;
+}
 
-
+.custom-control-label{
+  color: white;
+}
