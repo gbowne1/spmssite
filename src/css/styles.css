@@ -11,18 +11,18 @@ body {
   background-color: var(--body-background)!important;
   
 }
-.root{
+:root{
   --navbar-background: #d9d9d9;
-  --body-background: #000000;
+  --body-background: #cfcfcf;
   --card-background: white;
-  --bright-text: rgb(255, 255, 255);
+  --bright-text: rgb(26, 26, 26);
   --grey-text: rgb(204, 204, 204);
   --btn-background: rgb(24, 28, 31);
   --btn-text: white;
-  --form-background: rgb(0, 0, 0);
-  --s-b-b: rgb(29, 71, 99);
-  
-  
+  --form-background: rgb(255, 255, 255) !important;
+  --s-b-b: rgb(4, 13, 44);
+  --border-color: rgb(63, 63, 63);
+  --btn-text-color: white;
 }
 .dark-mode{
   --navbar-background: #212121;
@@ -32,9 +32,10 @@ body {
   --grey-text: rgb(204, 204, 204);
   --btn-background: rgb(26, 71, 122);
   --btn-text: #212529;
-  --form-background: rgb(22, 22, 22);
+  --form-background: rgb(14, 14, 14);
   --search-btn-background: rgb(30, 163, 112);
   --fotter-background: #1b094d;
+  --border-color: white;
 
 
 }
@@ -81,16 +82,24 @@ body {
   align-items: center;
   padding: 10px;
   background-color: var(--navbar-background);
+  z-index: 2;
+  margin-top: -25px;
+  
 }
+
 .navbar2 a{
-  color: grey;
+  color: var(--bright-text);
   text-decoration: none;
+ margin-left: 25px;
+}
+.navbar2 a:focus{
+  color: var(--bright-text);
 }
 .navbar2 a:hover{
-  color: rgb(61, 61, 61);
+  color: rgb(116, 116, 116);
   transition: 1s;
 }
-.navbar2 a:hover{
+.navbar2 a:not(:hover){
   transition: 1s;
 }
 .navbar2{
@@ -327,6 +336,7 @@ footer ul , li{
 .imgLogo{
   width: 30%;
   height: 10%;
+  border-radius: 50%;
 }
 .btn-primary {
   margin-top: 1.5rem;
@@ -435,6 +445,7 @@ footer ul , li{
 }
 #navb a{
   background-color: var(--navbar-background);
+  z-index: 2;
 }
 #navb a:hover{
   background-color: rgb(212, 212, 212);
@@ -458,6 +469,7 @@ footer ul , li{
 #business-history{
   margin-left: 10px;
   margin-right: 10px;
+  
 }
 
 .navbar2{
@@ -471,16 +483,23 @@ footer ul , li{
   0 41.8px 33.4px rgba(0, 0, 0, 0.086),
   0 100px 80px rgba(0, 0, 0, 0.12)
 ;
+  z-index: 2;
 }
 .s{
   position: absolute;
-  top: 29vh;
+  top: 27vh;
   left: 90%;
   z-index: 100;
 }
 .dmlabel{
   position: absolute;
   top: 28.5vh;
+  left: 91.5%;
+  color: white;
+}
+.dmlabel-c{
+  position: absolute;
+  top: 26.5vh;
   left: 91.5%;
   color: white;
 }
@@ -530,6 +549,9 @@ footer ul , li{
 #business-history{
   color: var(--bright-text);
 }
+#business-history-container{
+  padding-top: 200px;
+}
 #head3{
   color: var(--bright-text);
 }
@@ -537,7 +559,11 @@ footer ul , li{
 .form-control{
   color: var(--bright-text);
   background-color: var(--form-background);
-  border:  1px solid grey;
+  border-radius: 8px 0px 0px 8px;
+  border: 1px solid var(--border-color);
+}
+.form-control::placeholder{
+  color: var(--bright-text);
 }
 .form-control:focus{
   color: var(--bright-text);
@@ -547,6 +573,7 @@ footer ul , li{
   text-decoration: none;
   color: white;
   text-shadow: none;
+  
 }
 #mhead{
   color: var(--bright-text);
@@ -564,10 +591,12 @@ footer ul , li{
   margin-right: 25px;
 }
 #s-btn{
+  margin-left: -1px;
   width: 85px;
-  border: none;
-  color: var(--bright-text) ;
+  border: 1px solid var(--border-color);
+  color: var(--btn-text-color);
   background-color: var(--s-b-b);
+  border-radius: 0px 8px 8px 0px;
 }
 .footer-top{
   
@@ -575,6 +604,16 @@ footer ul , li{
 }
 .card-body p{
   color: var(--bright-text);
+}
+#team{
+  padding-top: 200px;
+}
+#head{
+  padding-top: 100px;
+  font-size: 100px;
+}
+#map-info{
+  padding-top: 150px;
 }
 .mainContent section{
   background-color: #dfb900;
@@ -594,4 +633,39 @@ footer ul , li{
   display: inline-block;
   padding-left: 50px;
   margin-top: 15px;
+  z-index: 2;
+  
+}
+
+#capablitys{
+  width: 85px;
+  height: 35px;
+  border: none;
+  outline: none;
+  background-color: var(--navbar-background);
+  color: var(--bright-text);
+}
+#capablitys option{
+  width: 400px;
+  border: none;
+  border-radius: 0px;
+}
+#the-form{
+  background-color: var(--form-background);
+}
+.label{
+  color: var(--bright-text);
+}
+#dropdown{
+  background-color: var(--navbar-background);
+  color: var(--bright-text);
+  border: none;
+  outline: none;
+  margin-right: -40px;
+}
+.dropdown-item:hover{
+  background-color: transparent;
+}
+.dropdown-menu{
+  background-color: var(--navbar-background);
 }
