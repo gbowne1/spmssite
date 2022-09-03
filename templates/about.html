@@ -65,27 +65,58 @@
 				</div>
 			</div>
 		</div>
-		<div class="navbar_wrapper">
-			<ion-icon name="menu-outline" id="hamburger_trigger"></ion-icon>
-			<nav class="main_navbar">
-				<ul class="hamburger_menu_active" id="navb" >
-					<li><a href="./about.html">About</a></li>
-					<li><a href="#materials">Materials</a></li>
-					<li><a href="#industries">Industries</a></li>
-					<li><a href="./rfq.html">Quotes</a></li>
-					<li><a href="./capabilities.html">Capabilities</a></li>
-					<li><a href="#history">History</a></li>
-					<li><a href="#quality">Quality</a></li>
-					<li><a href="#gallery">Gallery</a></li>
-					<li><a href="./jobs.html">Careers</a></li>
-					<li><a href="./contact.html">Contact</a></li>
-					<li><a href="#services">Services</a></li>
-					<li><a href="#blog">Blog</a></li>
-					<li><a href="#testiominals">Testimonials</a></li>
-					<li><a href="#equipment">Equipment</a></li>
-				</ul>
-			</nav>
-		</div>
+	
+	<nav class="navbar2 sticky-top navbar-expand-lg navbar-light ">
+	  <a class="navbar-brand " href="./index.html" >Home</a>
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+		aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	  </button>
+	  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+		<ul class="navbar-nav3 mr-auto">
+		  <li class="nav-item">
+			<a class="nav-link" href="#blog">Blog</a>
+		  </li>
+		  <li class="nav-item">
+			<div class="btn-group">
+			  <button type="button" class="btn  dropdown-toggle" style="color: red;" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="dropdown">
+				  About-us
+			  </button>
+			  <div class="dropdown-menu">
+				  <a class="dropdown-item" href="about.html">About</a>
+				  <a class="dropdown-item" href="about.html#business-history-container">Business-history</a>
+				  <a class="dropdown-item" href="rfq.html">Quotes</a>
+				
+				</div>
+		  </div>
+		  </li>
+		  <li class="nav-item">
+			<a class="nav-link" href="./contact.html">Contact</a>
+		  </li>
+		  <li class="nav-item dropdown">
+			
+			<div class="btn-group">
+			  <button type="button" class="btn  dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="dropdown">
+				  Capabilities
+			  </button>
+			  <div class="dropdown-menu">
+				  <a class="dropdown-item" href="capabilities.html#services">Services</a>
+				  <a class="dropdown-item" href="capabilities.html#equipments">Equipment</a>
+				  <a class="dropdown-item" href="capabilities.html#materials">Materials</a>
+				  <a class="dropdown-item" href="capabilities.html#industries">Industries</a>
+				  
+				  <div class="dropdown-divider"></div>
+				  <a class="dropdown-item" href="#">Separated link</a>
+			  </div>
+		  </div>
+			
+		  </li>
+		</ul>
+		<form class="form-inline my-2 my-lg-0 ms-auto d-flex">
+		  <input class="form-control mr-sm-2" type="search" placeholder="type something..." aria-label="Search">
+		  <button class="s-btn" id="s-btn"type="submit">Search</button>
+		</form>
+	  </div>
 	</header>
 
 	<div class="container z-depth-1 my-5 px-0">
@@ -175,7 +206,7 @@
 				</p>
 			</div>
 		</div>
-		<div>
+		<div id="map-info">
 			<h4 class="text-left ml-5" id="mhead">Map</h4>
 			<div class="mb-5 mr-5 ml-5 mt-3">
 				<iframe src="https://maps.google.com/maps?q=manhatan&t=&z=13&ie=UTF8&iwloc=&output=embed"
