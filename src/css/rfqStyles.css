@@ -6,6 +6,9 @@ body{
     overflow-x: hidden;
 
 }
+#home{
+    color: var(--bright-text);
+}
 :root{
     --navbar-background: #d9d9d9;
     --body-background: #cfcfcf;

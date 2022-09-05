@@ -26,16 +26,16 @@ body {
 }
 .dark-mode{
   --navbar-background: #212121;
-  --body-background: #1c1c1c;
+  --body-background: #2a2929;
   --card-background: #212529;
   --bright-text: rgb(255, 255, 255);
   --grey-text: rgb(204, 204, 204);
   --btn-background: rgb(26, 71, 122);
   --btn-text: #212529;
-  --form-background: rgb(14, 14, 14);
+  --form-background: rgb(26 26 26);
   --search-btn-background: rgb(30, 163, 112);
   --fotter-background: #1b094d;
-  --border-color: white;
+  --border-color: #3e3e3e;
 
 
 }
@@ -668,4 +668,11 @@ footer ul , li{
 }
 .dropdown-menu{
   background-color: var(--navbar-background);
+}
+#submit-btn{
+  width: 449px;
+  background-color: #5d2bd0;
+  background-color: #5d2bd0;
+  border: none;
+  color: var(--bright-text);
 }
