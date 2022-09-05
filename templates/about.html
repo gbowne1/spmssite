@@ -34,6 +34,7 @@
 		integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
 		crossorigin="anonymous" referrerpolicy="no-referrer" />
 	<link rel="stylesheet" href="../src/css/styles.css" />
+	
 </head>
 
 <body>
@@ -79,11 +80,11 @@
 		  </li>
 		  <li class="nav-item">
 			<div class="btn-group">
-			  <button type="button" class="btn  dropdown-toggle" style="color: red;" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="dropdown">
+			  <button type="button" class="btn  dropdown-toggle" style="color: rgb(126, 15, 218);" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="dropdown">
 				  About-us
 			  </button>
 			  <div class="dropdown-menu">
-				  <a class="dropdown-item" href="about.html">About</a>
+				  <a class="dropdown-item" href="about.html" style="color: rgb(126, 15, 218);">About</a>
 				  <a class="dropdown-item" href="about.html#business-history-container">Business-history</a>
 				
 				</div>
@@ -107,13 +108,17 @@
 				  <a class="dropdown-item" href="capabilities.html#materials">Materials</a>
 				  <a class="dropdown-item" href="capabilities.html#industries">Industries</a>
 				  
-				  <div class="dropdown-divider"></div>
-				  <a class="dropdown-item" href="#">Separated link</a>
 			  </div>
 		  </div>
 			
 		  </li>
 		</ul>
+		<label >
+			<input type="checkbox" name="checkbox1" class="f" id="switch-d-mode" onclick="dmode()" onchange="chekbox_changed()">
+			  <span class="moveable"></span>
+			  <span class="background-dark-toogle"></span>
+			  <span for="checkbox1" class="dmlabel-f" style="position: absolute; margin-left: 285px; top: 28px;">Dark Mode</span>
+		</label>
 		<form class="form-inline my-2 my-lg-0 ms-auto d-flex">
 		  <input class="form-control mr-sm-2" type="search" placeholder="type something..." aria-label="Search">
 		  <button class="s-btn" id="s-btn"type="submit">Search</button>
@@ -307,15 +312,21 @@
 			</div>
 		</div>
 	</footer>
-	<input type="checkbox" name="checkbox1" class="s" id="switch-d-mode" onclick="dmode()">
-	<label for="checkbox1"class="dmlabel">Dark Mode</label>
-	<!--Start toggle light/dark mode-->
+	
 	<script>
+		if(localStorage.getItem("dark-mode")=="Enabled"){
+			dmode()
+			document.getElementById("switch-d-mode").checked = true;
+		}
+		if(document.getElementById.checked == true){
+			localStorage.clear()
+			localStorage.setItem("dark-mode","Enabled")
+		}
 		function dmode(){
 			document.body.classList.toggle("dark-mode")
 		}
 	</script>
-	<!--End toggle light/dark mode-->
+	
+	<script src="../src/js/main.js"></script>
 </body>
-
 </html>

@@ -17,7 +17,7 @@ body {
   --card-background: white;
   --bright-text: rgb(26, 26, 26);
   --grey-text: rgb(204, 204, 204);
-  --btn-background: rgb(24, 28, 31);
+  --btn-background: rgb(126, 15, 218);
   --btn-text: white;
   --form-background: rgb(255, 255, 255) !important;
   --s-b-b: rgb(4, 13, 44);
@@ -30,7 +30,7 @@ body {
   --card-background: #212529;
   --bright-text: rgb(255, 255, 255);
   --grey-text: rgb(204, 204, 204);
-  --btn-background: rgb(26, 71, 122);
+  --btn-background: rgb(126, 15, 218);
   --btn-text: #212529;
   --form-background: rgb(26 26 26);
   --search-btn-background: rgb(30, 163, 112);
@@ -90,7 +90,7 @@ body {
 .navbar2 a{
   color: var(--bright-text);
   text-decoration: none;
- margin-left: 25px;
+ margin-left: 8px;
 }
 .navbar2 a:focus{
   color: var(--bright-text);
@@ -422,6 +422,7 @@ footer ul , li{
   0 41.8px 33.4px rgba(0, 0, 0, 0.086),
   0 100px 80px rgba(0, 0, 0, 0.12)
 ;
+  border-radius: 17px;
 }
 .form-container option{
   color: grey;
@@ -495,13 +496,17 @@ footer ul , li{
   position: absolute;
   top: 28.5vh;
   left: 91.5%;
-  color: white;
+  color: var(--bright-text);
+}
+.dmlabel-f{
+  top: 28px;
+  color: var(--bright-text);
 }
 .dmlabel-c{
   position: absolute;
   top: 26.5vh;
   left: 91.5%;
-  color: white;
+  color: black;
 }
 .e{
   position: absolute;
@@ -542,6 +547,7 @@ footer ul , li{
 .btn{
   background: var(--btn-background);
   color: var(--btn-text);
+  border: none;
 }
 #bheader {
   color: var(--bright-text);
@@ -554,6 +560,7 @@ footer ul , li{
 }
 #head3{
   color: var(--bright-text);
+  font-size: 55px;
 }
 
 .form-control{
@@ -591,12 +598,50 @@ footer ul , li{
   margin-right: 25px;
 }
 #s-btn{
-  margin-left: -1px;
+  margin-left: -10px;
   width: 85px;
   border: 1px solid var(--border-color);
   color: var(--btn-text-color);
   background-color: var(--s-b-b);
   border-radius: 0px 8px 8px 0px;
+}
+.background-dark-toogle{
+  position: absolute;
+  top: 4.9vh;
+  left: 69.4%;
+  width: 33px;
+  height: 15px;
+  background-color: #000000;
+  border-radius: 25px;
+}
+.f:checked ~ .background-dark-toogle{
+  background-color: rgb(104, 104, 104);
+}
+.moveable{
+  position: absolute;
+  top: 4.9vh;
+  left: 69.3%;
+  width: 14px;
+  height: 15px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  z-index: 10;
+}
+.f:checked ~ .moveable{
+  left: 70.8%;
+  background-color: black;
+  transition: 2s;
+}
+.f:not(:checked) ~ .moveable{
+  transition: 2s;
+}
+#s-btn:hover{
+  color: grey;
+  transition: 1s;
+}
+#s-btn:not(:hover){
+  color: var(--btn-text-color);
+  transition: 1s;
 }
 .footer-top{
   
@@ -652,6 +697,10 @@ footer ul , li{
 }
 #the-form{
   background-color: var(--form-background);
+}
+#the-form input{
+  border-radius: 5px;
+  border: 1px solid var(--border-color);
 }
 .label{
   color: var(--bright-text);

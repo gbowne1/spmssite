@@ -8,6 +8,7 @@ body{
 }
 #home{
     color: var(--bright-text);
+    font-size: 18px;
 }
 :root{
     --navbar-background: #d9d9d9;
@@ -23,6 +24,7 @@ body{
     --btn-text-color: white;
     --text-area: rgb(235, 235, 235);
     --icon-color: black;
+    --border-hover: black;
   }
   .dark-mode{
     --navbar-background: #212121;
@@ -35,9 +37,10 @@ body{
     --form-background: rgb(14, 14, 14);
     --search-btn-background: rgb(30, 163, 112);
     --fotter-background: #1b094d;
-    --border-color: white;
+    --border-color: #3e3e3e;
     --text-area: rgb(14, 14, 14);
     --icon-color: rgb(253, 253, 253);
+    --border-hover: white;
     
   
   }
@@ -81,16 +84,20 @@ main{
   }
   .f{
     position: absolute;
-    top: 60vh;
-    left: 88%;
+    top: 5vh;
+    left: 70.3%;
     z-index: 100;
+    display: hidden;
+    visibility: hidden;
   }
   .dmlabel-f{
     position: absolute;
-    top: 59.3vh;
-    left: 89.5%;
-    color: white;
+    top: 4.299999999999997vh;
+    left: 72%;
+    color: var(--bright-text);
+    z-index: 10;
   }
+  
 .fieldForm input{
     /* margin-bottom: 0.5rem; */
     display: block;
@@ -100,10 +107,14 @@ main{
     border-bottom: 1px solid var(--border-color);
     background-color: var(--form-background);
     color: var(--bright-text);
+    outline: none;
+}
+.fieldForm input:focus{
+    border-bottom: 2px solid rgb(14, 53, 110);
 }
 .fieldForm{
     width: 100%;
-    margin-left: 2rem;
+    margin-left: 5rem;
     display: flex;
     flex-direction: column;
 }
@@ -175,7 +186,7 @@ main{
 }
 .submitButton{
     height: 2rem;
-    margin: 2rem;
+    margin: -1rem;
     margin-left: 270px;
     width: 40%;
     font-size: 1rem;
@@ -194,7 +205,9 @@ main{
 .success{
     color:green;
 }
-
+.s-btn{
+    margin-right: 10px;
+}
 @media screen and (max-width: 576px) {
     .rfqForm{
         width: 85%;
