@@ -725,3 +725,35 @@ footer ul , li{
   border: none;
   color: var(--bright-text);
 }
+@-moz-document url-prefix() {
+  .background-dark-toogle{
+    position: absolute;
+      top: 4.9vh;
+      left: 67.4%;
+      width: 33px;
+      height: 15.5px;
+      background-color: #000000;
+      border-radius: 25px;
+  }
+  .f:checked ~ .background-dark-toogle{
+    background-color: rgb(104, 104, 104);
+  }
+  .moveable{
+    position: absolute;
+    top: 4.98vh;
+    left: 67.49%;
+    width: 13px;
+    height: 14px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    z-index: 10;
+  }
+  .f:checked ~ .moveable{
+    left: 68.8%;
+    background-color: black;
+    transition: 2s;
+  }
+  .f:not(:checked) ~ .moveable{
+    transition: 2s;
+  }
+}
