@@ -90,13 +90,7 @@ main{
     display: hidden;
     visibility: hidden;
   }
-  .dmlabel-f{
-    position: absolute;
-    top: 4.299999999999997vh;
-    left: 72%;
-    color: var(--bright-text);
-    z-index: 10;
-  }
+  
   
 .fieldForm input{
     /* margin-bottom: 0.5rem; */
