@@ -3,7 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Roboto", serif, sans-serif;
-  --fotter-background: rgb(89, 45, 210)!important;
+  --footer-background: rgb(89, 45, 210)!important;
 
 }
 body {
@@ -34,7 +34,7 @@ body {
   --btn-text: #212529;
   --form-background: rgb(26 26 26);
   --search-btn-background: rgb(30, 163, 112);
-  --fotter-background: #1b094d;
+  --footer-background: #1b094d;
   --border-color: #3e3e3e;
 
 
@@ -275,7 +275,7 @@ i {
   width: 100%;
   display: inline-flex;
   justify-content: space-between;
-  background-color: var(--fotter-background);
+  background-color: var(--footer-background);
   color: white;
 }
 #icon-title{
@@ -470,7 +470,7 @@ footer ul , li{
 }
 #business-history{
   margin-left: 10px;
-  margin-rpcight: 10px;
+  margin-right: 10px;
   
 }
 
@@ -507,6 +507,7 @@ footer ul , li{
   position: absolute;
   top: 26.5vh;
   left: 91.5%;
+  
   color: black;
 }
 .e{
@@ -514,7 +515,7 @@ footer ul , li{
   top: 60vh;
   left: 90%;
 }
-.dmlabele{
+.dmlabel-e{
   position: absolute;
   top: 59.5vh;
   left: 91.5%;
@@ -532,7 +533,7 @@ footer ul , li{
 ;
 }
 .footer-top{
-  background: var(--fotter-background);
+  background: var(--footer-background);
   box-shadow:
   0 2.8px 2.2px rgba(0, 0, 0, 0.034),
   0 6.7px 5.3px rgba(0, 0, 0, 0.048),
@@ -606,7 +607,7 @@ footer ul , li{
   background-color: var(--s-b-b);
   border-radius: 0px 8px 8px 0px;
 }
-.background-dark-toogle{
+.background-dark-toggle{
   position: absolute;
   width: 33px;
   height: 15px;
@@ -615,7 +616,7 @@ footer ul , li{
   right: 24pc;
   top: 2pc;
 }
-.f:checked ~ .background-dark-toogle{
+.f:checked ~ .background-dark-toggle{
   background-color: rgb(104, 104, 104);
 }
 .moveable{
@@ -649,7 +650,7 @@ footer ul , li{
 }
 .footer-top{
   
-  background-color: var(--fotter-background);
+  background-color: var(--footer-background);
 }
 .card-body p{
   color: var(--bright-text);
@@ -683,10 +684,9 @@ footer ul , li{
   padding-left: 50px;
   margin-top: 15px;
   z-index: 2;
-  
 }
 
-#capablitys{
+#capabilities{
   width: 85px;
   height: 35px;
   border: none;
@@ -694,7 +694,7 @@ footer ul , li{
   background-color: var(--navbar-background);
   color: var(--bright-text);
 }
-#capablitys option{
+#capabilities option{
   width: 400px;
   border: none;
   border-radius: 0px;
@@ -730,7 +730,7 @@ footer ul , li{
   color: var(--bright-text);
 }
 @-moz-document url-prefix() {
-  .background-dark-toogle{
+  .background-dark-toggle{
     position: absolute;
       top: 4.9vh;
       left: 67.4%;
@@ -739,7 +739,7 @@ footer ul , li{
       background-color: #000000;
       border-radius: 25px;
   }
-  .f:checked ~ .background-dark-toogle{
+  .f:checked ~ .background-dark-toggle{
     background-color: rgb(104, 104, 104);
   }
   .moveable{

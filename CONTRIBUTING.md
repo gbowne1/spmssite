@@ -6,7 +6,7 @@ Contributing to this site template assumes you know the basics of:
 
 HTML5
 CSS3
-JavaScript / ECMAScript ES2018 or latest
+JavaScript / ECMAScript ES2018 or latest (minimum ES5)
 PHP 8.1
 Ajax
 jQuery 3.6
@@ -22,10 +22,10 @@ I have added .editorconfig and .gitignore files to this project.
 ## Dependencies & CDN's
 
 Google Fonts
-jQuery
-Bootstrap
-FontAwesome
-Popper/PopperJS
+jQuery 3.6
+Bootstrap 5.2
+FontAwesome 6.1.2
+Popper/PopperJS 
 
 ## Fonts
 
@@ -42,3 +42,5 @@ Minimum 19.2px Normal
 - Hotfix (hotfix}
 - Feature-{feature}
 - User assigned tasks should get named{issue-no)-{name}-task/feature
+
+> When you are submitting a PR, please add reviewers and also include a screenshot of your changes.
