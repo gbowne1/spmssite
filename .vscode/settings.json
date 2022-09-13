@@ -1,9 +1,31 @@
 // Place your settings in this file to overwrite default and user settings.
 {
    "[html]": {
-    "editor.suggest.insertMode": "replace"
+    "editor.suggest.insertMode": "replace",
+    "editor.defaultFormatter": "vscode.html-language-features"
    },
    "[css]": {
     "editor.suggest.insertMode": "replace"
+   },
+   "[javascript]": {
+      "editor.maxTokenizationLineLength": 2500,
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+   },
+   "[json]": {
+      "editor.quickSuggestions": {
+         "strings": true
+      },
+      "editor.suggest.insertMode": "replace",
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+   },
+   "[jsonc]": {
+      "editor.quickSuggestions": {
+         "strings": true
+      },
+      "editor.suggest.insertMode": "replace",
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+   },
+   "yaml.schemas": {
+      "https://json.schemastore.org/github-issue-config.json": "file:///media/sdd1/Sites/spmssite/.github/PULL_REQUEST_TEMPLATE.yml"
    }
 }
