@@ -39,6 +39,7 @@
   <link rel="manifest" href="~/manifest.json">
   <link rel="shortcut icon" href="favicon.ico">
   <link rel="apple-touch-icon image_src" href="/src/images/apple-touch-icon.png">
+  <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet">
 
 </head>
 
@@ -48,7 +49,7 @@
       <div class="header">
         <div class="container">
           <div>
-            <img class="imgLogo" src="../src/images/logo.jpg" alt="logo of the company"></img>
+            <img class="imgLogo" src="../src/images/logo.jpg" alt="logo of the company">
           </div>
           <div class="jumbotron">
             <h1>Seattle Precision Machine Shop</h1>
@@ -100,25 +101,25 @@
                     <a class="dropdown-item" href="capabilities.html#materials">Materials</a>
                     <a class="dropdown-item" href="capabilities.html#industries">Industries</a>
                     
-
                 </div>
             </div>
               
             </li>
           </ul>
-          <label >
-            <input type="checkbox" name="checkbox1" class="f" id="switch-d-mode" onclick="dmode()" onchange="checkbox_changed()">
-              <span class="moveable"></span>
-              <span class="background-dark-toogle"></span>
-              <span for="checkbox1" class="dmlabel-f" style="position: absolute; margin-left: 285px; top: 28px;">Dark Mode</span>
-          </label>
           <form class="form-inline my-2 my-lg-0 ms-auto d-flex">
             <input class="form-control mr-sm-2" type="search" placeholder="type something..." aria-label="Search">
-            <button class="s-btn" id="s-btn"type="submit">Search</button>
+            <button class="s-btn" id="s-btn" type="submit">Search</button>
           </form>
+          <div class="mode__header">
+            <a href="mode:;" class="mode__toggle" onclick="dmode()">
+              <i class="bx bx-moon"></i>
+              <i class="bx bxs-moon" ></i>
+            </a>
+
+          </div>
         </div>
       </nav>
-    </header>
+
     <div class="mainContent">
       <section>
         <div class="card" >
@@ -169,8 +170,9 @@
               Get connected with us on social networks:
             </div>
             <div id="footer-icon">
-              <a href="https://github.com/" target="_blank" aria-label="GitHub"rel="noopener noreferrer"><i class="fa-brands fa-github"
-                  ></i></a>
+              <a href="https://github.com/" target="_blank" aria-label="GitHub" rel="noopener noreferrer">
+                <i class="fa-brands fa-github"></i>
+              </a>
 
               <a href="https://www.linkedin.com/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><i
                   class="fa-brands fa-linkedin-in" ></i></a>

@@ -36,9 +36,22 @@ body {
   --search-btn-background: rgb(30, 163, 112);
   --footer-background: #1b094d;
   --border-color: #3e3e3e;
-
-
 }
+
+.dark-mode .mode__toggle{
+  background-color: #404952;
+}
+
+.dark-mode .bx-moon{
+  opacity: 0;
+  visibility: hidden;
+}
+
+.dark-mode .bxs-moon{
+  opacity: 1;
+  visibility: visible;
+}
+
 .overall_wrapper {
   display: flex;
   flex-direction: column;
@@ -607,39 +620,50 @@ footer ul , li{
   background-color: var(--s-b-b);
   border-radius: 0px 8px 8px 0px;
 }
-.background-dark-toggle{
-  position: absolute;
-  width: 33px;
-  height: 15px;
-  background-color: #000000;
-  border-radius: 25px;
-  right: 24pc;
-  top: 2pc;
+
+.mode__header{
+  display: flex;
+  width:5%;
+  justify-content: flex-end;
+  margin-right: 15px;
 }
-.f:checked ~ .background-dark-toggle{
-  background-color: rgb(104, 104, 104);
-}
-.moveable{
-  position: absolute;
-  top: 2pc;
-  /* left: 69.3%; */
-  width: 14px;
-  height: 15px;
-  background-color: #ffffff;
+
+.mode__toggle{
+  display: flex;
+  width: 41px;
+  height: 41px;
+  background-color: #eff8ff;
   border-radius: 50%;
-  z-index: 10;
-  right: 25.2pc;
+  transition: .5s;
+  position: relative;
+  text-decoration: none;
 }
-.f:checked ~ .moveable{
-      /* left: 70.8%; */
-      background-color: black;
-      transition: 2s;
-      top: 2pc;
-      right: 24pc;
+
+.mode__toggle:hover{
+  transition: .1s;
+  width: 42px;
+  height: 42px;
 }
-.f:not(:checked) ~ .moveable{
-  transition: 2s;
+
+.mode__toggle .bx{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  transition: .5s;
 }
+
+.bx-moon{
+  color:#1b094d;
+}
+
+.bxs-moon{
+  color: #fff;
+  opacity: 0;
+  visibility: hidden;
+}
+
+
 #s-btn:hover{
   color: grey;
   transition: 1s;
