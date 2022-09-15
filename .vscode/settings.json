@@ -27,5 +27,6 @@
    },
    "yaml.schemas": {
       "https://json.schemastore.org/github-issue-config.json": "file:///media/sdd1/Sites/spmssite/.github/PULL_REQUEST_TEMPLATE.yml"
-   }
+   },
+   "liveServer.settings.port": 5501
 }

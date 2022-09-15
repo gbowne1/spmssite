@@ -34,10 +34,9 @@
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
   <link rel="stylesheet" href="../src/css/styles.css" />
-  <link rel="stylesheet" type="text/css" href="Content/bootstrap.min.css" />
   <meta name="theme-color" content="#4285f4">
   <link rel="manifest" href="~/manifest.json">
-  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="shortcut icon" href="/src/images/favicon.png">
   <link rel="apple-touch-icon image_src" href="/src/images/apple-touch-icon.png">
   <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet">
 
@@ -48,14 +47,15 @@
     <header>
       <div class="header">
         <div class="container">
+          <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+            <button class="btn btn-primary mb-2 w-20 me-md-2 rounded-2" type="button" data-toggle="modal">Employee Login</button>
+          </div>
           <div>
-            <img class="imgLogo" src="../src/images/logo.jpg" alt="logo of the company">
+            <img class="imgLogo" src="../src/images/logo.jpg" alt="">
           </div>
           <div class="jumbotron">
-            <h1>Seattle Precision Machine Shop</h1>
-            <h2>
-              We <u><i>ARE</i></u> Quality!
-            </h2>
+            <h1>A fantastic Industrial Workshop Site template</h1>
+            <h2> </h2>
           </div>
         </div>
       </div>
@@ -74,13 +74,12 @@
             <li class="nav-item">
               <div class="btn-group">
                 <button type="button" class="btn  dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="dropdown">
-                    About-us
+                    About
                 </button>
                 <div class="dropdown-menu" id="drop-about">
-                    <a class="dropdown-item" href="about.html">About</a>
-                    <a class="dropdown-item" href="about.html#business-history-container">Business-history</a>
-                
-                  </div>
+                    <a class="dropdown-item" href="./templates/about.html">About</a>
+                    <a class="dropdown-item" href="./templates/about.html#business-history-container">Business-history</a>
+                </div>
             </div>
             </li>
             <li class="nav-item">
@@ -115,7 +114,6 @@
               <i class="bx bx-moon"></i>
               <i class="bx bxs-moon" ></i>
             </a>
-
           </div>
         </div>
       </nav>
@@ -162,12 +160,15 @@
         </p>
       </aside>
     </div>
+    
     <div id="cookieConsent">
       <div id="closeCookieConsent">x</div>
       This website is using cookies.
       <a href="#" target="_blank">More info</a>.
       <a class="cookieConsentOK"></a>
     </div>
+    <br>
+
     <footer class="footer-wrapper">
       <div class="footer-container container">
         <div class="container">
@@ -218,10 +219,10 @@
                 </div>
                 <div class="product-list">
                   <ul>
-                    <li>MDBootstrap</li>
-                    <li>MDWordPress</li>
-                    <li>BrandFlow</li>
-                    <li>Bootstrap Angular</li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
                   </ul>
                 </div>
               </div>
@@ -233,10 +234,10 @@
                 </div>
                 <div class="link-list">
                   <ul>
-                    <li>Your Account</li>
-                    <li>Become an Affiliate</li>
-                    <li>Shipping Rate</li>
-                    <li>Helps</li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
                   </ul>
                 </div>
               </div>
@@ -246,20 +247,58 @@
                 </div>
                 <div class="contact-list">
                   <ul>
-                    <li>NewYork</li>
+                    <li>The Acme Co.</li>
+                    <li>12345 Anywhere Rd</li>
+                    <li>Anytown, AnyCounty, AnyState, 01234+0123</li>
                     <li>info@example.com</li>
-                    <li>+01 234 5678</li>
-                    <li>+01 234 5678</li>
                   </ul>
+                  <div>
+                  Office <a href="#"><span class="fa-solid fa-phone"></span> 1(234)456-7890 </a>
+                  <br>
+                  Fax <a href="#"><span class="fa-solid fa-phone"></span> 1(234)456-7890 </a>
+                  <br>
+                  Toll Free <a href="#"> <span class="fa-solid fa-phone"></span> 1(234)456-7890 </a>
+                  </div>
                 </div>
+              </div>
+            </div>
+            <div class="link-contact">
+              <div class="useful-links hours-map">
+                <div class="business-hours">
+                  <div class="footer-title">
+                    BUSINESS HOURS
+                  </div>
+                  <div class="contact-list">
+                    <ul>
+                      <li>Mon - Fri: 9am - 5pm</li>
+                      <li>Sat: 9am - 3pm</li>
+                      <li>Sun: Closed</li>
+                    </ul>
+                  </div>
+                </div>
+                <!--Google map-->
+              <div id="map-container-google-1" class="z-depth-1 map-container mb-1">
+                <iframe id="google-map" width="100" height="100" scrolling="yes" marginheight="0" marginwidth="0"
+                  src="https://maps.google.com/maps?q=manhatan&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0"
+                  style="border:0" allowfullscreen>
+                </iframe>
+              </div>
+              <!--Google Maps-->
               </div>
             </div>
           </div>
           <div class="footer-bottom">
             <div id="footer-wrapper">
+              <div>
+                <a href="/templates/privacy.html">Our Privacy Policy</a><br>
+                <a href="/templates/terms.html">Our Terms and Conditions</a>
+              </div>
               <p>
-                &copy; Copyright 2022 Seattle Precision Machine Shop, Inc.
+                &copy; Copyright 2022 A fantastic industrial business name.
               </p>
+              <div>
+                <h4>This website was created by: A WebDevelopment Company, LLC.</h4>
+              </div>
             </div>
           </div>
         </div>
@@ -274,8 +313,8 @@
 		function dmode(){
 			document.body.classList.toggle("dark-mode")
 		}
-    
 	</script>
-  <script src="../src/js/main.js"></script>
+  <script src="/src/js/main.js"></script>
+  <script src="/src/js/cookieConsent.js"></script>
 </body>
 </html>

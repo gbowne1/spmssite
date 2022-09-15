@@ -10,7 +10,7 @@
 	<meta name="keywords" content="cnc cnc machining " />
 	<meta name="description" content="" />
 	<meta name="author" content="Gregory K. Bowne" />
-	<link rel="icon" href="favicon.ico" type="image/x-icon" />
+	<link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -37,6 +37,9 @@
 	<header>
 		<div class="header">
 			<div class="container">
+				<div class="d-grid gap-2 d-md-flex justify-content-md-end">
+					<button class="btn btn-primary me-md-2" type="button" data-toggle="modal">Employee Login</button>
+				</div>
 				<div class="jumbotron">
 					<a href="./index.html">Seattle Precision Machine Shop</a>
 					<h2>
@@ -72,7 +75,7 @@
 					</div>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="rfq.html">Quotes</a>
+					<a class="nav-link" href="./rfq.html">Quotes</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="./contact.html" >Contact</a>
@@ -92,7 +95,6 @@
 
 						</div>
 					</div>
-
 				</li>
 			</ul>
 			<label>
@@ -117,8 +119,27 @@
 			document.body.classList.toggle("dark-mode")
 		}
 	</script>
-	<script src="scripts/jquery-3.1.0.min.js"></script>
-	<script src="scripts/bootstrap.min.js"></script>
+	<script>
+		const myModal = document.getElementById('myModal')
+		const myInput = document.getElementById('myInput')
+
+		myModal.addEventListener('shown.bs.modal', () => {
+ 		myInput.focus()
+		})
+	</script>
+	<br><br>
+	<div class="w-auto p-3 container-xl mt-3 mb-3 h-auto d-inline-block" style="background-color: aqua; border-radius:10px">
+		<div class="row">
+			<div class="col-xl">
+				One of three columns
+			</div>
+			<div class="col-sm">
+				One of three columns
+			</div>
+			<br><br>
+		</div>
+	</div>
+	<br><br>
 	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
 	  integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
 	  crossorigin="anonymous"></script>
