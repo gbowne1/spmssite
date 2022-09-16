@@ -33,6 +33,7 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
   <link rel="stylesheet" href="../src/css/styles.css" />
   <meta name="theme-color" content="#4285f4">
   <link rel="manifest" href="~/manifest.json">
@@ -48,8 +49,12 @@
       <div class="header">
         <div class="container">
           <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-            <button class="btn btn-primary mb-2 w-20 me-md-2 rounded-2" type="button" data-toggle="modal">Employee Login</button>
+            <button type="button" class="btn btn-primary mb-2 w-20 me-md-2 rounded-2" data-bs-toggle="modal"
+              data-bs-target="#loginForm">
+              Employee Login
+            </button>
           </div>
+
           <div>
             <img class="imgLogo" src="../src/images/logo.jpg" alt="">
           </div>
@@ -60,67 +65,92 @@
         </div>
       </div>
     </header>
-      <nav class="navbar2 sticky-top navbar-expand-lg navbar-light " style="backdrop-filter: invert(80%);">
-        <a class="navbar-brand" href="./index.html" style="color: rgb(126, 15, 218);">Home</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav3 mr-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="#blog">Blog</a>
-            </li>
-            <li class="nav-item">
-              <div class="btn-group">
-                <button type="button" class="btn  dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="dropdown">
-                    About
-                </button>
-                <div class="dropdown-menu" id="drop-about">
-                    <a class="dropdown-item" href="./templates/about.html">About</a>
-                    <a class="dropdown-item" href="./templates/about.html#business-history-container">Business-history</a>
-                </div>
+
+    <div class="modal fade" id="loginForm" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Login</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="">
+              <input type="email" class="form-control" placeholder="Email" aria-label="Email" required>
+              <br />
+              <input type="password" class="form-control" placeholder="Password" aria-label="Password" required>
             </div>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="rfq.html">Quotes</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./contact.html">Contact</a>
-            </li>
-            <li class="nav-item dropdown">
-              
-              <div class="btn-group">
-                <button type="button" class="btn  dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="dropdown">
-                    Capabilities
-                </button>
-                <div class="dropdown-menu">
-                    <a class="dropdown-item" href="capabilities.html#services">Services</a>
-                    <a class="dropdown-item" href="capabilities.html#equipments">Equipment</a>
-                    <a class="dropdown-item" href="capabilities.html#materials">Materials</a>
-                    <a class="dropdown-item" href="capabilities.html#industries">Industries</a>
-                    
-                </div>
-            </div>
-              
-            </li>
-          </ul>
-          <form class="form-inline my-2 my-lg-0 ms-auto d-flex">
-            <input class="form-control mr-sm-2" type="search" placeholder="type something..." aria-label="Search">
-            <button class="s-btn" id="s-btn" type="submit">Search</button>
-          </form>
-          <div class="mode__header">
-            <a href="mode:;" class="mode__toggle" onclick="dmode()">
-              <i class="bx bx-moon"></i>
-              <i class="bx bxs-moon" ></i>
-            </a>
+
+          </div>
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Submit</button>
           </div>
         </div>
-      </nav>
+      </div>
+    </div>
+
+    <nav class="navbar2 sticky-top navbar-expand-lg navbar-light " style="backdrop-filter: invert(80%);">
+      <a class="navbar-brand" href="./index.html" style="color: rgb(126, 15, 218);">Home</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav3 mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#blog">Blog</a>
+          </li>
+          <li class="nav-item">
+            <div class="btn-group">
+              <button type="button" class="btn  dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false" id="dropdown">
+                About
+              </button>
+              <div class="dropdown-menu" id="drop-about">
+                <a class="dropdown-item" href="./templates/about.html">About</a>
+                <a class="dropdown-item" href="./templates/about.html#business-history-container">Business-history</a>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="rfq.html">Quotes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./contact.html">Contact</a>
+          </li>
+          <li class="nav-item dropdown">
+
+            <div class="btn-group">
+              <button type="button" class="btn  dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false" id="dropdown">
+                Capabilities
+              </button>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="capabilities.html#services">Services</a>
+                <a class="dropdown-item" href="capabilities.html#equipments">Equipment</a>
+                <a class="dropdown-item" href="capabilities.html#materials">Materials</a>
+                <a class="dropdown-item" href="capabilities.html#industries">Industries</a>
+
+              </div>
+            </div>
+
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0 ms-auto d-flex">
+          <input class="form-control mr-sm-2" type="search" placeholder="type something..." aria-label="Search">
+          <button class="s-btn" id="s-btn" type="submit">Search</button>
+        </form>
+        <div class="mode__header">
+          <a href="mode:;" class="mode__toggle" onclick="dmode()">
+            <i class="bx bx-moon"></i>
+            <i class="bx bxs-moon"></i>
+          </a>
+        </div>
+      </div>
+    </nav>
 
     <div class="mainContent">
       <section>
-        <div class="card" >
+        <div class="card">
           <div class="card-body">
             <h4></h4>
             <p>
@@ -140,7 +170,7 @@
       </section>
       <article id="art">
         <h3>This is a Article</h3>
-        <p >
+        <p>
           This is an Article the INjuries was I'm name moral think act you.
           will according up an make "amazing" Road an known showing For we be
           words glasses twerkin the a sleeping media out does starchy say Road
@@ -160,7 +190,7 @@
         </p>
       </aside>
     </div>
-    
+
     <div id="cookieConsent">
       <div id="closeCookieConsent">x</div>
       This website is using cookies.
@@ -182,16 +212,16 @@
               </a>
 
               <a href="https://www.linkedin.com/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><i
-                  class="fa-brands fa-linkedin-in" ></i></a>
+                  class="fa-brands fa-linkedin-in"></i></a>
 
-              <a href="https://twitter.com/" target="_blank" aria-label="Twitter" rel="noopener noreferrer"><i class="fa-brands fa-twitter"
-                  ></i></a>
+              <a href="https://twitter.com/" target="_blank" aria-label="Twitter" rel="noopener noreferrer"><i
+                  class="fa-brands fa-twitter"></i></a>
 
               <a href="https://in.pinterest.com/" aria-label="Pinterest" target="_blank" rel="noopener noreferrer"><i
-                  class="fa-brands fa-pinterest" ></i></a>
+                  class="fa-brands fa-pinterest"></i></a>
 
               <a href="https://www.facebook.com/" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><i
-                  class="fa-brands fa-facebook" ></i></a>
+                  class="fa-brands fa-facebook"></i></a>
 
               <a href="https://www.instagram.com/" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><i
                   class="fa-brands fa-instagram"></i></a>
@@ -253,11 +283,11 @@
                     <li>info@example.com</li>
                   </ul>
                   <div>
-                  Office <a href="#"><span class="fa-solid fa-phone"></span> 1(234)456-7890 </a>
-                  <br>
-                  Fax <a href="#"><span class="fa-solid fa-phone"></span> 1(234)456-7890 </a>
-                  <br>
-                  Toll Free <a href="#"> <span class="fa-solid fa-phone"></span> 1(234)456-7890 </a>
+                    Office <a href="#"><span class="fa-solid fa-phone"></span> 1(234)456-7890 </a>
+                    <br>
+                    Fax <a href="#"><span class="fa-solid fa-phone"></span> 1(234)456-7890 </a>
+                    <br>
+                    Toll Free <a href="#"> <span class="fa-solid fa-phone"></span> 1(234)456-7890 </a>
                   </div>
                 </div>
               </div>
@@ -277,13 +307,13 @@
                   </div>
                 </div>
                 <!--Google map-->
-              <div id="map-container-google-1" class="z-depth-1 map-container mb-1">
-                <iframe id="google-map" width="100" height="100" scrolling="yes" marginheight="0" marginwidth="0"
-                  src="https://maps.google.com/maps?q=manhatan&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0"
-                  style="border:0" allowfullscreen>
-                </iframe>
-              </div>
-              <!--Google Maps-->
+                <div id="map-container-google-1" class="z-depth-1 map-container mb-1">
+                  <iframe id="google-map" width="100" height="100" scrolling="yes" marginheight="0" marginwidth="0"
+                    src="https://maps.google.com/maps?q=manhatan&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0"
+                    style="border:0" allowfullscreen>
+                  </iframe>
+                </div>
+                <!--Google Maps-->
               </div>
             </div>
           </div>
@@ -305,16 +335,18 @@
       </div>
     </footer>
   </div>
-	<!--Start toggle light/dark mode-->
-	<script>
-    if(localStorage.getItem("dark-mode")=="Enabled"){
-			dmode()
-		}
-		function dmode(){
-			document.body.classList.toggle("dark-mode")
-		}
-	</script>
+  <!--Start toggle light/dark mode-->
+  <script type="text/javascript">
+    if (localStorage.getItem("dark-mode") == "Enabled") {
+      dmode()
+    }
+    function dmode() {
+      document.body.classList.toggle("dark-mode")
+    }
+
+  </script>
   <script src="/src/js/main.js"></script>
   <script src="/src/js/cookieConsent.js"></script>
 </body>
+
 </html>
