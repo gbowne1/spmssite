@@ -30,19 +30,20 @@ body {
 .dark-mode {
   --navbar-background: #0e0e0e;
   --body-background: #2a2929;
-  --card-background: #212529;
+  --card-background: #101010;
   --bright-text: rgb(255, 255, 255);
   --grey-text: rgb(204, 204, 204);
-  --btn-background: rgb(126, 15, 218);
+  --btn-background: rgb(240, 240, 240);
   --btn-text: #212529;
   --form-background: rgb(26 26 26);
   --search-btn-background: rgb(30, 163, 112);
   --footer-background: #1b094d;
   --border-color: #3e3e3e;
+
 }
 
 .dark-mode .mode__toggle {
-  background-color: #404952;
+  background-color: #8b8b8b;
 }
 
 .dark-mode .bx-moon {
@@ -53,6 +54,15 @@ body {
 .dark-mode .bxs-moon {
   opacity: 1;
   visibility: visible;
+}
+.dark-mode .pra{
+  color: rgb(90, 148, 213);
+}
+.dark-mode .paragraph{
+  color: white;
+}
+.dark-mode .card-title{
+  color: #fff;
 }
 
 .overall_wrapper {
@@ -785,10 +795,9 @@ h3 {
 }
 
 #head {
-  padding-top: 100px;
+  padding-top: 30px;
   font-size: 100px;
 }
-
 #map-info {
   padding-top: 150px;
 }
@@ -978,9 +987,32 @@ h2{
   padding-right: 30px;
   padding-bottom: 20px;
 }
+.card{
+  padding-top: 20px;
+}
+.row{
+  padding-top: 60px;
+}
+.main-carousel{
+  padding-right:60px; ;
+  padding-left: 60px;
+  padding-top: 50px;
+}
+.cell{
+  width: 33%;
+  height:350px;
+  margin: 0 15px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+.cell img{
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+}
+
 
 #cookieConsent a.cookieConsentOK:hover {
   background-color: #E0C91F;
 }
-
 /*Cookie Consent End*/
