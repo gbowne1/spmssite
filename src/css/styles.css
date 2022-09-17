@@ -174,7 +174,6 @@ body {
 /**/
 .container {
   max-width: 100%;
-  position: relative;
   z-index: 2;
   padding: 0;
 }
@@ -636,9 +635,18 @@ h2 {
 }
 
 .btn {
+  padding-top: 10px;
+  padding-bottom: 10px;
   background: var(--btn-background);
   color: var(--btn-text);
-  border: none;
+  border-radius: 30px;
+}
+.btn:hover{
+  color: #fff;
+  background-color: #2e2e2e;
+}
+.card-text{
+  padding-top: 10px;
 }
 
 #bheader {
@@ -942,6 +950,33 @@ h3 {
   padding: 0 20px;
   cursor: pointer;
   margin: 0 60px 0 10px;
+}
+#head2{
+  padding-bottom: 30px;
+  padding-top: 30px;
+  font-size: 30px;
+  border-radius: 30px;
+  color: #fff;
+  background-color: rgb(126, 15, 218);
+}
+.container.jumbotron{
+  font-family: sans-serif;
+}
+#bheader{
+  width: 100%;
+  background-color: #1b094d;
+  color: #fff;
+  font-size: 40px;
+}
+h2{
+  color: #1b094d;
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+.pra{
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 20px;
 }
 
 #cookieConsent a.cookieConsentOK:hover {
