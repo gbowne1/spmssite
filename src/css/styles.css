@@ -143,7 +143,11 @@ body {
 .navbar2 {
   background-color: var(--navbar-background);
 }
-
+/* logo image */
+.logoImg{
+  width: 200px;
+  height: 200px;
+}
 /* Google maps */
 #map-container-google-1 {
   width: 20vw;
