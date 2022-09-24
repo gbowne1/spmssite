@@ -33,6 +33,7 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script src="../src/js/loginform.js"></script>
 
   <link rel="stylesheet" href="../src/css/styles.css" />
   <meta name="theme-color" content="#4285f4">
@@ -45,16 +46,20 @@
 
 <body>
   <div class="overall_wrapper">
+   
     <header>
       <div class="header">
         <div class="container">
-          <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+          <div class="d-grid gap-2 d-md-flex justify-content-md-end" id="abc">
             <button type="button" class="btn btn-primary mb-2 w-20 me-md-2 rounded-2" data-bs-toggle="modal"
-              data-bs-target="#loginForm">
+              data-bs-target="#loginForm" id="loginbutton">
               Employee Login
             </button>
           </div>
-
+          <div id="loggedin" style="visibility: hidden;">Logged in as </div>
+          <button type="button" id="logout" class="btn btn-primary  mb-2 w-20 me-md-2 rounded-2" style="visibility: hidden;">
+            log out
+          </button>
           <div>
             <img class="logoImg" src="../src/images/logo.png" alt="logo">
           </div>
@@ -67,27 +72,61 @@
     </header>
 
     <div class="modal fade" id="loginForm" tabindex="-1">
+      <div class="custom-modal">
       <div class="modal-dialog">
-        <div class="modal-content">
+        <div class="modal-content rounded-3">
           <div class="modal-header">
+  
             <h5 class="modal-title">Login</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+           
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="close"></button>
           </div>
-          <div class="modal-body">
-            <div class="">
-              <input type="email" class="form-control" placeholder="Email" aria-label="Email" required>
-              <br />
-              <input type="password" class="form-control" placeholder="Password" aria-label="Password" required>
+          <form>
+            <div class="alert alert-danger alert-dismissible fade show" data-bs-dismiss="alert" role="alert" id="incorrect" style="display: none;">
+              incorrect credentials
+              <!--<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>-->
             </div>
-
+            <div class="alert alert-danger alert-dismissible fade show" data-bs-dismiss="alert"  role="alert" id="blankEmail" style="display: none;">
+              <strong>Email cannot be blank</strong> 
+             <!-- <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>-->
+            </div>
+            <div class="alert alert-danger alert-dismissible fade show" data-bs-dismiss="alert" role="alert" id="blankPassword" style="display: none;">
+              password cannot be blank
+             <!-- <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>-->
+            </div>
+            <div class="alert alert-danger alert-dismissible fade show" data-bs-dismiss="alert" role="alert" id="blankBoth" style="display: none;">
+               Email and password cannot be blank
+             <!-- <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>-->
+            </div>
+            <div class="alert alert-danger alert-dismissible fade show" data-bs-dismiss="alert" role="alert" id="invalidemail" style="display: none;">
+              Email is invalid
+            <!-- <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>-->
+           </div>
+            <div class="form-group">
+              <br>
+              <label for="email address">Email address</label>
+           
+              <div class="input">
+              <input type="email" class="form-control" id="EmailForLogin" placeholder="Enter email">
+              </div>
+            </div>
+            <div class="form-group" class="label">
+              <div class="label">
+              <label for="password">Password</label>
+              </div>
+              <div class="input">
+              <input type="password" class="form-control" id="PasswordForLogin" placeholder="Enter password">
+              </div>
+            </div>
+             <div class="submitbutton">
+            <button class="btn btn-primary" id="submit" type="button">Login</button>
           </div>
-          <div class="modal-footer">
-            <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Submit</button>
-          </div>
+        </form>
         </div>
       </div>
+      </div>
     </div>
-
+    
     <nav class="navbar2 sticky-top navbar-expand-lg navbar-light " style="backdrop-filter: invert(80%);">
       <a class="navbar-brand" href="./index.html" style="color: rgb(126, 15, 218);">Home</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -147,7 +186,7 @@
         </div>
       </div>
     </nav>
-
+       
     <div class="mainContent">
       <section>
         <div class="card">
