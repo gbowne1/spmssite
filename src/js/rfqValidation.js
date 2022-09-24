@@ -5,7 +5,13 @@ const mobileEl = document.querySelector('#mobile');
 const websiteEl = document.querySelector('#website');
 const emailEl = document.querySelector('#email');
 const contactEl = document.querySelector('#contactPerson');
-const form = document.querySelector('#form')
+const form = document.querySelector('#form');
+const password = document.querySelector('#password');
+//const loginForm = document.getElementById('loginForm');
+//const submitButton = document.getElementById('submit');
+//console.log(submitButton);
+// const emailForLogin = document.getElementById('emailForLogin');
+// const passwordForLogin = document.getElementById('passwordForLogin');
 
 const isRequired = value => value ===''?false:true;
 const isEmailValid = (email) => {
@@ -143,6 +149,8 @@ const checkEmail = () => {
     }
     return valid;
 };
+
+
 
 form.addEventListener('submit', (e)=>{
     e.preventDefault();

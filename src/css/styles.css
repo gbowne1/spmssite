@@ -68,8 +68,10 @@ body {
 .overall_wrapper {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 50px;
 }
+
+
 
 .nav-item {
   padding: 0;
@@ -679,11 +681,14 @@ h2 {
   color: var(--bright-text);
   font-size: 55px;
 }
-
+.modal_header{
+  text-align: center !important;
+}
 .form-control {
   color: var(--bright-text);
   background-color: var(--form-background);
-  border-radius: 8px 0px 0px 8px;
+  border-radius: 8px  8px;
+  text-align: left;
   border: 1px solid var(--border-color);
 }
 
@@ -773,6 +778,7 @@ h3 {
   opacity: 0;
   visibility: hidden;
 }
+
 
 
 #s-btn:hover {
@@ -1015,8 +1021,34 @@ h2{
   object-fit: cover;
 }
 
-
 #cookieConsent a.cookieConsentOK:hover {
   background-color: #E0C91F;
 }
+.input{
+  position:relative;
+  width: 90%;
+  height: 50px;
+  right: -25px;
+  
+}
 /*Cookie Consent End*/
+.submitbutton{
+  position: relative;
+  width: 90%;
+  right: -22px;
+  top: -15px;
+  align-items: center;
+}
+#loggedin{
+  position: relative;
+  width: 80%;
+  font-size: 15px;
+  right: -500px;
+  color:white;
+}
+
+#logout{
+  position: relative;
+  width: 20%;
+  right:-400px;
+}
