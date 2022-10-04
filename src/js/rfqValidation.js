@@ -7,6 +7,7 @@ const emailEl = document.querySelector('#email');
 const contactEl = document.querySelector('#contactPerson');
 const form = document.querySelector('#form');
 const password = document.querySelector('#password');
+const attachmentEl = document.querySelector('#attachment');
 //const loginForm = document.getElementById('loginForm');
 //const submitButton = document.getElementById('submit');
 //console.log(submitButton);
@@ -109,6 +110,25 @@ const checkPhone = () => {
     return valid;
 };
 
+const checkAttachment = () => {
+    let valid = true;
+    //the var allowedFileExts is an array of all allowable filetypes 
+    var allowedFileExts = ['.jpg', '.jpeg', '.png', '.txt', '.webp', '.docx', '.doc', '.dwg', '.dxf', '.iges', '.step'];
+    //return true if no file was uploaded, as this is not a required field
+    if(attachmentEl.value=='') {
+        valid = true 
+    }
+    //if a file was uploaded, check to see if it's a valid file type
+    else {
+        var fileExtension = attachmentEl.value.substring(attachmentEl.value.lastIndexOf("."), attachmentEl.value.length).toLowerCase();
+        if (allowedFileExts.indexOf(fileExtension)  === -1) {
+            showError(attachmentEl, 'File type not valid.');
+            valid = false;
+        }
+    }
+    return valid;
+};
+
 
 const showError = (input, message) => {
     // get the form-field element
@@ -161,7 +181,8 @@ isPhoneValid = checkPhone(),
 isFaxValid = checkFax(),
 isMobileValid = checkMobile(),
 isWebsiteValid = checkWebsite(),
-isContanctValid = checkContact();
+isContanctValid = checkContact(),
+isAttachmentValid = checkAttachment();
 
 let isFormValid = isAddressValid &&
 isEmailValid &&
@@ -169,7 +190,8 @@ isFaxValid &&
 isPhoneValid &&
 isWebsiteValid &&
 isMobileValid &&
-isContanctValid;
+isContanctValid &&
+isAttachmentValid;
 
 // submit to the server if the form is valid
 if (isFormValid) {
@@ -214,6 +236,9 @@ case 'contactPerson':
     break;
 case 'email':
     checkEmail();
+    break;
+case 'attachment':
+    checkAttachment();
     break;
 }
 }));
