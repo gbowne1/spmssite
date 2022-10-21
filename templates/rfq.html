@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="robots" content="index, follow" />
+	<title>Seattle Precision Machine Shop</title>
+	<meta name="keywords" content="cnc cnc machining " />
+	<meta name="description" content="" />
+	<meta name="author" content="Gregory K. Bowne" />
+	<link rel="icon" href="/src/images/favicon.png" type="image/x-icon" />
+	<link rel="shortcut icon" href="/src/images/favicon.png" type="image/x-icon" />
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet" />
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+	<script src="https://code.jquery.com/jquery-3.6.0.js"
+		integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.10.2/umd/popper.min.js"
+		integrity="sha512-nnzkI2u2Dy6HMnzMIkh7CPd1KX445z38XIu4jG1jGw7x5tSL3VBjE44dY4ihMU1ijAQV930SPM12cCFrB18sVw=="
+		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/js/all.min.js"
+		integrity="sha512-8pHNiqTlsrRjVD4A/3va++W1sMbUHwWxxRPWNyVlql3T+Hgfd81Qc6FC5WMXDC+tSauxxzp1tgiAvSKFu1qIlA=="
+		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<link rel="stylesheet" href="../src/css/styles.css" />
+	<link rel="stylesheet" href="../src/css/rfqStyles.css" />
+</head>
+
+<body>
+	<style>
+		.map-container {
+			height: 200px;
+			position: relative;
+			overflow-x: auto;
+		}
+
+		.map-container iframe {
+			left: 0;
+			top: 0;
+			height: 100%;
+			width: 600px;
+			position: relative;
+			overflow-x: hidden;
+		}
+	</style>
+	<header>
+		<div class="header">
+			<div class="container">
+				<div>
+					<img class="logoImg" src="../src/images/logo.png" alt="logo">
+				</div>
+				<div class="jumbotron">
+					<h1>Seattle Precision Machine Shop</h1>
+					<h2>
+						We <u><i>ARE</i></u> Quality!
+					</h2>
+				</div>
+			</div>
+		</div>
+	</header>
+	<ul>
+		<nav class="navbar2 sticky-top navbar-expand-lg navbar-light " style="backdrop-filter: invert(80%);">
+		<a class="navbar-brand" href="./index.html" id="home">Home</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+	
+		</button>
+		
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<div class="navbar-nav3 mr-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="#blog">Blog</a>
+				</li>
+				<li class="nav-item">
+					<div class="btn-group">
+						<button type="button" class="btn  dropdown-toggle" data-bs-toggle="dropdown"
+							aria-haspopup="true" aria-expanded="false" id="dropdown">
+							About-us
+						</button>
+						<div class="dropdown-menu">
+							<a class="dropdown-item" href="about.html">About</a>
+							<a class="dropdown-item" href="about.html#business-history-container">Business-history</a>
+						</div>
+					</div>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="rfq.html"
+						style="color: rgb(126, 15, 218); margin-right: -50px;">Quotes</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="./contact.html">Contact</a>
+				</li>
+				<li class="nav-item dropdown">
+					<div class="btn-group">
+						<button type="button" class="btn  dropdown-toggle" data-bs-toggle="dropdown"
+							aria-haspopup="true" aria-expanded="false" itemid ="dropdown">
+							Capabilities
+						</button>
+						<div class="dropdown-menu">
+							<a class="dropdown-item" href="capabilities.html#services">Services</a>
+							<a class="dropdown-item" href="capabilities.html#equipments">Equipment</a>
+							<a class="dropdown-item" href="capabilities.html#materials">Materials</a>
+							<a class="dropdown-item" href="capabilities.html#industries">Industries</a>
+						</div>
+					</div>
+				</li>
+		
+			</div>
+				<div>
+				<span class="moveable, d-lg-inline-block" style="color:rgb(58, 64, 68)" sty onclick="dmode()">Dark-mode</span>
+				<span class="background-dark-toogle"></span>
+				</div>
+			</div>
+			
+		
+			<form class="form-inline my-1 my-lg-1 ms-1 d-flex">
+				<input class="form-control mr-sm-1" type="search" placeholder="type something..." aria-label="Search">
+				<button class="s-btn" id="s-btn" type="submit">Search</button>
+			</form>
+		
+		</nav>
+</ul>
+	<main>
+		<form class="rfqForm" id="form">
+			<div class="inputs">
+				<div class="fieldForm">
+					<label for="businessName"><i class="fa-solid fa-briefcase"></i> Business Name</label>
+					<input type="text" name="businessName" id="businessName">
+					<small></small>
+				</div>
+				<div class="fieldForm">
+					<label for="personName"><i class="fa-solid fa-user"></i> Name</label>
+					<input type="text" name="personName" id="personName">
+					<small></small>
+				</div>
+				<div class="fieldForm">
+					<label for="adress"><i class="fa-solid fa-location-dot"></i> Adress</label>
+					<input type="text" name="address" id="address">
+					<small></small>
+				</div>
+				<div class="fieldForm">
+					<label for="phone"><i class="fa-solid fa-phone"></i> Phone Number</label>
+					<input type="tel" name="phone" id="phone">
+					<small></small>
+				</div>
+				<div class="fieldForm">
+					<label for="fax"><i class="fa-solid fa-fax"> </i> Fax Number</label>
+					<input type="tel" name="fax" id="fax">
+					<small></small>
+				</div>
+				<div class="fieldForm">
+					<label for="website"><i class="fa-solid fa-at"></i> Website</label>
+					<input type="text" name="website" id="website">
+					<small></small>
+				</div>
+				<div class="fieldForm">
+					<label for="email"><i class="fa-solid fa-envelope"></i> Email Address</label>
+					<input type="email" name="email" id="email">
+					<small></small>
+				</div>
+				<div class="fieldForm">
+					<label for="mobile"><i class="fa-solid fa-mobile-retro"></i> Mobile/Text Number</label>
+					<input type="tel" name="mobile" id="mobile">
+					<small></small>
+				</div>
+				<div class="fieldForm">
+					<label for="contactPerson"><i class="fa-solid fa-user-pen"></i> Contact Person</label>
+					<input type="text" name="contactPerson" id="contactPerson">
+					<small></small>
+				</div>
+			</div>
+			<div class="textArea">
+				<textarea name="message" id="message" cols="30" rows="10" maxlength="1500"></textarea>
+				<div class="fieldForm" id="att">
+					<label for="attachment"><i class="fa-solid fa-paperclip" id="att-text"></i> Attach file</label>
+					<input 
+						type="file" 
+						name="attachment" 
+						id="attachment"
+						accept=".jpg, .jpeg, .png , .txt, .webp, .docx, .doc, .dwg, .dxf, .iges, .step" />
+					<small></small>
+				</div>
+				<input type="submit" value="Send" class="submitButton">
+			</div>
+		</form>
+	</main>
+	<footer class="footer-wrapper">
+		<div class="footer-container container">
+			<div class="container">
+				<div class="footer-top">
+					<div id="icon-title">
+						Get connected with us on social networks:
+					</div>
+					<div id="footer-icon">
+						<a href="https://github.com/" target="_blank" rel="noopener noreferrer"><i
+								class="fa-brands fa-github"></i></a>
+
+						<a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer"><i
+								class="fa-brands fa-linkedin-in"></i></a>
+
+						<a href="https://twitter.com/" target="_blank" rel="noopener noreferrer"><i
+								class="fa-brands fa-twitter"></i></a>
+
+						<a href="https://in.pinterest.com/" target="_blank" rel="noopener noreferrer"><i
+								class="fa-brands fa-pinterest"></i></a>
+
+						<a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><i
+								class="fa-brands fa-facebook"></i></a>
+					</div>
+				</div>
+				<div class="footer-middle">
+					<div class="company-product">
+						<div class="company-name">
+							<div class="footer-title">
+								COMPANY NAME
+							</div>
+							<div class="company-list">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>
+								Quasi architecto repellendus consequuntur volup <br>
+								tatem ut quo earum omnis accusantium eligendi <br>
+								soluta, blanditiis illo porro
+							</div>
+						</div>
+						<div class="products">
+							<div class="footer-title">
+								PRODUCTS
+							</div>
+							<div class="product-list">
+								<ul>
+									<li>MDBootstrap</li>
+									<li>MDWordPress</li>
+									<li>BrandFlow</li>
+									<li>Bootstrap Angular</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="link-contact">
+						<div class="useful-links">
+							<div class="footer-title">
+								USEFUL LINKS
+							</div>
+							<div class="link-list">
+								<ul>
+									<li>Your Account</li>
+									<li>Become an Affiliate</li>
+									<li>Shipping Rate</li>
+									<li>Helps</li>
+								</ul>
+							</div>
+						</div>
+						<div class="contact">
+							<div class="footer-title">
+								CONTACT
+							</div>
+							<div class="contact-list">
+								<ul>
+									<li>NewYork</li>
+									<li>info@example.com</li>
+									<li>+01 234 5678</li>
+									<li>+01 234 5678</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="footer-bottom">
+					<div id="footer-wrapper">
+						<p>
+							&copy; Copyright 2022 A great Industrial company
+						</p>
+						<div>
+							<h4>This website was created by: A WebDevelopment Company, LLC.</h4>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<script src="../src/js/rfqValidation.js"></script>
+
+	<script>
+		if (localStorage.getItem("dark-mode") == "Enabled") {
+			dmode()
+			document.getElementById("switch-d-mode").checked = true
+		}
+		function dmode() {
+			document.body.classList.toggle("dark-mode")
+		}
+	</script>
+	<script src="scripts/jquery-3.1.0.min.js"></script>
+	<script src="scripts/bootstrap.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+		integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+		integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+		crossorigin="anonymous"></script>
+</body>
+
+</html>
