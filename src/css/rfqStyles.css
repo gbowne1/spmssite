@@ -3,7 +3,7 @@
     margin-left: -5px;
 }
 body{
-    overflow-x: hidden;
+    overflow-x: scroll;
 
 }
 #home{
@@ -41,6 +41,7 @@ body{
     --text-area: rgb(14, 14, 14);
     --icon-color: rgb(253, 253, 253);
     --border-hover: white;
+    
     
   
   }
@@ -83,15 +84,17 @@ main{
 ;
   }
   .f{
-    position: absolute;
-    top: 5vh;
-    left: 70.3%;
+    position:relative;
+    top: 4vh;
+    left: 50%;
+    right: 50%;
     z-index: 100;
-    display: hidden;
-    visibility: hidden;
+    display:inline-flex;
+    visibility:collapse;
+    overflow-x:auto;
   }
-  
-  
+
+   
 .fieldForm input{
     /* margin-bottom: 0.5rem; */
     display: block;

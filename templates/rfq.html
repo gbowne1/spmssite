@@ -34,6 +34,7 @@
 		.map-container {
 			height: 200px;
 			position: relative;
+			overflow-x: auto;
 		}
 
 		.map-container iframe {
@@ -41,7 +42,8 @@
 			top: 0;
 			height: 100%;
 			width: 600px;
-			position: absolute;
+			position: relative;
+			overflow-x: hidden;
 		}
 	</style>
 	<header>
@@ -59,14 +61,17 @@
 			</div>
 		</div>
 	</header>
-	<nav class="navbar2 sticky-top navbar-expand-lg navbar-light " style="backdrop-filter: invert(80%);">
+	<ul>
+		<nav class="navbar2 sticky-top navbar-expand-lg navbar-light " style="backdrop-filter: invert(80%);">
 		<a class="navbar-brand" href="./index.html" id="home">Home</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
 			aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
+	
 		</button>
+		
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
-			<ul class="navbar-nav3 mr-auto">
+			<div class="navbar-nav3 mr-auto">
 				<li class="nav-item">
 					<a class="nav-link" href="#blog">Blog</a>
 				</li>
@@ -92,7 +97,7 @@
 				<li class="nav-item dropdown">
 					<div class="btn-group">
 						<button type="button" class="btn  dropdown-toggle" data-bs-toggle="dropdown"
-							aria-haspopup="true" aria-expanded="false" id="dropdown">
+							aria-haspopup="true" aria-expanded="false" itemid ="dropdown">
 							Capabilities
 						</button>
 						<div class="dropdown-menu">
@@ -103,19 +108,22 @@
 						</div>
 					</div>
 				</li>
-			</ul>
-			<label>
-				<input type="checkbox" name="checkbox1" class="f" id="switch-d-mode" onclick="dmode()">
-				<span class="moveable"></span>
+		
+			</div>
+				<div>
+				<span class="moveable, d-lg-inline-block" style="color:rgb(58, 64, 68)" sty onclick="dmode()">Dark-mode</span>
 				<span class="background-dark-toogle"></span>
-				<span for="checkbox1" class="dmlabel">Dark Mode</span>
-			</label>
-			<form class="form-inline my-2 my-lg-0 ms-auto d-flex">
-				<input class="form-control mr-sm-2" type="search" placeholder="type something..." aria-label="Search">
+				</div>
+			</div>
+			
+		
+			<form class="form-inline my-1 my-lg-1 ms-1 d-flex">
+				<input class="form-control mr-sm-1" type="search" placeholder="type something..." aria-label="Search">
 				<button class="s-btn" id="s-btn" type="submit">Search</button>
 			</form>
-		</div>
-	</nav>
+		
+		</nav>
+</ul>
 	<main>
 		<form class="rfqForm" id="form">
 			<div class="inputs">
