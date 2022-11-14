@@ -1,0 +1,305 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $font-primary;
+  --footer-background: rgb(89, 45, 210);
+}
+
+body {
+  text-align: center;
+  background-color: var(--body-background);
+}
+
+.dark-mode .pra {
+  color: rgb(90, 148, 213);
+}
+.dark-mode .paragraph {
+  color: white;
+}
+.overall_wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+#container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.mb-6 {
+  margin-bottom: 20px;
+}
+.container {
+  max-width: 100%;
+  z-index: 2;
+  padding: 0;
+}
+section {
+  display: flex;
+  float: left;
+  margin: 0 1.5%;
+  width: 63%;
+  padding: 5%;
+  background: greenyellow;
+}
+
+aside {
+  color: black;
+  float: right;
+  margin: 2%;
+  width: 30%;
+  background: gray;
+  padding: 5%;
+  box-shadow: inset 5px 0 5px -5px #29627e;
+  padding-left: 0.5rem;
+}
+
+aside > p {
+  margin: 0.5rem;
+}
+
+article {
+  background: var(--card-background);
+  padding: 5%;
+}
+
+.static-img {
+  display: block;
+}
+
+iframe {
+  max-width: 100%;
+  background: orange;
+}
+
+i {
+  @include size(20px, 20px);
+}
+
+#icon-title {
+  padding: 10px 50px;
+  gap: 20px;
+}
+
+.contact-list,
+.link-list,
+.product-list,
+.company-list {
+  font-size: 13px;
+  text-align: left;
+}
+
+.hours-map,
+.company-product,
+.link-contact {
+  display: flex;
+  gap: 50px;
+  justify-content: space-evenly;
+}
+
+.imgLogo {
+  @include size(30%, 10px);
+
+  border-radius: 50%;
+}
+@media all and (min-width: 34.375em) {
+  .map-container {
+    display: block;
+  }
+
+  .static-img {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  #icon-title {
+    width: 100%;
+    text-align: left;
+    padding: 15px;
+  }
+
+  .openhours,
+  .company-name,
+  .useful-link {
+    width: 60%;
+  }
+
+  .company-product {
+    gap: 10px;
+  }
+
+  .link-contact {
+    gap: 100px;
+    padding: 0 20px;
+  }
+}
+.container3 section {
+  background-color: var(--form-background);
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12);
+  border-radius: 17px;
+}
+
+@-moz-document url-prefix() {
+  .background-dark-toggle {
+    position: absolute;
+    top: 4.9vh;
+    left: 67.4%;
+
+    @include size(33px, 15.5px);
+
+    background-color: #000000;
+    border-radius: 25px;
+  }
+
+  .f:checked ~ .background-dark-toggle {
+    background-color: rgb(104, 104, 104);
+  }
+
+  .moveable {
+    position: absolute;
+    top: 4.98vh;
+    left: 67.49%;
+
+    @include size(13px, 14px);
+
+    background-color: #ffffff;
+    border-radius: 50%;
+    z-index: 10;
+  }
+
+  .f:checked ~ .moveable {
+    left: 68.8%;
+    background-color: black;
+    transition: 2s;
+  }
+
+  .f:not(:checked) ~ .moveable {
+    transition: 2s;
+  }
+}
+.row {
+  padding-top: 60px;
+}
+.cell {
+  @include size(33%, 350px);
+
+  margin: 0 15px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+.cell img {
+  @include size(100%, 350px);
+
+  object-fit: cover;
+}
+
+#business-history {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.s {
+  position: absolute;
+  top: 27vh;
+  left: 90%;
+  z-index: 100;
+}
+
+#business-history {
+  color: var(--bright-text);
+}
+
+#business-history-container {
+  padding-top: 200px;
+}
+
+.modal_header {
+  text-align: center !important;
+}
+
+#mhead {
+  color: var(--bright-text);
+}
+
+#map-gog {
+  @include size(100%, 500px);
+  margin-bottom: -55px;
+}
+
+#art p,
+h3 {
+  color: var(--bright-text);
+}
+
+#art {
+  height: 363px;
+  margin-right: 25px;
+}
+
+#team {
+  padding-top: 200px;
+}
+
+#head {
+  padding-top: 30px;
+  font-size: 100px;
+}
+#map-info {
+  padding-top: 150px;
+}
+
+.mainContent section {
+  background-color: #dfb900;
+}
+
+#ba {
+  background-color: var(--card-background);
+}
+
+#as {
+  margin-top: -5px;
+  margin-right: 25px;
+  left: 25px;
+  width: 454px;
+  padding-left: 40px;
+  padding-right: -10px;
+}
+
+#capabilities {
+  @include size(85px,35px);
+  border: none;
+  outline: none;
+  background-color: var(--navbar-background);
+  color: var(--bright-text);
+}
+
+#capabilities option {
+  width: 400px;
+  border: none;
+  border-radius: 0px;
+}
+
+/*Cookie Consent Begin*/
+
+h2 {
+  color: #1b094d;
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+.pra {
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 20px;
+}
+
+.main-carousel {
+  padding-right: 60px;
+  padding-left: 60px;
+  padding-top: 50px;
+}

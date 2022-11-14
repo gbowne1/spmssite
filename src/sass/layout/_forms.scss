@@ -1,0 +1,77 @@
+.form-container {
+  @include size(40rem, 37rem);
+  option {
+    color: grey;
+  }
+}
+
+.form-control {
+  color: var(--bright-text);
+  background-color: var(--form-background);
+  border-radius: 8px 8px;
+  text-align: left;
+  border: 1px solid var(--border-color);
+
+  &::placeholder {
+    color: var(--bright-text);
+  }
+  &:focus {
+    color: var(--bright-text);
+    background-color: var(--form-background);
+  }
+}
+
+#the-form {
+  background-color: var(--form-background);
+  input {
+    border-radius: 5px;
+    border: 1px solid var(--border-color);
+  }
+}
+
+.label {
+  color: var(--bright-text);
+}
+
+.dmlabel {
+  position: absolute;
+  top: 1.8pc;
+  right: 19pc;
+  color: var(--bright-text);
+}
+
+.dmlabel-f {
+  right: 19pc;
+  color: var(--bright-text);
+}
+
+.dmlabel-c {
+  position: absolute;
+  top: 26.5vh;
+  left: 91.5%;
+
+  color: black;
+}
+
+.e {
+  position: absolute;
+  top: 60vh;
+  left: 90%;
+}
+
+.dmlabel-e {
+  position: absolute;
+  top: 59.5vh;
+  left: 91.5%;
+  color: white;
+}
+
+.custom-control-label {
+  color: white;
+}
+.input {
+  position: relative;
+  width: 90%;
+  height: 50px;
+  right: -25px;
+}

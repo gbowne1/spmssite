@@ -1,0 +1,37 @@
+
+$breakpoints: (
+  'small': (576px),   
+  'medium': (768px),
+  'large': (992px),
+  'huge': (1200px),
+);
+
+
+:root {
+    --navbar-background: #d9d9d9;
+    --body-background: #cfcfcf;
+    --card-background: white;
+    --bright-text: rgb(26, 26, 26);
+    --grey-text: rgb(204, 204, 204);
+    --btn-background: rgb(126, 15, 218);
+    --btn-text: white;
+    --form-background: rgb(255, 255, 255) !important;
+    --s-b-b: rgb(4, 13, 44);
+    --border-color: rgb(63, 63, 63);
+    --btn-text-color: white;
+  }
+  
+  .dark-mode {
+    --navbar-background: #0e0e0e;
+    --body-background: #2a2929;
+    --card-background: #101010;
+    --bright-text: rgb(255, 255, 255);
+    --grey-text: rgb(204, 204, 204);
+    --btn-background: rgb(240, 240, 240);
+    --btn-text: #212529;
+    --form-background: rgb(26 26 26);
+    --search-btn-background: rgb(30, 163, 112);
+    --footer-background: #1b094d;
+    --border-color: #3e3e3e;
+  
+  }

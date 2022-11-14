@@ -1,0 +1,121 @@
+footer {
+  display: inline-flex;
+  background-color: gray;
+  color: black;
+  clear: both;
+  height: 100px;
+  font-family: $font-primary;
+  width: 100%;
+
+  .footer-top {
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-between;
+    background-color: var(--footer-background);
+    color: white;
+
+    @include respond-max("medium") {
+      flex-direction: column;
+    }
+
+    #footer-icon {
+      align-items: center;
+      padding: 10px 50px;
+      gap: 20px;
+      display: flex;
+
+      @include respond-max("medium") {
+        padding: 0 10px;
+        gap: 7px;
+      }
+
+      a {
+        color: white;
+        padding-left: 20px;
+      }
+    }
+  }
+
+  .footer-middle {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 40px 0;
+    background-color: #1b2430;
+    color: white;
+    text-align: left;
+    align-items: start;
+    flex-wrap: wrap;
+    @include respond-max("medium") {
+      padding: 0 10px;
+      gap: 7px;
+      flex-direction: column;
+    }
+  }
+
+  .footer-title {
+    font-weight: 500;
+    font-size: 18px;
+    padding-bottom: 30px;
+    color: black;
+  }
+
+  ul,
+  li {
+    text-decoration: none;
+    list-style-type: none;
+    padding-bottom: 15px;
+    padding-left: 0;
+  }
+
+  .footer-bottom {
+    background-color: #0f151b;
+    color: white;
+    padding: 20px;
+    margin: 0;
+  }
+  .footer-top {
+    background: var(--footer-background);
+    box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+      0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
+      0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+      0 100px 80px rgba(0, 0, 0, 0.12);
+  }
+}
+
+.fa-github {
+  color: #171515;
+}
+
+.fa-linkedin-in {
+  color: #0e76a8;
+}
+
+.fa-twitter {
+  color: #00acee;
+}
+
+.fa-pinterest {
+  color: #c8232c;
+}
+
+.fa-facebook {
+  color: #1877f2;
+}
+
+.fa-instagram {
+  color: #a6f218;
+}
+
+.fa-youtube {
+  color: #f21818;
+}
+
+.svg-inline--fa {
+  &:hover {
+    color: #fff;
+    transition: 1s;
+  }
+  &:not(:hover) {
+    transition: 2s;
+  }
+}
