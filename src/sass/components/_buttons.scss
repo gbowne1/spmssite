@@ -1,0 +1,49 @@
+.btn {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background: var(--btn-background);
+  color: var(--btn-text);
+  border-radius: 30px;
+
+  &:hover {
+    color: #fff;
+    background-color: #2e2e2e;
+  }
+}
+
+.btn-primary {
+  margin-top: 1.5rem;
+}
+
+#s-btn {
+  margin-left: -10px;
+  width: 85px;
+  border: 1px solid var(--border-color);
+  color: var(--btn-text-color);
+  background-color: var(--s-b-b);
+  border-radius: 0px 8px 8px 0px;
+
+  &:hover {
+    color: grey;
+    transition: 1s;
+  }
+  &:not(:hover) {
+    color: var(--btn-text-color);
+    transition: 1s;
+  }
+}
+
+#submit-btn {
+  width: 449px;
+  background-color: #5d2bd0;
+  border: none;
+  color: var(--bright-text);
+}
+
+.submitbutton {
+  position: relative;
+  width: 90%;
+  right: -22px;
+  top: -15px;
+  align-items: center;
+}

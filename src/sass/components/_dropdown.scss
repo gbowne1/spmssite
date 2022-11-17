@@ -1,0 +1,20 @@
+
+// TODO: this sould be class
+#dropdown {
+    background-color: var(--navbar-background);
+    color: var(--bright-text);
+    border: none;
+    outline: none;
+    margin-right: -40px;
+  }
+  
+  .dropdown-menu {
+    background-color: var(--navbar-background);
+
+    .dropdown-item{
+
+        &:hover {
+            background-color: transparent;
+          }
+      }
+  }

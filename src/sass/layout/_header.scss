@@ -1,0 +1,44 @@
+.header {
+    padding: 60px;
+    text-align: center;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    color: black;
+    background-image: radial-gradient(circle 610px at 5.2% 51.6%, rgb(2, 3, 54) 0%, rgb(5, 2, 39) 97.5%);
+    font-size: 30px;
+    position: relative;
+    @include respond-max('small'){
+        height: 20%;
+        padding: 0.2rem;
+        font-size: 1rem;
+    }
+    .jumbotron {
+        margin: 10px auto;
+        background-size: cover;
+        text-shadow: black 0.3em 0.3em 0.3em;
+        font-family: $font-primary;
+        @include respond-max('medium'){
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+       a{
+            text-decoration: none;
+            color: white;
+            text-shadow: none;
+          
+          }
+        h1{
+            text-shadow: none;
+            color: white;
+            @include respond-max('small'){
+                font-size: 1rem;
+            }
+        }
+        h2{
+            text-shadow: none;
+            color: white;
+        }
+      }
+  }

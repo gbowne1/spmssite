@@ -1,0 +1,23 @@
+#head,
+#head2,
+#head3 {
+  color: var(--bright-text);
+}
+#head2 {
+  padding-bottom: 30px;
+  padding-top: 30px;
+  font-size: 30px;
+  border-radius: 30px;
+  color: #fff;
+  background-color: rgb(126, 15, 218);
+}
+#head3 {
+  font-size: 55px;
+}
+#bheader {
+  width: 100%;
+  background-color: #1b094d;
+  color: #fff;
+  font-size: 40px;
+  color: var(--bright-text);
+}
