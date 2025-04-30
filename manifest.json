@@ -1,15 +1,35 @@
 {
-    "short_name": "",
-    "name": "",
+    "name": "Precision CNC Fabrication",
+    "short_name": "Precision CNC",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#121212",
+    "theme_color": "#007bff",
+    "description": "CNC, aerospace, and sheet metal machine shop for precision parts.",
+    "orientation": "portrait",
+    "lang": "en-US",
+    "dir": "ltr",
     "icons": [
-    {
-      "src":"",
-      "sizes": "",
-      "type": ""
-    }
-   ],
-   "start_url": "",
-   "background_color": "",
-   "Theme_color": "",
-   "display": ""
+      {
+        "src": "/icons/logo.svg",
+        "sizes": "any",
+        "type": "image/svg+xml"
+      },
+      {
+        "src": "/icons/favicon.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      },
+      {
+        "src": "/icons/apple-touch-icon.png",
+        "sizes": "180x180",
+        "type": "image/png"
+      },
+      {
+        "src": "/icons/favicon.ico",
+        "sizes": "48x48",
+        "type": "image/x-icon"
+      }
+    ]
   }
+  
